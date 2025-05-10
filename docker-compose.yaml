@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13
+    container_name: dw_postgres
+    environment:
+      POSTGRES_USER: dw_user
+      POSTGRES_PASSWORD: dw_pass
+      POSTGRES_DB: dw_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  airflow:
+    image: apache/airflow:2.5.1
+    container_name: dw_airflow
+    depends_on:
+      - postgres
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://dw_user:dw_pass@postgres:5432/dw_db
+      AIRFLOW__CORE__FERNET_KEY: "$(openssl rand -base64 32)"
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    ports:
+      - "8080:8080"
+    command: >
+      bash -c "airflow db init \
+      && airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com \
+      && airflow scheduler & airflow webserver"
+
+  dbt:
+    image: dbt-labs/dbt:1.6.0
+    container_name: dw_dbt
+    depends_on:
+      - postgres
+    working_dir: /usr/app
+    volumes:
+      - ./dbt:/usr/app
+      - ~/.dbt:/root/.dbt
+    entrypoint: ["tail", "-f", "/dev/null"]
+
+volumes:
+  postgres_data:
