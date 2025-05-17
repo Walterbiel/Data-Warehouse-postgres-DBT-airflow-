@@ -32,17 +32,6 @@ Este projeto demonstra a construção de um **Data Warehouse** completo utilizan
 
 ---
 
-## Arquitetura da Solução
-
-- **Camada Bronze**: Recepção bruta dos dados extraídos.  
-- **Camada Silver**: Dados padronizados e limpos via dbt.  
-- **Camada Gold**: Modelos analíticos e tabelas agregadas.  
-- **Orquestração**: Pipelines schedulados em Airflow (DAGs de ingestão, transformação e carga).  
-- **Relatórios & BI**: Conectores e dashboards para Power BI (ou outra ferramenta).  
-- **ML & IA**: Possibilidade de plug-and-play de modelos preditivos e alertas automatizados. :contentReference[oaicite:6]{index=6}:contentReference[oaicite:7]{index=7}
-
----
-
 ## Tecnologias
 
 - **Banco de Dados**  
@@ -60,68 +49,13 @@ Este projeto demonstra a construção de um **Data Warehouse** completo utilizan
 ---
 
 ## Como Começar
+1.Importe os dados disponibilizados para a pasta principal do projeto.
 
-### 1. Pré-requisitos
+2. Crie um ambiente virtual com o comando:
+python -m venv .venv
 
-- Docker & Docker Compose  
-- Python 3.8+  
-- PostgreSQL 13+  
-- dbt Core  
-- Airflow 2.x  
+Ative o ambiente: source .venv/bin/activate
 
-### 2. Clonar o Repositório
+3. Instale as dependências necessarias para o projeto:
+pip install -r requirements.txt
 
-```bash
-git clone https://github.com/seu-usuario/live-dw-postgres-dbt-airflow.git
-cd live-dw-postgres-dbt-airflow
-3. Subir os Containers
-bash
-Copy
-Edit
-docker-compose up -d
-Isso iniciará:
-
-postgres (porta 5432)
-
-airflow webserver (porta 8080)
-
-dbt (via CLI em um container auxiliar)
-
-4. Configurar o dbt
-No diretório dbt_project/:
-
-Ajuste o arquivo profiles.yml com as credenciais do PostgreSQL.
-
-Execute:
-
-bash
-Copy
-Edit
-dbt deps
-dbt seed
-dbt run
-dbt test
-5. Agendar DAGs no Airflow
-Copie os arquivos dags/ para o volume do Airflow.
-
-Na interface web (http://localhost:8080), habilite e dispare os DAGs de ingestão e transformação.
-
-Uso
-Ingestão & Carga: os DAGs realizam a extração do ERP e carregam os dados na camada Bronze.
-
-Transformação: dbt executa os modelos de limpeza e padronização, populando Silver e Gold.
-
-Relatórios: conecte-se ao schema Gold no PostgreSQL para alimentar dashboards.
-
-Alertas: configure notificações via e-mail/Slack nos DAGs de Airflow ou no nível de BI.
-
-Contribuição
-Fork este repositório
-
-Crie sua branch (git checkout -b feature/nova-funcionalidade)
-
-Commit suas alterações (git commit -m 'Adiciona ...')
-
-Push para a branch (git push origin feature/nova-funcionalidade)
-
-Abra um Pull Request
