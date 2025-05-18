@@ -6,8 +6,8 @@ services:
     container_name: dw_airflow
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://postgresadmin:jAloy0oZD2Aks1zMjCgDDilQExPLXKCg@dpg-d0khna8gjchc73ae1r1g-a.oregon-postgres.render.com:5432/general_rtxt
-      AIRFLOW__CORE__FERNET_KEY: "gkspxK2rrHD4KjfFuEHZaJOl1F0RuzwNQENzqqyobSY="
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: ${AIRFLOW__CORE__SQL_ALCHEMY_CONN}
+      AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW__CORE__FERNET_KEY}
       AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     volumes:
       - ./dags:/opt/airflow/dags
@@ -17,7 +17,9 @@ services:
     ports:
       - "8080:8080"
     command: >
-      bash -c "airflow db init       && airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com       && airflow scheduler & airflow webserver"
+      bash -c "airflow db init && 
+               airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com && 
+               airflow scheduler & airflow webserver"
 
   dbt:
     image: dbt-labs/dbt:1.6.0

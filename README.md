@@ -59,3 +59,6 @@ Ative o ambiente: source .venv/bin/activate
 3. Instale as dependências necessarias para o projeto:
 pip install -r requirements.txt
 
+4.Subir container docker para airflow e dbt
+docker compose --env-file .env up
+

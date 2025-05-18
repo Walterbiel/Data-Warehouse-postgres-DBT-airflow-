@@ -77,14 +77,5 @@ df = pd.DataFrame({
     'parcelamento':     parcelamento
 })
 
-df.to_csv('/mnt/data/base_vendas_2M.csv', index=False)
-print("CSV gerado em /mnt/data/base_vendas_2M.csv")```
-
-**O que o script faz**  
-- Cria vendas com de 1 a 8 itens cada (totalizando ~2 000 000 linhas).  
-- A coluna `preco` cresce 2% ao ano em média (simulando inflação).  
-- A `quantidade` média sobe 0.1 item por ano (distribuição normal).  
-- Define `meio_pagamento` com as três categorias e calcula `parcelamento` de acordo com o total da venda.  
-- Usa nomes snake_case e datas entre 01/01/2018 e 30/04/2025.
-
-Basta rodar esse script no seu Python local ou no notebook, e ele já vai gerar a base para você carregar no seu ETL/Data Warehouse.
+df.to_csv('base_vendas_2M.csv', index=False)
+print("CSV gerado em /mnt/data/base_vendas_2M.csv")
