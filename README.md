@@ -14,7 +14,7 @@ Este projeto demonstra a construção de um **Data Warehouse** completo utilizan
 
 1. **Coleta e Integração de Dados**  
    - Integração automática com sistemas ERP para capturar tabelas de vendas, estoque e ordens de produção, com atualização diária ou em tempo real.  
-   - Tratamento e padronização (nomes de produtos, datas, filiais, centros de custo).  
+   - Tratamento e padronização (nomes de produtoip install markdowns, datas, filiais, centros de custo).  
    - Armazenamento em estrutura analítica (Data Warehouse ou Lakehouse). :contentReference[oaicite:0]{index=0}:contentReference[oaicite:1]{index=1}
 
 2. **Análises Essenciais**  
@@ -30,21 +30,12 @@ Este projeto demonstra a construção de um **Data Warehouse** completo utilizan
    - Alertas automatizados (e-mail/WhatsApp) para eventos críticos.  
    - Exportação de relatórios (Excel/PDF) para reuniões estratégicas. :contentReference[oaicite:4]{index=4}:contentReference[oaicite:5]{index=5}
 
----
+---preparação           |37.36648511886597 |
+|Filtro + média                 |35.93171310424805 |
+|Contagem com condições         |21.732516527175903|
+|Agrupamento por ano + categoria|48.217999
 
-## Tecnologias
 
-- **Banco de Dados**  
-  - PostgreSQL (DW)  
-- **Transformação de Dados**  
-  - [dbt](https://www.getdbt.com/)  
-- **Orquestração**  
-  - [Apache Airflow](https://airflow.apache.org/)  
-- **Visualização**  
-  - Power BI / ferramentas compatíveis  
-- **Complementares**  
-  - Python (scripts de ingestão, testes e helpers)  
-  - Docker (ambientes isolados)  
 
 ---
 
