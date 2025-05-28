@@ -50,6 +50,19 @@ Ative o ambiente: source .venv/bin/activate
 3. Instale as dependências necessarias para o projeto:
 pip install -r requirements.txt
 
-4.Subir container docker para airflow e dbt
+4. Rode esse arquivo no bash:
+python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
+
+5. Criar pasta de plugin do DBT
+mkdir -p dags logs plugins dbt
+
+6.✅ Importante: antes de rodar o docker-compose up:
+Faça login no GitHub Container Registry (GHCR):
+echo <SEU_GITHUB_TOKEN> | docker login ghcr.io -u <SEU_USUARIO_GITHUB> --password-stdin
+Gere o token em: GitHub - Configurações de Tokens
+O token precisa de permissão:
+✅ read:packages
+
+7.Subir container docker para airflow e dbt
 docker compose --env-file .env up
 

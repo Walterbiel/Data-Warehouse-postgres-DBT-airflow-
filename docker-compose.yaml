@@ -20,12 +20,3 @@ services:
       bash -c "airflow db init && 
                airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com && 
                airflow scheduler & airflow webserver"
-
-  dbt:
-    image: dbt-labs/dbt:1.6.0
-    container_name: dw_dbt
-    working_dir: /usr/app
-    volumes:
-      - ./dbt:/usr/app
-      - ~/.dbt:/root/.dbt
-    entrypoint: ["tail", "-f", "/dev/null"]
