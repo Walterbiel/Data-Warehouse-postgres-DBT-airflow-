@@ -17,6 +17,10 @@ id_loja      = np.random.randint(1, 16,    size=TOTAL_DEVOLUCOES)
 # 4) Data da devolução = data aleatória entre 1 e 30 dias após data da venda (simulada)
 data_venda = pd.to_datetime(np.random.choice(
     pd.date_range(start='2018-01-01', end='2025-04-30'),
+
+
+
+    
     size=TOTAL_DEVOLUCOES
 ))
 dias_offset = np.random.randint(1, 31, size=TOTAL_DEVOLUCOES)

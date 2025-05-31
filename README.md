@@ -45,7 +45,8 @@ Este projeto demonstra a construção de um **Data Warehouse** completo utilizan
 2. Crie um ambiente virtual com o comando:
 python -m venv .venv
 
-Ative o ambiente: source .venv/bin/activate
+Ative o ambiente: 
+source .venv/bin/activate
 
 3. Instale as dependências necessarias para o projeto:
 pip install -r requirements.txt
@@ -66,3 +67,7 @@ O token precisa de permissão:
 7.Subir container docker para airflow e dbt
 docker compose --env-file .env up
 
+### Gerar dados
+rodar arquivo gearador_de_dados
+
+uvicorn gerador_de_dados.api_vendas_batch:app --reload --port 8002

@@ -1,148 +1,96 @@
 from fastapi import FastAPI
-from sqlalchemy import create_engine
+from pydantic import BaseModel
 import numpy as np
 import pandas as pd
 from datetime import datetime
-import os
+import psycopg2
+from psycopg2.extras import execute_values
 
 app = FastAPI()
 
-# ✅ Configuração da conexão PostgreSQL
-DATABASE_URL = "postgresql+psycopg2://postgresadmin:jAloy0oZD2Aks1zMjCgDDilQExPLXKCg@dpg-d0khna8gjchc73ae1r1g-a.oregon-postgres.render.com:5432/general_rtxt"
-engine = create_engine(DATABASE_URL)
-
-@app.post("/gerar_vendas")
+# Função auxiliar para gerar e inserir vendas
 def gerar_e_inserir_vendas():
-    np.random.seed()  # dados diferentes a cada execução
-    TOTAL_LINHAS = 50
+    N_LINHAS = 500
+    np.random.seed(datetime.now().microsecond)
 
-    # Tamanho de vendas entre 1 e 8
-    sale_sizes = np.random.randint(1, 9, size=TOTAL_LINHAS)
-    sale_ids = np.arange(1, TOTAL_LINHAS + 1)
+    # 1) Geração de venda simulada
+    sale_sizes = []
+    total = 0
+    while total < N_LINHAS:
+        s = np.random.randint(1, 9)
+        sale_sizes.append(s)
+        total += s
 
-    # Colunas estáticas
-    id_produto = np.random.randint(1, 301, size=TOTAL_LINHAS)
-    id_cliente = np.random.randint(1, 451, size=TOTAL_LINHAS)
-    id_vendedor = np.random.randint(1, 121, size=TOTAL_LINHAS)
-    id_loja = np.random.randint(1, 16, size=TOTAL_LINHAS)
+    sale_ids = np.repeat(np.arange(1, len(sale_sizes)+1), sale_sizes)[:N_LINHAS]
+    sale_sizes = sale_sizes[:len(np.unique(sale_ids))]
+    n = sale_ids.size
 
-    # Datas de venda — últimos 30 dias
-    start = pd.Timestamp.now() - pd.Timedelta(days=30)
-    end = pd.Timestamp.now()
-    dias = (end - start).days
-    offsets = np.random.randint(0, dias + 1, size=TOTAL_LINHAS)
-    data_venda = start + pd.to_timedelta(offsets, unit='D')
-
-    anos = data_venda.year.values
-    base_price = np.random.uniform(10, 780, size=TOTAL_LINHAS)
-    preco = np.round(base_price * (1 + 0.02 * (anos - 2018)), 2)
-
-    mu = 3 + 0.1 * (anos - 2018)
-    q = np.random.normal(loc=mu, scale=1.5, size=TOTAL_LINHAS)
-    quantidade = np.clip(np.round(q), 1, 7).astype(int)
-
-    meios = ['dinheiro', 'cartao_debito', 'cartao_credito']
-    probs = [0.5, 0.3, 0.2]
-    meio_pagamento = np.random.choice(meios, size=TOTAL_LINHAS, p=probs)
+    id_produto   = np.random.randint(1, 301, size=n)
+    id_cliente   = np.random.randint(1, 451, size=n)
+    id_vendedor  = np.random.randint(1, 121, size=n)
+    id_loja      = np.random.randint(1, 16, size=n)
+    data_venda   = np.full(n, datetime.today().date(), dtype='datetime64[D]')
+    anos         = pd.to_datetime(data_venda).year.values
+    base_price   = np.random.uniform(10, 780, size=n)
+    preco        = np.round(base_price * (1 + 0.02 * (anos - 2018)), 2)
+    mu           = 3 + 0.1 * (anos - 2018)
+    q            = np.random.normal(loc=mu, scale=1.5, size=n)
+    quantidade   = np.clip(np.round(q), 1, 7).astype(int)
+    meios        = ['dinheiro', 'cartao_debito', 'cartao_credito']
+    probs        = [0.5, 0.3, 0.2]
+    meio_pagamento = np.random.choice(meios, size=n, p=probs)
 
     line_total = preco * quantidade
-    totals_por_linha = line_total
+    boundaries = np.concatenate(([0], np.cumsum(sale_sizes)[:-1]))
+    sale_totals = np.add.reduceat(line_total, boundaries)
+    totals_por_linha = np.repeat(sale_totals, sale_sizes)[:n]
 
-    parcelamento = np.zeros(TOTAL_LINHAS, dtype=int)
+    parcelamento = np.zeros(n, dtype=int)
     mask_credit = meio_pagamento == 'cartao_credito'
     parcelamento[mask_credit] = 1
     big = mask_credit & (totals_por_linha > 1000)
     parcelamento[big] = np.random.randint(1, 4, size=big.sum())
 
-    df = pd.DataFrame({
-        'idfrom fastapi import FastAPI
-from sqlalchemy import create_engine
-import numpy as np
-import pandas as pd
-from datetime import datetime
-import os
+    dados = list(zip(
+        id_produto.astype(int).tolist(),
+        preco.astype(float).tolist(),
+        quantidade.astype(int).tolist(),
+        [d.item().strftime("%Y-%m-%d") for d in data_venda],
+        id_cliente.astype(int).tolist(),
+        id_loja.astype(int).tolist(),
+        id_vendedor.astype(int).tolist(),
+        meio_pagamento.tolist(),
+        parcelamento.astype(int).tolist()
+    ))
 
-app = FastAPI()
+    # 2) Conecta e insere no PostgreSQL
+    conn = psycopg2.connect(
+        dbname="general_rtxt",
+        user="postgresadmin",
+        password="jAloy0oZD2Aks1zMjCgDDilQExPLXKCg",
+        host="dpg-d0khna8gjchc73ae1r1g-a.oregon-postgres.render.com",
+        port="5432"
+    )
+    cur = conn.cursor()
 
-# ✅ Configuração da conexão PostgreSQL
-DATABASE_URL = "postgresql+psycopg2://postgresadmin:jAloy0oZD2Aks1zMjCgDDilQExPLXKCg@dpg-d0khna8gjchc73ae1r1g-a.oregon-postgres.render.com:5432/general_rtxt"
-engine = create_engine(DATABASE_URL)
+    sql = """
+        INSERT INTO bronze.vendas (
+            id_produto, preco, quantidade, data_venda,
+            id_cliente, id_loja, id_vendedor,
+            meio_pagamento, parcelamento
+        )
+        VALUES %s
+    """
 
-@app.post("/gerar_vendas")
-def gerar_e_inserir_vendas():
-    np.random.seed()  # dados diferentes a cada execução
-    TOTAL_LINHAS = 50
+    execute_values(cur, sql, dados)
+    conn.commit()
+    cur.close()
+    conn.close()
 
-    # Tamanho de vendas entre 1 e 8
-    sale_sizes = np.random.randint(1, 9, size=TOTAL_LINHAS)
-    sale_ids = np.arange(1, TOTAL_LINHAS + 1)
+    return {"status": "sucesso", "registros_inseridos": n}
 
-    # Colunas estáticas
-    id_produto = np.random.randint(1, 301, size=TOTAL_LINHAS)
-    id_cliente = np.random.randint(1, 451, size=TOTAL_LINHAS)
-    id_vendedor = np.random.randint(1, 121, size=TOTAL_LINHAS)
-    id_loja = np.random.randint(1, 16, size=TOTAL_LINHAS)
-
-    # Datas de venda — últimos 30 dias
-    start = pd.Timestamp.now() - pd.Timedelta(days=30)
-    end = pd.Timestamp.now()
-    dias = (end - start).days
-    offsets = np.random.randint(0, dias + 1, size=TOTAL_LINHAS)
-    data_venda = start + pd.to_timedelta(offsets, unit='D')
-
-    anos = data_venda.year.values
-    base_price = np.random.uniform(10, 780, size=TOTAL_LINHAS)
-    preco = np.round(base_price * (1 + 0.02 * (anos - 2018)), 2)
-
-    mu = 3 + 0.1 * (anos - 2018)
-    q = np.random.normal(loc=mu, scale=1.5, size=TOTAL_LINHAS)
-    quantidade = np.clip(np.round(q), 1, 7).astype(int)
-
-    meios = ['dinheiro', 'cartao_debito', 'cartao_credito']
-    probs = [0.5, 0.3, 0.2]
-    meio_pagamento = np.random.choice(meios, size=TOTAL_LINHAS, p=probs)
-
-    line_total = preco * quantidade
-    totals_por_linha = line_total
-
-    parcelamento = np.zeros(TOTAL_LINHAS, dtype=int)
-    mask_credit = meio_pagamento == 'cartao_credito'
-    parcelamento[mask_credit] = 1
-    big = mask_credit & (totals_por_linha > 1000)
-    parcelamento[big] = np.random.randint(1, 4, size=big.sum())
-
-    df = pd.DataFrame({
-        'id_venda': sale_ids,
-        'id_produto': id_produto,
-        'preco': preco,
-        'quantidade': quantidade,
-        'data_venda': data_venda.dt.strftime('%Y-%m-%d'),
-        'id_cliente': id_cliente,
-        'id_loja': id_loja,
-        'id_vendedor': id_vendedor,
-        'meio_pagamento': meio_pagamento,
-        'parcelamento': parcelamento
-    })
-
-    # ✅ Inserção no PostgreSQL
-    try:
-        df.to_sql("vendas", engine, schema="bronze", if_exists="append", index=False)
-        return {"message": f"{TOTAL_LINHAS} registros inseridos com sucesso na tabela bronze.vendas."}
-    except Exception as e:
-        return {"error": str(e)}
-eco': preco,
-        'quantidade': quantidade,
-        'data_venda': data_venda.dt.strftime('%Y-%m-%d'),
-        'id_cliente': id_cliente,
-        'id_loja': id_loja,
-        'id_vendedor': id_vendedor,
-        'meio_pagamento': meio_pagamento,
-        'parcelamento': parcelamento
-    })
-
-    # ✅ Inserção no PostgreSQL
-    try:
-        df.to_sql("vendas", engine, schema="bronze", if_exists="append", index=False)
-        return {"message": f"{TOTAL_LINHAS} registros inseridos com sucesso na tabela bronze.vendas."}
-    except Exception as e:
-        return {"error": str(e)}
+# Endpoint POST para gerar dados
+@app.post("/gerar-vendas")
+def gerar_vendas_endpoint():
+    resultado = gerar_e_inserir_vendas()
+    return resultado
