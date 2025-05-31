@@ -76,3 +76,315 @@ Traceback (most recent call last):
 airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
 [2025-05-31T19:31:19.264-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
 [2025-05-31T19:31:19.278-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py took 0.037 seconds
+[2025-05-31T19:41:38.239-0300] {processor.py:161} INFO - Started process (PID=12403) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:41:38.244-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py for tasks to queue
+[2025-05-31T19:41:38.245-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:41:38.245-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:41:38.258-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:41:38.256-0300] {dagbag.py:348} ERROR - Failed to import: /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py", line 125, in <module>
+    random_choice_venv = branching_virtualenv(choices=options)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/base.py", line 366, in __call__
+    op = self.operator_class(
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/python.py", line 52, in __init__
+    super().__init__(
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/base.py", line 233, in __init__
+    super().__init__(task_id=task_id, **kwargs_to_upstream, **kwargs)
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-31T19:41:38.258-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:41:38.272-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py took 0.036 seconds
+[2025-05-31T19:42:34.982-0300] {processor.py:161} INFO - Started process (PID=12746) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:42:34.987-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py for tasks to queue
+[2025-05-31T19:42:34.988-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:42:34.988-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:42:35.001-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:42:34.999-0300] {dagbag.py:348} ERROR - Failed to import: /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py", line 125, in <module>
+    random_choice_venv = branching_virtualenv(choices=options)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/base.py", line 366, in __call__
+    op = self.operator_class(
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/python.py", line 52, in __init__
+    super().__init__(
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/base.py", line 233, in __init__
+    super().__init__(task_id=task_id, **kwargs_to_upstream, **kwargs)
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-31T19:42:35.002-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:42:35.015-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py took 0.036 seconds
+[2025-05-31T19:43:34.228-0300] {processor.py:161} INFO - Started process (PID=13244) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:43:34.233-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py for tasks to queue
+[2025-05-31T19:43:34.234-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:43:34.234-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:43:34.248-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:43:34.245-0300] {dagbag.py:348} ERROR - Failed to import: /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py", line 125, in <module>
+    random_choice_venv = branching_virtualenv(choices=options)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/base.py", line 366, in __call__
+    op = self.operator_class(
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/python.py", line 52, in __init__
+    super().__init__(
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/base.py", line 233, in __init__
+    super().__init__(task_id=task_id, **kwargs_to_upstream, **kwargs)
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-31T19:43:34.249-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:43:34.265-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py took 0.040 seconds
+[2025-05-31T19:44:39.629-0300] {processor.py:161} INFO - Started process (PID=13593) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:44:39.635-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py for tasks to queue
+[2025-05-31T19:44:39.636-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:44:39.635-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:44:39.649-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:44:39.647-0300] {dagbag.py:348} ERROR - Failed to import: /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py", line 125, in <module>
+    random_choice_venv = branching_virtualenv(choices=options)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/base.py", line 366, in __call__
+    op = self.operator_class(
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/python.py", line 52, in __init__
+    super().__init__(
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/base.py", line 233, in __init__
+    super().__init__(task_id=task_id, **kwargs_to_upstream, **kwargs)
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-31T19:44:39.649-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:44:39.664-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py took 0.037 seconds
+[2025-05-31T19:45:31.008-0300] {processor.py:161} INFO - Started process (PID=13847) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:45:31.013-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py for tasks to queue
+[2025-05-31T19:45:31.014-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:45:31.013-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:45:31.026-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:45:31.024-0300] {dagbag.py:348} ERROR - Failed to import: /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py", line 125, in <module>
+    random_choice_venv = branching_virtualenv(choices=options)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/base.py", line 366, in __call__
+    op = self.operator_class(
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/python.py", line 52, in __init__
+    super().__init__(
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/base.py", line 233, in __init__
+    super().__init__(task_id=task_id, **kwargs_to_upstream, **kwargs)
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-31T19:45:31.027-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:45:31.042-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py took 0.036 seconds
+[2025-05-31T19:46:28.001-0300] {processor.py:161} INFO - Started process (PID=14130) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:46:28.006-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py for tasks to queue
+[2025-05-31T19:46:28.007-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:46:28.007-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:46:28.020-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:46:28.018-0300] {dagbag.py:348} ERROR - Failed to import: /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py", line 125, in <module>
+    random_choice_venv = branching_virtualenv(choices=options)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/base.py", line 366, in __call__
+    op = self.operator_class(
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/python.py", line 52, in __init__
+    super().__init__(
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/base.py", line 233, in __init__
+    super().__init__(task_id=task_id, **kwargs_to_upstream, **kwargs)
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-31T19:46:28.021-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:46:28.035-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py took 0.036 seconds
+[2025-05-31T19:47:27.115-0300] {processor.py:161} INFO - Started process (PID=14362) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:47:27.121-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py for tasks to queue
+[2025-05-31T19:47:27.122-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:47:27.121-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:47:27.135-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:47:27.133-0300] {dagbag.py:348} ERROR - Failed to import: /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py", line 125, in <module>
+    random_choice_venv = branching_virtualenv(choices=options)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/base.py", line 366, in __call__
+    op = self.operator_class(
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/python.py", line 52, in __init__
+    super().__init__(
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/base.py", line 233, in __init__
+    super().__init__(task_id=task_id, **kwargs_to_upstream, **kwargs)
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-31T19:47:27.136-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:47:27.151-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py took 0.038 seconds
+[2025-05-31T19:48:37.043-0300] {processor.py:161} INFO - Started process (PID=14788) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:48:37.048-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py for tasks to queue
+[2025-05-31T19:48:37.049-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:48:37.048-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:48:37.061-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:48:37.060-0300] {dagbag.py:348} ERROR - Failed to import: /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py", line 125, in <module>
+    random_choice_venv = branching_virtualenv(choices=options)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/base.py", line 366, in __call__
+    op = self.operator_class(
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/python.py", line 52, in __init__
+    super().__init__(
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/decorators/base.py", line 233, in __init__
+    super().__init__(task_id=task_id, **kwargs_to_upstream, **kwargs)
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-31T19:48:37.062-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2025-05-31T19:48:37.077-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_operator_decorator.py took 0.038 seconds

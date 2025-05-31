@@ -16,3 +16,52 @@
 [2025-05-31T19:31:36.311-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:31:36.311-0300] {dag.py:3036} INFO - Sync 1 DAGs
 [2025-05-31T19:31:36.325-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:31:36.325-0300] {dag.py:3823} INFO - Setting next_dagrun for chamar_api_vendas to 2025-05-31 22:30:00+00:00, run_after=2025-05-31 22:31:00+00:00
 [2025-05-31T19:31:36.345-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py took 0.059 seconds
+[2025-05-31T19:41:47.482-0300] {processor.py:161} INFO - Started process (PID=12413) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:41:47.487-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py for tasks to queue
+[2025-05-31T19:41:47.488-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:41:47.488-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:41:47.495-0300] {processor.py:840} INFO - DAG(s) 'chamar_api_vendas' retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:41:47.558-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:41:47.558-0300] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-31T19:41:47.570-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:41:47.570-0300] {dag.py:3823} INFO - Setting next_dagrun for chamar_api_vendas to 2025-05-31 22:41:00+00:00, run_after=2025-05-31 22:42:00+00:00
+[2025-05-31T19:41:47.588-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py took 0.108 seconds
+[2025-05-31T19:43:00.247-0300] {processor.py:161} INFO - Started process (PID=12870) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:43:00.252-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py for tasks to queue
+[2025-05-31T19:43:00.253-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:43:00.252-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:43:00.260-0300] {processor.py:840} INFO - DAG(s) 'chamar_api_vendas' retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:43:00.270-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:43:00.270-0300] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-31T19:43:00.285-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:43:00.285-0300] {dag.py:3823} INFO - Setting next_dagrun for chamar_api_vendas to 2025-05-31 22:42:00+00:00, run_after=2025-05-31 22:43:00+00:00
+[2025-05-31T19:43:00.302-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py took 0.058 seconds
+[2025-05-31T19:43:57.676-0300] {processor.py:161} INFO - Started process (PID=13317) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:43:57.681-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py for tasks to queue
+[2025-05-31T19:43:57.682-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:43:57.682-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:43:57.689-0300] {processor.py:840} INFO - DAG(s) 'chamar_api_vendas' retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:43:57.700-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:43:57.700-0300] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-31T19:43:57.715-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:43:57.714-0300] {dag.py:3823} INFO - Setting next_dagrun for chamar_api_vendas to 2025-05-31 22:43:00+00:00, run_after=2025-05-31 22:44:00+00:00
+[2025-05-31T19:43:57.731-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py took 0.058 seconds
+[2025-05-31T19:45:08.866-0300] {processor.py:161} INFO - Started process (PID=13738) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:45:08.871-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py for tasks to queue
+[2025-05-31T19:45:08.872-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:45:08.871-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:45:08.878-0300] {processor.py:840} INFO - DAG(s) 'chamar_api_vendas' retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:45:08.889-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:45:08.889-0300] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-31T19:45:08.904-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:45:08.903-0300] {dag.py:3823} INFO - Setting next_dagrun for chamar_api_vendas to 2025-05-31 22:45:00+00:00, run_after=2025-05-31 22:46:00+00:00
+[2025-05-31T19:45:08.920-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py took 0.056 seconds
+[2025-05-31T19:46:08.773-0300] {processor.py:161} INFO - Started process (PID=14013) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:46:08.774-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py for tasks to queue
+[2025-05-31T19:46:08.775-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:46:08.774-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:46:08.782-0300] {processor.py:840} INFO - DAG(s) 'chamar_api_vendas' retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:46:08.793-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:46:08.793-0300] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-31T19:46:08.809-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:46:08.808-0300] {dag.py:3823} INFO - Setting next_dagrun for chamar_api_vendas to 2025-05-31 22:46:00+00:00, run_after=2025-05-31 22:47:00+00:00
+[2025-05-31T19:46:08.827-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py took 0.057 seconds
+[2025-05-31T19:47:08.439-0300] {processor.py:161} INFO - Started process (PID=14265) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:47:08.444-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py for tasks to queue
+[2025-05-31T19:47:08.445-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:47:08.445-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:47:08.452-0300] {processor.py:840} INFO - DAG(s) 'chamar_api_vendas' retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:47:08.463-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:47:08.463-0300] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-31T19:47:08.478-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:47:08.478-0300] {dag.py:3823} INFO - Setting next_dagrun for chamar_api_vendas to 2025-05-31 22:47:00+00:00, run_after=2025-05-31 22:48:00+00:00
+[2025-05-31T19:47:08.493-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py took 0.057 seconds
+[2025-05-31T19:48:07.995-0300] {processor.py:161} INFO - Started process (PID=14520) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:48:08.000-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py for tasks to queue
+[2025-05-31T19:48:08.001-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:48:08.001-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:48:08.009-0300] {processor.py:840} INFO - DAG(s) 'chamar_api_vendas' retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py
+[2025-05-31T19:48:08.129-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:48:08.128-0300] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-31T19:48:08.149-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:48:08.149-0300] {dag.py:3823} INFO - Setting next_dagrun for chamar_api_vendas to 2025-05-31 22:48:00+00:00, run_after=2025-05-31 22:49:00+00:00
+[2025-05-31T19:48:08.187-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/airflow/dags/chamar_api_vendas.py took 0.194 seconds
