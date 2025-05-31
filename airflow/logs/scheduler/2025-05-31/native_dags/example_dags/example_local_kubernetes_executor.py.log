@@ -229,3 +229,630 @@ ModuleNotFoundError: No module named 'kubernetes'
 [2025-05-31T19:59:37.902-0300] {logging_mixin.py:188} INFO - [2025-05-31T19:59:37.902-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
 [2025-05-31T19:59:37.903-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
 [2025-05-31T19:59:37.911-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:00:38.741-0300] {processor.py:161} INFO - Started process (PID=17875) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:00:38.747-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:00:38.747-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:00:38.747-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:00:38.750-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:00:38.749-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:00:38.750-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:00:38.750-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:00:38.750-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:00:38.758-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.019 seconds
+[2025-05-31T20:01:40.362-0300] {processor.py:161} INFO - Started process (PID=18252) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:01:40.367-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:01:40.368-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:01:40.368-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:01:40.371-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:01:40.370-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:01:40.371-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:01:40.371-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:01:40.371-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:01:40.379-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.019 seconds
+[2025-05-31T20:02:41.783-0300] {processor.py:161} INFO - Started process (PID=18458) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:02:41.789-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:02:41.790-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:02:41.790-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:02:41.793-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:02:41.792-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:02:41.793-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:02:41.793-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:02:41.793-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:02:41.801-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.021 seconds
+[2025-05-31T20:03:44.658-0300] {processor.py:161} INFO - Started process (PID=18632) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:03:44.659-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:03:44.660-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:03:44.659-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:03:44.662-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:03:44.662-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:03:44.663-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:03:44.663-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:03:44.663-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:03:44.671-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.016 seconds
+[2025-05-31T20:04:47.793-0300] {processor.py:161} INFO - Started process (PID=18822) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:04:47.798-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:04:47.799-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:04:47.799-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:04:47.802-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:04:47.801-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:04:47.802-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:04:47.802-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:04:47.802-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:04:47.810-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:05:48.291-0300] {processor.py:161} INFO - Started process (PID=19030) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:05:48.297-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:05:48.298-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:05:48.297-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:05:48.301-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:05:48.300-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:05:48.301-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:05:48.301-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:05:48.301-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:05:48.309-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:06:49.629-0300] {processor.py:161} INFO - Started process (PID=19291) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:06:49.634-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:06:49.635-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:06:49.635-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:06:49.638-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:06:49.637-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:06:49.638-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:06:49.638-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:06:49.638-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:06:49.646-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:07:51.457-0300] {processor.py:161} INFO - Started process (PID=19485) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:07:51.462-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:07:51.463-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:07:51.463-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:07:51.466-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:07:51.465-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:07:51.466-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:07:51.466-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:07:51.466-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:07:51.475-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:08:51.136-0300] {processor.py:161} INFO - Started process (PID=19656) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:08:51.141-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:08:51.142-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:08:51.141-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:08:51.144-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:08:51.144-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:08:51.144-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:08:51.144-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:08:51.145-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:08:51.153-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.019 seconds
+[2025-05-31T20:09:47.196-0300] {processor.py:161} INFO - Started process (PID=19824) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:09:47.197-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:09:47.198-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:09:47.198-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:09:47.201-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:09:47.200-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:09:47.201-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:09:47.201-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:09:47.201-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:09:47.210-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.016 seconds
+[2025-05-31T20:10:49.291-0300] {processor.py:161} INFO - Started process (PID=20019) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:10:49.296-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:10:49.297-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:10:49.297-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:10:49.300-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:10:49.300-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:10:49.300-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:10:49.300-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:10:49.300-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:10:49.309-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:11:51.699-0300] {processor.py:161} INFO - Started process (PID=20190) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:11:51.704-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:11:51.705-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:11:51.705-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:11:51.708-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:11:51.707-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:11:51.708-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:11:51.708-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:11:51.708-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:11:51.716-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:12:52.147-0300] {processor.py:161} INFO - Started process (PID=20367) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:12:52.153-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:12:52.153-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:12:52.153-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:12:52.156-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:12:52.155-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:12:52.156-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:12:52.156-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:12:52.156-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:12:52.165-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:13:52.308-0300] {processor.py:161} INFO - Started process (PID=20523) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:13:52.313-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:13:52.314-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:13:52.314-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:13:52.317-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:13:52.316-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:13:52.317-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:13:52.317-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:13:52.317-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:13:52.326-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:14:51.322-0300] {processor.py:161} INFO - Started process (PID=20719) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:14:51.328-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:14:51.328-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:14:51.328-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:14:51.331-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:14:51.330-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:14:51.331-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:14:51.331-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:14:51.331-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:14:51.339-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.019 seconds
+[2025-05-31T20:15:46.337-0300] {processor.py:161} INFO - Started process (PID=20905) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:15:46.342-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:15:46.344-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:15:46.343-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:15:46.346-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:15:46.346-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:15:46.347-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:15:46.347-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:15:46.347-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:15:46.355-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:16:48.645-0300] {processor.py:161} INFO - Started process (PID=21451) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:16:48.650-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:16:48.651-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:16:48.651-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:16:48.654-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:16:48.654-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:16:48.654-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:16:48.654-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:16:48.655-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:16:48.664-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.021 seconds
+[2025-05-31T20:17:52.453-0300] {processor.py:161} INFO - Started process (PID=21671) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:17:52.458-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:17:52.460-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:17:52.459-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:17:52.463-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:17:52.462-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:17:52.463-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:17:52.463-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:17:52.463-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:17:52.472-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.021 seconds
+[2025-05-31T20:18:51.517-0300] {processor.py:161} INFO - Started process (PID=21845) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:18:51.522-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:18:51.523-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:18:51.523-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:18:51.526-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:18:51.525-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:18:51.526-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:18:51.526-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:18:51.526-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:18:51.535-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:19:41.358-0300] {processor.py:161} INFO - Started process (PID=21991) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:19:41.363-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:19:41.364-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:19:41.363-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:19:41.367-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:19:41.366-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:19:41.367-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:19:41.367-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:19:41.367-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:19:41.375-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:20:47.354-0300] {processor.py:161} INFO - Started process (PID=22248) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:20:47.359-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:20:47.360-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:20:47.359-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:20:47.363-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:20:47.362-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:20:47.363-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:20:47.363-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:20:47.363-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:20:47.371-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:21:47.407-0300] {processor.py:161} INFO - Started process (PID=22483) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:21:47.412-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:21:47.413-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:21:47.413-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:21:47.416-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:21:47.416-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:21:47.417-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:21:47.417-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:21:47.417-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:21:47.425-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.021 seconds
+[2025-05-31T20:22:47.910-0300] {processor.py:161} INFO - Started process (PID=22728) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:22:47.914-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:22:47.915-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:22:47.915-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:22:47.918-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:22:47.917-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:22:47.918-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:22:47.918-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:22:47.918-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:22:47.926-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.019 seconds
+[2025-05-31T20:23:48.928-0300] {processor.py:161} INFO - Started process (PID=22923) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:23:48.933-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:23:48.935-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:23:48.934-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:23:48.937-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:23:48.937-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:23:48.938-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:23:48.937-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:23:48.938-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:23:48.946-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.021 seconds
+[2025-05-31T20:24:47.478-0300] {processor.py:161} INFO - Started process (PID=23186) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:24:47.483-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:24:47.484-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:24:47.484-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:24:47.488-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:24:47.487-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:24:47.488-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:24:47.488-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:24:47.488-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:24:47.496-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.021 seconds
+[2025-05-31T20:25:47.566-0300] {processor.py:161} INFO - Started process (PID=23428) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:25:47.571-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:25:47.573-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:25:47.572-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:25:47.576-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:25:47.575-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:25:47.576-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:25:47.576-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:25:47.576-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:25:47.585-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.021 seconds
+[2025-05-31T20:26:49.314-0300] {processor.py:161} INFO - Started process (PID=23621) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:26:49.320-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:26:49.321-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:26:49.320-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:26:49.324-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:26:49.323-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:26:49.324-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:26:49.324-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:26:49.324-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:26:49.332-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:27:50.971-0300] {processor.py:161} INFO - Started process (PID=23934) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:27:50.976-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:27:50.976-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:27:50.976-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:27:50.979-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:27:50.978-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:27:50.980-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:27:50.979-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:27:50.980-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:27:50.988-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:28:56.489-0300] {processor.py:161} INFO - Started process (PID=24096) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:28:56.494-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:28:56.495-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:28:56.494-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:28:56.498-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:28:56.497-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:28:56.498-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:28:56.498-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:28:56.498-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:28:56.507-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:30:00.996-0300] {processor.py:161} INFO - Started process (PID=24355) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:30:01.001-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:30:01.002-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:30:01.002-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:30:01.005-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:30:01.005-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:30:01.005-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:30:01.005-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:30:01.006-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:30:01.015-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.022 seconds
+[2025-05-31T20:30:47.831-0300] {processor.py:161} INFO - Started process (PID=24497) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:30:47.836-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:30:47.837-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:30:47.837-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:30:47.840-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:30:47.839-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:30:47.840-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:30:47.840-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:30:47.840-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:30:47.848-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:31:49.661-0300] {processor.py:161} INFO - Started process (PID=24690) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:31:49.666-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:31:49.667-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:31:49.667-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:31:49.670-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:31:49.669-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:31:49.670-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:31:49.670-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:31:49.670-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:31:49.679-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:32:49.290-0300] {processor.py:161} INFO - Started process (PID=24880) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:32:49.295-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:32:49.297-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:32:49.296-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:32:49.299-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:32:49.299-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:32:49.300-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:32:49.299-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:32:49.300-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:32:49.309-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.022 seconds
+[2025-05-31T20:33:52.458-0300] {processor.py:161} INFO - Started process (PID=25038) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:33:52.463-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:33:52.464-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:33:52.463-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:33:52.466-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:33:52.466-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:33:52.467-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:33:52.467-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:33:52.467-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:33:52.475-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:34:57.149-0300] {processor.py:161} INFO - Started process (PID=25300) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:34:57.154-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:34:57.155-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:34:57.155-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:34:57.158-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:34:57.158-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:34:57.158-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:34:57.158-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:34:57.158-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:34:57.167-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:35:54.286-0300] {processor.py:161} INFO - Started process (PID=25489) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:35:54.291-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:35:54.293-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:35:54.292-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:35:54.295-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:35:54.295-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:35:54.296-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:35:54.296-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:35:54.296-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:35:54.304-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:36:54.834-0300] {processor.py:161} INFO - Started process (PID=25769) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:36:54.835-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:36:54.836-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:36:54.836-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:36:54.839-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:36:54.838-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:36:54.839-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:36:54.839-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:36:54.840-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:36:54.848-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.016 seconds
+[2025-05-31T20:37:58.336-0300] {processor.py:161} INFO - Started process (PID=26147) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:37:58.341-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:37:58.343-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:37:58.342-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:37:58.345-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:37:58.345-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:37:58.346-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:37:58.346-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:37:58.346-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:37:58.354-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.021 seconds
+[2025-05-31T20:38:46.285-0300] {processor.py:161} INFO - Started process (PID=26410) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:38:46.290-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:38:46.292-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:38:46.291-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:38:46.295-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:38:46.294-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:38:46.295-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:38:46.295-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:38:46.295-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:38:46.305-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.022 seconds
+[2025-05-31T20:39:52.778-0300] {processor.py:161} INFO - Started process (PID=26783) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:39:52.783-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:39:52.784-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:39:52.783-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:39:52.787-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:39:52.787-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:39:52.787-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:39:52.787-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:39:52.788-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:39:52.797-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.022 seconds
+[2025-05-31T20:40:57.251-0300] {processor.py:161} INFO - Started process (PID=27078) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:40:57.256-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:40:57.257-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:40:57.257-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:40:57.260-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:40:57.260-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:40:57.260-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:40:57.260-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:40:57.261-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:40:57.271-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.022 seconds
+[2025-05-31T20:41:44.107-0300] {processor.py:161} INFO - Started process (PID=27279) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:41:44.108-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:41:44.109-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:41:44.108-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:41:44.111-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:41:44.111-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:41:44.111-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:41:44.111-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:41:44.112-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:41:44.120-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.016 seconds
+[2025-05-31T20:42:47.193-0300] {processor.py:161} INFO - Started process (PID=27588) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:42:47.194-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:42:47.194-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:42:47.194-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:42:47.197-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:42:47.196-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:42:47.197-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:42:47.197-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:42:47.197-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:42:47.206-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.016 seconds
+[2025-05-31T20:43:47.388-0300] {processor.py:161} INFO - Started process (PID=27834) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:43:47.393-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:43:47.394-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:43:47.394-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:43:47.397-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:43:47.396-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:43:47.397-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:43:47.397-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:43:47.397-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:43:47.406-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:44:50.547-0300] {processor.py:161} INFO - Started process (PID=28088) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:44:50.552-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:44:50.553-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:44:50.553-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:44:50.556-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:44:50.555-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:44:50.556-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:44:50.556-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:44:50.556-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:44:50.564-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:45:53.852-0300] {processor.py:161} INFO - Started process (PID=28439) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:45:53.857-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:45:53.858-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:45:53.857-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:45:53.861-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:45:53.860-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:45:53.861-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:45:53.861-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:45:53.861-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:45:53.869-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:46:42.887-0300] {processor.py:161} INFO - Started process (PID=28630) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:46:42.888-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:46:42.889-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:46:42.888-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:46:42.891-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:46:42.891-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:46:42.892-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:46:42.892-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:46:42.892-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:46:42.900-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.016 seconds
+[2025-05-31T20:47:46.794-0300] {processor.py:161} INFO - Started process (PID=28881) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:47:46.799-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:47:46.800-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:47:46.800-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:47:46.803-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:47:46.802-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:47:46.803-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:47:46.803-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:47:46.803-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:47:46.811-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:48:49.608-0300] {processor.py:161} INFO - Started process (PID=29143) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:48:49.609-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:48:49.610-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:48:49.609-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:48:49.612-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:48:49.612-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:48:49.612-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:48:49.612-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:48:49.613-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:48:49.621-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.016 seconds
+[2025-05-31T20:49:48.194-0300] {processor.py:161} INFO - Started process (PID=29398) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:49:48.199-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:49:48.200-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:49:48.200-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:49:48.203-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:49:48.202-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:49:48.203-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:49:48.203-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:49:48.203-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:49:48.212-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.021 seconds
+[2025-05-31T20:50:49.005-0300] {processor.py:161} INFO - Started process (PID=29670) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:50:49.010-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:50:49.012-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:50:49.011-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:50:49.015-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:50:49.014-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:50:49.015-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:50:49.015-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:50:49.015-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:50:49.025-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.022 seconds
+[2025-05-31T20:51:53.381-0300] {processor.py:161} INFO - Started process (PID=30093) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:51:53.382-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:51:53.382-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:51:53.382-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:51:53.385-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:51:53.385-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:51:53.385-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:51:53.385-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:51:53.386-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:51:53.394-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.016 seconds
+[2025-05-31T20:52:57.353-0300] {processor.py:161} INFO - Started process (PID=30331) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:52:57.354-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:52:57.354-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:52:57.354-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:52:57.357-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:52:57.357-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:52:57.357-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:52:57.357-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:52:57.358-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:52:57.366-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.017 seconds
+[2025-05-31T20:53:47.078-0300] {processor.py:161} INFO - Started process (PID=30549) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:53:47.079-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:53:47.080-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:53:47.079-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:53:47.082-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:53:47.082-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:53:47.083-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:53:47.082-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:53:47.083-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:53:47.091-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.016 seconds
+[2025-05-31T20:54:46.971-0300] {processor.py:161} INFO - Started process (PID=30916) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:54:46.976-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:54:46.977-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:54:46.977-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:54:46.980-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:54:46.979-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:54:46.980-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:54:46.980-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:54:46.980-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:54:46.989-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.020 seconds
+[2025-05-31T20:55:46.253-0300] {processor.py:161} INFO - Started process (PID=31179) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:55:46.258-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:55:46.259-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:55:46.259-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:55:46.262-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:55:46.261-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:55:46.262-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:55:46.262-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:55:46.262-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:55:46.272-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.022 seconds
+[2025-05-31T20:56:47.837-0300] {processor.py:161} INFO - Started process (PID=31475) to work on /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:56:47.842-0300] {processor.py:830} INFO - Processing file /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2025-05-31T20:56:47.843-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:56:47.842-0300] {dagbag.py:538} INFO - Filling up the DagBag from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:56:47.845-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:56:47.845-0300] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-05-31T20:56:47.846-0300] {logging_mixin.py:188} INFO - [2025-05-31T20:56:47.846-0300] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-05-31T20:56:47.846-0300] {processor.py:842} WARNING - No viable dags retrieved from /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2025-05-31T20:56:47.854-0300] {processor.py:183} INFO - Processing /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.019 seconds

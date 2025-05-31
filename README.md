@@ -3,6 +3,13 @@
 
 Em parceria com a **3D Universe Creators** — sorteio de logos em impressão 3D de Power BI e Python
 
+## 💡 Recomendado para Windows
+Se estiver usando Windows, o melhor cenário é:
+
+Usar o WSL2 (Subsistema Linux do Windows) com uma distro como Ubuntu.
+
+Você roda tudo como se estivesse em um Linux real, incluindo Docker, dbt, Airflow, PostgreSQL e VS Code com integração total.
+
 ---
 
 ## Visão Geral
@@ -222,8 +229,18 @@ vendas_dw:
       schema: bronze
       threads: 4
 ```
+bash
+```
+mkdir -p ~/.dbt
+code ~/.dbt/profiles.yml
+```
 
 ---
+
+### testar a conexão:
+```
+dbt debug --project-dir vendas_dw
+```
 
 ### 4. Registro de Tabelas de Origem
 

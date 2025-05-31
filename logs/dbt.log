@@ -28,3 +28,165 @@ Happy modeling!
 [0m10:56:48.950839 [debug] [MainThread]: Command `dbt init` succeeded at 10:56:48.950745 after 24.32 seconds
 [0m10:56:48.951132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c313760d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c31377190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7c312e0390>]}
 [0m10:56:48.951438 [debug] [MainThread]: Flushing usage events
+[0m20:38:57.715007 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d71d5d7d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d7205d890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d71db4950>]}
+
+
+============================== 20:38:57.718128 | dd8bd8ed-b51c-43b9-85ac-5c1309e0ba52 ==============================
+[0m20:38:57.718128 [info ] [MainThread]: Running with dbt=1.6.0
+[0m20:38:57.718593 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/walterg/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt init vendas_dw', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:38:57.719301 [debug] [MainThread]: Starter project path: /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/dbt/include/starter_project
+[0m20:38:57.722421 [info ] [MainThread]: 
+Your new dbt project "vendas_dw" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m20:38:57.722828 [info ] [MainThread]: Setting up your profile.
+[0m20:39:01.989299 [error] [MainThread]: Encountered an error:
+[Errno 13] Permission denied: '/home/walterg/.dbt/profiles.yml'
+[0m20:39:01.991440 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 87, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 72, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/dbt/cli/main.py", line 467, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/dbt/task/init.py", line 308, in run
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/dbt/task/init.py", line 189, in create_profile_from_target
+    self.create_profile_from_sample(adapter, profile_name)
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/dbt/task/init.py", line 96, in create_profile_from_sample
+    with open(profiles_filepath, "w") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/home/walterg/.dbt/profiles.yml'
+
+[0m20:39:01.992252 [debug] [MainThread]: Command `dbt init` failed at 20:39:01.992129 after 4.28 seconds
+[0m20:39:01.992614 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d720f29d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d71d11990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d71d11650>]}
+[0m20:39:01.992951 [debug] [MainThread]: Flushing usage events
+[0m20:51:45.325963 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f1a845d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f1a8446d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f1a845a50>]}
+
+
+============================== 20:51:45.328463 | 65f1f0ba-4438-49a4-86bf-64ad831c0462 ==============================
+[0m20:51:45.328463 [info ] [MainThread]: Running with dbt=1.6.0
+[0m20:51:45.329029 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': '/home/walterg/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m20:51:45.329488 [info ] [MainThread]: dbt version: 1.6.0
+[0m20:51:45.329856 [info ] [MainThread]: python version: 3.11.2
+[0m20:51:45.330239 [info ] [MainThread]: python path: /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/bin/python3
+[0m20:51:45.330576 [info ] [MainThread]: os info: Linux-6.10.7-policorp-amd64-x86_64-with-glibc2.36
+[0m20:51:45.368019 [info ] [MainThread]: Using profiles dir at /home/walterg/.dbt
+[0m20:51:45.368469 [info ] [MainThread]: Using profiles.yml file at /home/walterg/.dbt/profiles.yml
+[0m20:51:45.368835 [info ] [MainThread]: Using dbt_project.yml file at /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/dbt_project.yml
+[0m20:51:45.373352 [info ] [MainThread]: adapter type: postgres
+[0m20:51:45.374272 [info ] [MainThread]: adapter version: 1.6.0
+[0m20:51:45.375046 [info ] [MainThread]: Configuration:
+[0m20:51:45.375467 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:51:45.375903 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m20:51:45.376278 [info ] [MainThread]: Required dependencies:
+[0m20:51:45.376724 [debug] [MainThread]: Executing "git --help"
+[0m20:51:45.379051 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:51:45.380208 [debug] [MainThread]: STDERR: "b''"
+[0m20:51:45.380957 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:51:45.381217 [info ] [MainThread]: Connection:
+[0m20:51:45.381464 [info ] [MainThread]:   host: dpg-d0khna8gjchc73ae1r1g-a.oregon-postgres.render.com
+[0m20:51:45.381705 [info ] [MainThread]:   port: 5432
+[0m20:51:45.381936 [info ] [MainThread]:   user: postgresadmin
+[0m20:51:45.382203 [info ] [MainThread]:   database: general_rtxt
+[0m20:51:45.382455 [info ] [MainThread]:   schema: bronze
+[0m20:51:45.382706 [info ] [MainThread]:   connect_timeout: 10
+[0m20:51:45.382934 [info ] [MainThread]:   role: None
+[0m20:51:45.383249 [info ] [MainThread]:   search_path: None
+[0m20:51:45.383595 [info ] [MainThread]:   keepalives_idle: 0
+[0m20:51:45.383926 [info ] [MainThread]:   sslmode: None
+[0m20:51:45.384177 [info ] [MainThread]:   sslcert: None
+[0m20:51:45.384418 [info ] [MainThread]:   sslkey: None
+[0m20:51:45.384682 [info ] [MainThread]:   sslrootcert: None
+[0m20:51:45.384927 [info ] [MainThread]:   application_name: dbt
+[0m20:51:45.385165 [info ] [MainThread]:   retries: 1
+[0m20:51:45.385463 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m20:51:45.386047 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m20:51:45.386312 [debug] [MainThread]: Using postgres connection "debug"
+[0m20:51:45.386581 [debug] [MainThread]: On debug: select 1 as id
+[0m20:51:45.386827 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:51:46.890966 [debug] [MainThread]: SQL status: SELECT 1 in 2.0 seconds
+[0m20:51:46.891875 [debug] [MainThread]: On debug: Close
+[0m20:51:46.892343 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:51:46.892689 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:51:46.892951 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/dbt_project.yml> not found
+
+[0m20:51:46.893444 [debug] [MainThread]: Command `dbt debug` failed at 20:51:46.893333 after 1.57 seconds
+[0m20:51:46.893791 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:51:46.894078 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f1ab52790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f1cdb4290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f1f524a50>]}
+[0m20:51:46.894399 [debug] [MainThread]: Flushing usage events
+[0m20:52:59.369033 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f91d7ac4e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f91d5820f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f91d7ac4f90>]}
+
+
+============================== 20:52:59.371848 | 6c36d2f5-34e5-4ddb-85a4-a2823b81ecb8 ==============================
+[0m20:52:59.371848 [info ] [MainThread]: Running with dbt=1.6.0
+[0m20:52:59.372270 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/walterg/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:52:59.372672 [info ] [MainThread]: dbt version: 1.6.0
+[0m20:52:59.372947 [info ] [MainThread]: python version: 3.11.2
+[0m20:52:59.373223 [info ] [MainThread]: python path: /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/bin/python3
+[0m20:52:59.373500 [info ] [MainThread]: os info: Linux-6.10.7-policorp-amd64-x86_64-with-glibc2.36
+[0m20:52:59.407281 [info ] [MainThread]: Using profiles dir at /home/walterg/.dbt
+[0m20:52:59.407681 [info ] [MainThread]: Using profiles.yml file at /home/walterg/.dbt/profiles.yml
+[0m20:52:59.407948 [info ] [MainThread]: Using dbt_project.yml file at /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/dbt_project.yml
+[0m20:52:59.408380 [info ] [MainThread]: adapter type: postgres
+[0m20:52:59.408684 [info ] [MainThread]: adapter version: 1.6.0
+[0m20:52:59.408954 [info ] [MainThread]: Configuration:
+[0m20:52:59.409200 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:52:59.409456 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m20:52:59.409723 [info ] [MainThread]: Required dependencies:
+[0m20:52:59.409980 [debug] [MainThread]: Executing "git --help"
+[0m20:52:59.411884 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:52:59.412301 [debug] [MainThread]: STDERR: "b''"
+[0m20:52:59.412802 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:52:59.413307 [info ] [MainThread]: Connection:
+[0m20:52:59.413869 [info ] [MainThread]:   host: dpg-d0khna8gjchc73ae1r1g-a.oregon-postgres.render.com
+[0m20:52:59.414327 [info ] [MainThread]:   port: 5432
+[0m20:52:59.414584 [info ] [MainThread]:   user: postgresadmin
+[0m20:52:59.414818 [info ] [MainThread]:   database: general_rtxt
+[0m20:52:59.415050 [info ] [MainThread]:   schema: bronze
+[0m20:52:59.415295 [info ] [MainThread]:   connect_timeout: 10
+[0m20:52:59.415571 [info ] [MainThread]:   role: None
+[0m20:52:59.415817 [info ] [MainThread]:   search_path: None
+[0m20:52:59.416050 [info ] [MainThread]:   keepalives_idle: 0
+[0m20:52:59.416288 [info ] [MainThread]:   sslmode: None
+[0m20:52:59.416538 [info ] [MainThread]:   sslcert: None
+[0m20:52:59.416779 [info ] [MainThread]:   sslkey: None
+[0m20:52:59.417039 [info ] [MainThread]:   sslrootcert: None
+[0m20:52:59.417308 [info ] [MainThread]:   application_name: dbt
+[0m20:52:59.417621 [info ] [MainThread]:   retries: 1
+[0m20:52:59.417997 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m20:52:59.418583 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m20:52:59.418937 [debug] [MainThread]: Using postgres connection "debug"
+[0m20:52:59.419236 [debug] [MainThread]: On debug: select 1 as id
+[0m20:52:59.419529 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:53:00.826106 [debug] [MainThread]: SQL status: SELECT 1 in 1.0 seconds
+[0m20:53:00.827606 [debug] [MainThread]: On debug: Close
+[0m20:53:00.827977 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:53:00.828249 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:53:00.828516 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/dbt_project.yml> not found
+
+[0m20:53:00.829009 [debug] [MainThread]: Command `dbt debug` failed at 20:53:00.828907 after 1.47 seconds
+[0m20:53:00.829307 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:53:00.829601 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f91d5549c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f91d6e1e350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f91d50075d0>]}
+[0m20:53:00.829915 [debug] [MainThread]: Flushing usage events

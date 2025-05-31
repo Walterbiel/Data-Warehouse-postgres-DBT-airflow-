@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: seu_banco
+    schema: bronze
+    tables:
+      - name: vendas
+      - name: devolucoes
+      - name: produtos
+      - name: lojas
+      - name: vendedores
