@@ -153,3 +153,178 @@ docker compose --env-file .env up
 - O SQLite é usado aqui apenas para fins educacionais.
 
 ---
+
+# 📁 Estrutura das Tabelas na Camada Bronze
+
+As seguintes tabelas estão disponíveis no banco PostgreSQL, no schema `bronze`:
+
+- `vendas`: informações de vendas realizadas.
+- `devolucoes`: registros de devoluções de vendas.
+- `produtos`: catálogo de produtos com categoria e impostos.
+- `lojas`: dados cadastrais das lojas.
+- `vendedores`: cadastro de vendedores e datas importantes.
+
+---
+
+## 🔧 Configuração do dbt (Data Build Tool)
+
+Este projeto utiliza o **dbt** para organizar e transformar os dados da camada bronze até a gold. Abaixo estão os passos completos para configuração e execução:
+
+### 1. Inicialização do Projeto
+
+```bash
+dbt init vendas_dw
+```
+
+Siga os prompts e selecione o adaptador `Postgres`.
+
+---
+
+### 2. Estrutura Esperada do Projeto
+
+```text
+vendas_dw/
+├── dbt_project.yml
+├── models/
+│   ├── bronze/
+│   │   ├── vendas.sql
+│   │   ├── devolucoes.sql
+│   │   ├── produtos.sql
+│   │   ├── lojas.sql
+│   │   └── vendedores.sql
+│   ├── silver/
+│   │   ├── fct_vendas.sql
+│   │   ├── fct_devolucoes.sql
+│   │   └── dim_lojas.sql
+│   ├── gold/
+│   │   ├── indicadores_vendas.sql
+│   │   └── produtos_mais_devolvidos.sql
+│   └── _sources.yml
+```
+
+---
+
+### 3. Configuração do Profile
+
+Crie ou edite o arquivo `~/.dbt/profiles.yml`:
+
+```yaml
+vendas_dw:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: seu_usuario
+      password: sua_senha
+      port: 5432
+      dbname: seu_banco
+      schema: bronze
+      threads: 4
+```
+
+---
+
+### 4. Registro de Tabelas de Origem
+
+`models/_sources.yml`:
+
+```yaml
+version: 2
+
+sources:
+  - name: bronze
+    database: seu_banco
+    schema: bronze
+    tables:
+      - name: vendas
+      - name: devolucoes
+      - name: produtos
+      - name: lojas
+      - name: vendedores
+```
+
+---
+
+### 5. Exemplo de Modelo Bronze
+
+`models/bronze/vendas.sql`:
+
+```sql
+SELECT * FROM {{ source('bronze', 'vendas') }}
+```
+
+---
+
+### 6. Exemplo de Modelo Silver
+
+`models/silver/fct_vendas.sql`:
+
+```sql
+WITH vendas_clean AS (
+    SELECT
+        id_venda,
+        id_produto,
+        preco,
+        quantidade,
+        data_venda::date AS data_venda,
+        id_cliente,
+        id_loja,
+        id_vendedor,
+        meio_pagamento,
+        parcelamento
+    FROM {{ ref('vendas') }}
+)
+SELECT * FROM vendas_clean
+```
+
+---
+
+### 7. Exemplo de Modelo Gold
+
+`models/gold/indicadores_vendas.sql`:
+
+```sql
+SELECT
+    data_venda,
+    id_loja,
+    SUM(preco * quantidade) AS receita_total,
+    COUNT(DISTINCT id_venda) AS qtd_vendas
+FROM {{ ref('fct_vendas') }}
+GROUP BY data_venda, id_loja
+```
+
+---
+
+### 8. Executando o Projeto
+
+Para compilar e rodar os modelos:
+
+```bash
+dbt run
+```
+
+Para validar a conexão e estrutura:
+
+```bash
+dbt debug
+```
+
+---
+
+## 🎯 Objetivos da Live
+
+- Demonstrar como estruturar um DW do zero com dados transacionais.
+- Aplicar boas práticas de modelagem dimensional.
+- Apresentar o fluxo de camadas (bronze → silver → gold) com dbt.
+- Mostrar indicadores de negócio em SQL a partir da camada gold.
+
+---
+
+## 🧠 Autor
+
+**Walter Gonzaga**  
+Data Architect | Engenheiro de Dados | Mentor  
+[LinkedIn](https://www.linkedin.com/in/waltergonzaga)
+
+---
