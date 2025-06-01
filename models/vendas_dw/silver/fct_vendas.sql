@@ -1,3 +1,10 @@
+{{ 
+  config(
+    materialized = 'table',
+    schema       = 'gold'
+  ) 
+}}
+
 SELECT
     id_venda,
     id_produto,

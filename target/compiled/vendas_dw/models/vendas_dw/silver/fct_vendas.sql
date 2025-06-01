@@ -1,3 +1,5 @@
+
+
 SELECT
     id_venda,
     id_produto,

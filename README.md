@@ -229,7 +229,7 @@ vendas_dw:
       schema: bronze
       threads: 4
 ```
-bash
+bash (mover profile.yml)
 ```
 mkdir -p ~/.dbt
 code ~/.dbt/profiles.yml

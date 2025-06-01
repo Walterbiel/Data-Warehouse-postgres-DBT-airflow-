@@ -1,9 +1,16 @@
 
-  create view "general_rtxt"."bronze"."fct_vendas__dbt_tmp"
+  
     
+
+  create  table "general_rtxt"."bronze_gold"."fct_vendas__dbt_tmp"
+  
+  
+    as
+  
+  (
     
-  as (
-    SELECT
+
+SELECT
     id_venda,
     id_produto,
     preco,
@@ -16,3 +23,4 @@
     parcelamento
 FROM "general_rtxt"."bronze"."vendas"
   );
+  

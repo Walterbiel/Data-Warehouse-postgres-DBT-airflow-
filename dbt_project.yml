@@ -18,8 +18,11 @@ clean-targets:
 models:
   vendas_dw:
     bronze:
-      +materialized: table  
+      +materialized: table
+      +schema: bronze
     silver:
       +materialized: table
+      +schema: silver
     gold:
       +materialized: table
+      +schema: gold

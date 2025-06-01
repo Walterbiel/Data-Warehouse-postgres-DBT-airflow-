@@ -1,16 +1,41 @@
-import pandas as pd
-from sqlalchemy import create_engine
+import psycopg2
+import csv
 
-# Criação correta do engine com SQLAlchemy + psycopg2
-engine = create_engine(
-    "postgresql+psycopg2://postgresadmin:jAloy0oZD2Aks1zMjCgDDilQExPLXKCg@dpg-d0khna8gjchc73ae1r1g-a.oregon-postgres.render.com:5432/general_rtxt"
+# Conexão com o PostgreSQL
+conn = psycopg2.connect(
+    host="dpg-d0khna8gjchc73ae1r1g-a.oregon-postgres.render.com",
+    port="5432",
+    database="general_rtxt",
+    user="postgresadmin",
+    password="jAloy0oZD2Aks1zMjCgDDilQExPLXKCg"
 )
+cursor = conn.cursor()
 
-# === LEITURA DOS CSVs ===
-df_vendas = pd.read_csv("base_vendas_2M.csv")
+# Criação da tabela manualmente (ajuste os tipos se quiser)
+cursor.execute("""
+    DROP TABLE IF EXISTS bronze.vendas;
+    CREATE TABLE bronze.vendas (
+        id_venda INTEGER,
+        id_produto INTEGER,
+        preco FLOAT,
+        quantidade INTEGER,
+        data_venda TIMESTAMP,
+        id_cliente INTEGER,
+        id_loja INTEGER,
+        id_vendedor INTEGER,
+        meio_pagamento TEXT,
+        parcelamento INTEGER
+    );
+""")
+conn.commit()
 
+# Copiar os dados do CSV para a tabela
+with open("base_vendas_2M.csv", "r", encoding="utf-8") as f:
+    next(f)  # Pular cabeçalho
+    cursor.copy_expert("COPY bronze.vendas FROM STDIN WITH CSV", f)
 
-df_vendas.to_sql("vendas", engine, schema="bronze", if_exists="replace", index=False)
+conn.commit()
+cursor.close()
+conn.close()
 
-
-print("✅ Todas as tabelas foram carregadas com sucesso no schema 'bronze' do PostgreSQL!")
+print("✅ Dados inseridos com sucesso na tabela bronze.vendas")
