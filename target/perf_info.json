@@ -1,0 +1,51 @@
+{
+    "path_count": 97,
+    "parsed_path_count": 97,
+    "static_analysis_path_count": 2,
+    "static_analysis_parsed_path_count": 2,
+    "is_partial_parse_enabled": true,
+    "is_static_analysis_enabled": true,
+    "read_files_elapsed": 0.009620241000448004,
+    "load_macros_elapsed": 0.4221427489992493,
+    "parse_project_elapsed": 0.05008761899989622,
+    "patch_sources_elapsed": 0.0009383830001752358,
+    "process_manifest_elapsed": 0.012965343001269503,
+    "load_all_elapsed": 0.5114077140005975,
+    "projects": [
+        {
+            "project_name": "vendas_dw",
+            "elapsed": 0.04477502800000366,
+            "parsers": [
+                {
+                    "parser": "model",
+                    "elapsed": 0.02854902199942444,
+                    "parsed_path_count": 2
+                },
+                {
+                    "parser": "test",
+                    "elapsed": 0.013665638000020408,
+                    "parsed_path_count": 1
+                }
+            ],
+            "parsed_path_count": 3
+        },
+        {
+            "project_name": "dbt_postgres",
+            "elapsed": 0.0029132060008123517,
+            "parsers": [],
+            "parsed_path_count": 0
+        },
+        {
+            "project_name": "dbt",
+            "elapsed": 0.002298884999618167,
+            "parsers": [
+                {
+                    "parser": "doc",
+                    "elapsed": 0.00018633599938766565,
+                    "parsed_path_count": 1
+                }
+            ],
+            "parsed_path_count": 1
+        }
+    ]
+}

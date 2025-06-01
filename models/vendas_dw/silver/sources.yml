@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: bronze
-    database: seu_banco
+    database: general_rtxt
     schema: bronze
     tables:
       - name: vendas

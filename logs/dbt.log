@@ -190,3 +190,1636 @@ PermissionError: [Errno 13] Permission denied: '/home/walterg/.dbt/profiles.yml'
 [0m20:53:00.829307 [debug] [MainThread]: Connection 'debug' was properly closed.
 [0m20:53:00.829601 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f91d5549c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f91d6e1e350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f91d50075d0>]}
 [0m20:53:00.829915 [debug] [MainThread]: Flushing usage events
+[0m20:58:38.034188 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd35a7ead90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd35a76ea90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd35a731110>]}
+
+
+============================== 20:58:38.036633 | e1a27fc2-ef0e-42c4-8235-636708ee5390 ==============================
+[0m20:58:38.036633 [info ] [MainThread]: Running with dbt=1.6.0
+[0m20:58:38.037073 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/walterg/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:58:38.037492 [info ] [MainThread]: dbt version: 1.6.0
+[0m20:58:38.037781 [info ] [MainThread]: python version: 3.11.2
+[0m20:58:38.038062 [info ] [MainThread]: python path: /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/bin/python3
+[0m20:58:38.038313 [info ] [MainThread]: os info: Linux-6.10.7-policorp-amd64-x86_64-with-glibc2.36
+[0m20:58:38.072926 [info ] [MainThread]: Using profiles dir at /home/walterg/.dbt
+[0m20:58:38.073341 [info ] [MainThread]: Using profiles.yml file at /home/walterg/.dbt/profiles.yml
+[0m20:58:38.073617 [info ] [MainThread]: Using dbt_project.yml file at /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/dbt_project.yml
+[0m20:58:38.074031 [info ] [MainThread]: adapter type: postgres
+[0m20:58:38.074306 [info ] [MainThread]: adapter version: 1.6.0
+[0m20:58:38.074592 [info ] [MainThread]: Configuration:
+[0m20:58:38.074845 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:58:38.075100 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m20:58:38.075343 [info ] [MainThread]: Required dependencies:
+[0m20:58:38.075624 [debug] [MainThread]: Executing "git --help"
+[0m20:58:38.078222 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:58:38.078681 [debug] [MainThread]: STDERR: "b''"
+[0m20:58:38.078936 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:58:38.079188 [info ] [MainThread]: Connection:
+[0m20:58:38.079450 [info ] [MainThread]:   host: dpg-d0khna8gjchc73ae1r1g-a.oregon-postgres.render.com
+[0m20:58:38.079724 [info ] [MainThread]:   port: 5432
+[0m20:58:38.079952 [info ] [MainThread]:   user: postgresadmin
+[0m20:58:38.080182 [info ] [MainThread]:   database: general_rtxt
+[0m20:58:38.080412 [info ] [MainThread]:   schema: bronze
+[0m20:58:38.080661 [info ] [MainThread]:   connect_timeout: 10
+[0m20:58:38.080888 [info ] [MainThread]:   role: None
+[0m20:58:38.081113 [info ] [MainThread]:   search_path: None
+[0m20:58:38.081338 [info ] [MainThread]:   keepalives_idle: 0
+[0m20:58:38.081585 [info ] [MainThread]:   sslmode: None
+[0m20:58:38.081809 [info ] [MainThread]:   sslcert: None
+[0m20:58:38.082031 [info ] [MainThread]:   sslkey: None
+[0m20:58:38.082254 [info ] [MainThread]:   sslrootcert: None
+[0m20:58:38.082484 [info ] [MainThread]:   application_name: dbt
+[0m20:58:38.082723 [info ] [MainThread]:   retries: 1
+[0m20:58:38.082992 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m20:58:38.083458 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m20:58:38.083804 [debug] [MainThread]: Using postgres connection "debug"
+[0m20:58:38.084060 [debug] [MainThread]: On debug: select 1 as id
+[0m20:58:38.084309 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:58:39.692890 [debug] [MainThread]: SQL status: SELECT 1 in 2.0 seconds
+[0m20:58:39.694430 [debug] [MainThread]: On debug: Close
+[0m20:58:39.694857 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:58:39.695154 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:58:39.695405 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/dbt_project.yml> not found
+
+[0m20:58:39.695890 [debug] [MainThread]: Command `dbt debug` failed at 20:58:39.695806 after 1.67 seconds
+[0m20:58:39.696160 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:58:39.696418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd35a4a2b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd35a301410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd35a755310>]}
+[0m20:58:39.696735 [debug] [MainThread]: Flushing usage events
+[0m20:59:50.268446 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa57b656fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa57b32d250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa57dcbb550>]}
+
+
+============================== 20:59:50.270889 | 38f951c9-a450-421c-be95-700a06bec0b9 ==============================
+[0m20:59:50.270889 [info ] [MainThread]: Running with dbt=1.6.0
+[0m20:59:50.271320 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/walterg/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:59:50.271660 [info ] [MainThread]: dbt version: 1.6.0
+[0m20:59:50.271928 [info ] [MainThread]: python version: 3.11.2
+[0m20:59:50.272183 [info ] [MainThread]: python path: /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/bin/python3
+[0m20:59:50.272435 [info ] [MainThread]: os info: Linux-6.10.7-policorp-amd64-x86_64-with-glibc2.36
+[0m20:59:50.307016 [info ] [MainThread]: Using profiles dir at /home/walterg/.dbt
+[0m20:59:50.307430 [info ] [MainThread]: Using profiles.yml file at /home/walterg/.dbt/profiles.yml
+[0m20:59:50.307701 [info ] [MainThread]: Using dbt_project.yml file at /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/dbt_project.yml
+[0m20:59:50.308082 [info ] [MainThread]: adapter type: postgres
+[0m20:59:50.308328 [info ] [MainThread]: adapter version: 1.6.0
+[0m20:59:50.324032 [info ] [MainThread]: Configuration:
+[0m20:59:50.324423 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:59:50.324689 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:59:50.324928 [info ] [MainThread]: Required dependencies:
+[0m20:59:50.325187 [debug] [MainThread]: Executing "git --help"
+[0m20:59:50.327036 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:59:50.327434 [debug] [MainThread]: STDERR: "b''"
+[0m20:59:50.327694 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:59:50.327944 [info ] [MainThread]: Connection:
+[0m20:59:50.328207 [info ] [MainThread]:   host: dpg-d0khna8gjchc73ae1r1g-a.oregon-postgres.render.com
+[0m20:59:50.328452 [info ] [MainThread]:   port: 5432
+[0m20:59:50.328735 [info ] [MainThread]:   user: postgresadmin
+[0m20:59:50.329009 [info ] [MainThread]:   database: general_rtxt
+[0m20:59:50.329247 [info ] [MainThread]:   schema: bronze
+[0m20:59:50.329494 [info ] [MainThread]:   connect_timeout: 10
+[0m20:59:50.329755 [info ] [MainThread]:   role: None
+[0m20:59:50.330083 [info ] [MainThread]:   search_path: None
+[0m20:59:50.330331 [info ] [MainThread]:   keepalives_idle: 0
+[0m20:59:50.330582 [info ] [MainThread]:   sslmode: None
+[0m20:59:50.330923 [info ] [MainThread]:   sslcert: None
+[0m20:59:50.331306 [info ] [MainThread]:   sslkey: None
+[0m20:59:50.331737 [info ] [MainThread]:   sslrootcert: None
+[0m20:59:50.332034 [info ] [MainThread]:   application_name: dbt
+[0m20:59:50.332269 [info ] [MainThread]:   retries: 1
+[0m20:59:50.332601 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m20:59:50.333158 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m20:59:50.333421 [debug] [MainThread]: Using postgres connection "debug"
+[0m20:59:50.333675 [debug] [MainThread]: On debug: select 1 as id
+[0m20:59:50.333893 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:59:51.783365 [debug] [MainThread]: SQL status: SELECT 1 in 1.0 seconds
+[0m20:59:51.784692 [debug] [MainThread]: On debug: Close
+[0m20:59:51.785117 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:59:51.785394 [info ] [MainThread]: [32mAll checks passed![0m
+[0m20:59:51.785881 [debug] [MainThread]: Command `dbt debug` succeeded at 20:59:51.785786 after 1.52 seconds
+[0m20:59:51.786139 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:59:51.786402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa57af0c710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa57addd290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa57d78b950>]}
+[0m20:59:51.786725 [debug] [MainThread]: Flushing usage events
+[0m21:01:27.930068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2ec80fa50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2ecb20810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2ed398c90>]}
+
+
+============================== 21:01:27.932878 | 991cddf2-601e-4706-bde7-f64a0499254c ==============================
+[0m21:01:27.932878 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:01:27.933307 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/walterg/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m21:01:27.993504 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '991cddf2-601e-4706-bde7-f64a0499254c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2ed37b450>]}
+[0m21:01:28.004513 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '991cddf2-601e-4706-bde7-f64a0499254c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2ecb33cd0>]}
+[0m21:01:28.005168 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m21:01:28.016743 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m21:01:28.017285 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:01:28.017625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '991cddf2-601e-4706-bde7-f64a0499254c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2ece8cc10>]}
+[0m21:01:28.473061 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.vendas_dw.bronze
+- models.vendas_dw.gold
+- models.vendas_dw.silver
+[0m21:01:28.476657 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '991cddf2-601e-4706-bde7-f64a0499254c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2ede8c810>]}
+[0m21:01:28.483726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '991cddf2-601e-4706-bde7-f64a0499254c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2ec3e1650>]}
+[0m21:01:28.484145 [info ] [MainThread]: Found 0 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m21:01:28.484434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '991cddf2-601e-4706-bde7-f64a0499254c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2ec324350>]}
+[0m21:01:28.485552 [info ] [MainThread]: 
+[0m21:01:28.485891 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:01:28.486279 [debug] [MainThread]: Command end result
+[0m21:01:28.492302 [debug] [MainThread]: Command `dbt run` succeeded at 21:01:28.492144 after 0.57 seconds
+[0m21:01:28.492690 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2eceee7d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2f18c2450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2ecb20810>]}
+[0m21:01:28.493033 [debug] [MainThread]: Flushing usage events
+[0m21:03:14.461412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa63a84ab90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa63a5b5810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa63a5ab1d0>]}
+
+
+============================== 21:03:14.464391 | 7e88acd1-c58b-44b7-86f7-6f724c4ffe20 ==============================
+[0m21:03:14.464391 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:03:14.464860 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'debug': 'False', 'profiles_dir': '/home/walterg/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:03:14.523978 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7e88acd1-c58b-44b7-86f7-6f724c4ffe20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa63a70d990>]}
+[0m21:03:14.534966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7e88acd1-c58b-44b7-86f7-6f724c4ffe20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa63a70d950>]}
+[0m21:03:14.535606 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m21:03:14.542250 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m21:03:14.556624 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:03:14.556987 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:03:14.557304 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.vendas_dw.gold
+- models.vendas_dw.silver
+- models.vendas_dw.bronze
+[0m21:03:14.560997 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7e88acd1-c58b-44b7-86f7-6f724c4ffe20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa63a55d990>]}
+[0m21:03:14.569900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7e88acd1-c58b-44b7-86f7-6f724c4ffe20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa639d3c250>]}
+[0m21:03:14.570390 [info ] [MainThread]: Found 0 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m21:03:14.570733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7e88acd1-c58b-44b7-86f7-6f724c4ffe20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa63e178d50>]}
+[0m21:03:14.571895 [info ] [MainThread]: 
+[0m21:03:14.572258 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:03:14.572689 [debug] [MainThread]: Command end result
+[0m21:03:14.577828 [debug] [MainThread]: Command `dbt run` succeeded at 21:03:14.577655 after 0.12 seconds
+[0m21:03:14.578224 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa63f220c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa63f210690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa63f2bb710>]}
+[0m21:03:14.578556 [debug] [MainThread]: Flushing usage events
+[0m21:04:32.306686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3e7724d590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3e772b2b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3e77116b50>]}
+
+
+============================== 21:04:32.308990 | e28567d8-b2fb-4e02-bc93-5fb7482ae812 ==============================
+[0m21:04:32.308990 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:04:32.309404 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'fail_fast': 'False', 'profiles_dir': '/home/walterg/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt parse', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m21:04:32.368866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e28567d8-b2fb-4e02-bc93-5fb7482ae812', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3e772363d0>]}
+[0m21:04:32.379975 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e28567d8-b2fb-4e02-bc93-5fb7482ae812', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3e772b25d0>]}
+[0m21:04:32.380628 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m21:04:32.387213 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m21:04:32.402055 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:04:32.402408 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:04:32.402737 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.vendas_dw.gold
+- models.vendas_dw.bronze
+- models.vendas_dw.silver
+[0m21:04:32.406367 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e28567d8-b2fb-4e02-bc93-5fb7482ae812', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3e775678d0>]}
+[0m21:04:32.407031 [info ] [MainThread]: Performance info: /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/target/perf_info.json
+[0m21:04:32.415066 [debug] [MainThread]: Command `dbt parse` succeeded at 21:04:32.414914 after 0.11 seconds
+[0m21:04:32.415459 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3e772b2990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3e76f0fe90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3e77220950>]}
+[0m21:04:32.415863 [debug] [MainThread]: Flushing usage events
+[0m21:05:20.862328 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5df1552490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5df1dc7110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5df157f950>]}
+
+
+============================== 21:05:20.864981 | 6ca61b9d-dd83-45a3-abbb-2ba7ecb93631 ==============================
+[0m21:05:20.864981 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:05:20.865430 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/walterg/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:05:20.933857 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6ca61b9d-dd83-45a3-abbb-2ba7ecb93631', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5df0f48350>]}
+[0m21:05:20.944830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6ca61b9d-dd83-45a3-abbb-2ba7ecb93631', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5df0f48350>]}
+[0m21:05:20.945496 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m21:05:20.951953 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m21:05:20.957518 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m21:05:20.957944 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '6ca61b9d-dd83-45a3-abbb-2ba7ecb93631', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5df0e3ec90>]}
+[0m21:05:21.427496 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.bronze
+- models.silver
+- models.gold
+[0m21:05:21.431059 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6ca61b9d-dd83-45a3-abbb-2ba7ecb93631', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5df191d710>]}
+[0m21:05:21.438500 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6ca61b9d-dd83-45a3-abbb-2ba7ecb93631', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5df0dd86d0>]}
+[0m21:05:21.438928 [info ] [MainThread]: Found 0 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m21:05:21.439237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6ca61b9d-dd83-45a3-abbb-2ba7ecb93631', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5df0d74190>]}
+[0m21:05:21.440420 [info ] [MainThread]: 
+[0m21:05:21.440861 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:05:21.441285 [debug] [MainThread]: Command end result
+[0m21:05:21.447316 [debug] [MainThread]: Command `dbt run` succeeded at 21:05:21.447159 after 0.59 seconds
+[0m21:05:21.447770 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5df191d790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5df5e3f310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5df19371d0>]}
+[0m21:05:21.448188 [debug] [MainThread]: Flushing usage events
+[0m21:07:08.515736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2f1652c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2f1651590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2f13a8a50>]}
+
+
+============================== 21:07:08.518545 | ca90f062-cd96-4284-b27a-8c6ba9767fba ==============================
+[0m21:07:08.518545 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:07:08.519019 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/walterg/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:07:08.577512 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ca90f062-cd96-4284-b27a-8c6ba9767fba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2f1323390>]}
+[0m21:07:08.588518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ca90f062-cd96-4284-b27a-8c6ba9767fba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2f1a09710>]}
+[0m21:07:08.589157 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m21:07:08.596280 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m21:07:08.602017 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m21:07:08.602524 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ca90f062-cd96-4284-b27a-8c6ba9767fba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2f1351190>]}
+[0m21:07:09.058353 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.vendas_dw.silver
+- models.vendas_dw.bronze
+- models.vendas_dw.gold
+[0m21:07:09.062202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ca90f062-cd96-4284-b27a-8c6ba9767fba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2f166da90>]}
+[0m21:07:09.070000 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ca90f062-cd96-4284-b27a-8c6ba9767fba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2f10ff850>]}
+[0m21:07:09.070512 [info ] [MainThread]: Found 0 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m21:07:09.071008 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ca90f062-cd96-4284-b27a-8c6ba9767fba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2f156a690>]}
+[0m21:07:09.072523 [info ] [MainThread]: 
+[0m21:07:09.072977 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:07:09.073428 [debug] [MainThread]: Command end result
+[0m21:07:09.079435 [debug] [MainThread]: Command `dbt run` succeeded at 21:07:09.079281 after 0.57 seconds
+[0m21:07:09.079929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2f1629610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2f167e3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2f1304950>]}
+[0m21:07:09.080306 [debug] [MainThread]: Flushing usage events
+[0m21:08:09.634372 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd968f30850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd96b90f510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd968cb80d0>]}
+
+
+============================== 21:08:09.637254 | 306a9842-1f4b-4d1b-92d0-106a9bf49df0 ==============================
+[0m21:08:09.637254 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:08:09.637706 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'debug': 'False', 'profiles_dir': '/home/walterg/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt run', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:08:09.698097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '306a9842-1f4b-4d1b-92d0-106a9bf49df0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd968b11350>]}
+[0m21:08:09.709514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '306a9842-1f4b-4d1b-92d0-106a9bf49df0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd968cf5750>]}
+[0m21:08:09.710184 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m21:08:09.716950 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m21:08:09.732831 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:08:09.733242 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:08:09.733576 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.vendas_dw.silver
+- models.vendas_dw.gold
+- models.vendas_dw.bronze
+[0m21:08:09.737770 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '306a9842-1f4b-4d1b-92d0-106a9bf49df0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9692f0910>]}
+[0m21:08:09.745378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '306a9842-1f4b-4d1b-92d0-106a9bf49df0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9688398d0>]}
+[0m21:08:09.745887 [info ] [MainThread]: Found 0 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m21:08:09.746262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '306a9842-1f4b-4d1b-92d0-106a9bf49df0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd96da5b590>]}
+[0m21:08:09.747531 [info ] [MainThread]: 
+[0m21:08:09.747972 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:08:09.748514 [debug] [MainThread]: Command end result
+[0m21:08:09.754343 [debug] [MainThread]: Command `dbt run` succeeded at 21:08:09.754201 after 0.13 seconds
+[0m21:08:09.754717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd96d9b0690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd968cb8510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd968cb83d0>]}
+[0m21:08:09.755037 [debug] [MainThread]: Flushing usage events
+[0m21:10:13.648981 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff40b590cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff40b573bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff40b029990>]}
+
+
+============================== 21:10:13.651569 | 1deb3218-7b39-4155-9a36-895b69f642d1 ==============================
+[0m21:10:13.651569 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:10:13.651983 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/walterg/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt clean', 'send_anonymous_usage_stats': 'True'}
+[0m21:10:13.680322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1deb3218-7b39-4155-9a36-895b69f642d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff40aa07850>]}
+[0m21:10:13.682710 [debug] [MainThread]: Command `dbt clean` succeeded at 21:10:13.682622 after 0.04 seconds
+[0m21:10:13.683027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff40bbccd50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff40fa20990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff40b059910>]}
+[0m21:10:13.683347 [debug] [MainThread]: Flushing usage events
+[0m21:10:16.239021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc76f685ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc76f572810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc76f20d090>]}
+
+
+============================== 21:10:16.241351 | 0c3b4568-7656-4d5c-8f3e-896d3631a47d ==============================
+[0m21:10:16.241351 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:10:16.241820 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'version_check': 'True', 'profiles_dir': '/home/walterg/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt parse', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:10:16.301367 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0c3b4568-7656-4d5c-8f3e-896d3631a47d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc76f65d350>]}
+[0m21:10:16.312528 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0c3b4568-7656-4d5c-8f3e-896d3631a47d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc76eb08590>]}
+[0m21:10:16.313161 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m21:10:16.319773 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m21:10:16.320305 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:10:16.320661 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '0c3b4568-7656-4d5c-8f3e-896d3631a47d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc76f0dd150>]}
+[0m21:10:16.774998 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.vendas_dw.bronze
+- models.vendas_dw.silver
+- models.vendas_dw.gold
+[0m21:10:16.778626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0c3b4568-7656-4d5c-8f3e-896d3631a47d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc76f789d90>]}
+[0m21:10:16.779311 [info ] [MainThread]: Performance info: /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/target/perf_info.json
+[0m21:10:16.786025 [debug] [MainThread]: Command `dbt parse` succeeded at 21:10:16.785874 after 0.55 seconds
+[0m21:10:16.786378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc76f572990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc76f676510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc76f8c8610>]}
+[0m21:10:16.786752 [debug] [MainThread]: Flushing usage events
+[0m21:10:19.603601 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93e3c55650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93e3dfed10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93e40f7f10>]}
+
+
+============================== 21:10:19.606455 | f3abc9f4-cbc9-472d-8a38-00f21b17ac2d ==============================
+[0m21:10:19.606455 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:10:19.606927 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'profiles_dir': '/home/walterg/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:10:19.667829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f3abc9f4-cbc9-472d-8a38-00f21b17ac2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93e39fef10>]}
+[0m21:10:19.679166 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f3abc9f4-cbc9-472d-8a38-00f21b17ac2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93e393dad0>]}
+[0m21:10:19.679842 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m21:10:19.686975 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m21:10:19.701757 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:10:19.702121 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:10:19.702428 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.vendas_dw.gold
+- models.vendas_dw.silver
+- models.vendas_dw.bronze
+[0m21:10:19.706143 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f3abc9f4-cbc9-472d-8a38-00f21b17ac2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93e4ac8a10>]}
+[0m21:10:19.714877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f3abc9f4-cbc9-472d-8a38-00f21b17ac2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93e3831450>]}
+[0m21:10:19.715566 [info ] [MainThread]: Found 0 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m21:10:19.716112 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f3abc9f4-cbc9-472d-8a38-00f21b17ac2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93e7850950>]}
+[0m21:10:19.717308 [info ] [MainThread]: 
+[0m21:10:19.717734 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:10:19.718237 [debug] [MainThread]: Command end result
+[0m21:10:19.723669 [debug] [MainThread]: Command `dbt run` succeeded at 21:10:19.723466 after 0.13 seconds
+[0m21:10:19.724188 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93e3e2ccd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93e4f769d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93e8914690>]}
+[0m21:10:19.724736 [debug] [MainThread]: Flushing usage events
+[0m21:12:34.999007 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e58a8d390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e58823c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e5862b9d0>]}
+
+
+============================== 21:12:35.001652 | e7f538a9-e1b1-45f6-aa10-538b696c1624 ==============================
+[0m21:12:35.001652 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:12:35.002080 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/walterg/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m21:12:35.061896 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e7f538a9-e1b1-45f6-aa10-538b696c1624', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e5833d150>]}
+[0m21:12:35.072898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e7f538a9-e1b1-45f6-aa10-538b696c1624', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e594c8810>]}
+[0m21:12:35.073556 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m21:12:35.080865 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m21:12:35.096999 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:12:35.097383 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:12:35.097737 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.vendas_dw.bronze
+- models.vendas_dw.gold
+- models.vendas_dw.silver
+[0m21:12:35.101987 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e7f538a9-e1b1-45f6-aa10-538b696c1624', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e5860d9d0>]}
+[0m21:12:35.110275 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e7f538a9-e1b1-45f6-aa10-538b696c1624', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e5818d950>]}
+[0m21:12:35.110903 [info ] [MainThread]: Found 0 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m21:12:35.111390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e7f538a9-e1b1-45f6-aa10-538b696c1624', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e5c23cd50>]}
+[0m21:12:35.113027 [info ] [MainThread]: 
+[0m21:12:35.113561 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m21:12:35.114121 [debug] [MainThread]: Command end result
+[0m21:12:35.120312 [debug] [MainThread]: Command `dbt run` succeeded at 21:12:35.120126 after 0.13 seconds
+[0m21:12:35.120728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e59199a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e5d25b290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e5d25b350>]}
+[0m21:12:35.121073 [debug] [MainThread]: Flushing usage events
+[0m21:13:47.769119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2eac6b5f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2eac6c0a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ead1dff50>]}
+
+
+============================== 21:13:47.772068 | 39873dd6-efd7-4b0d-9205-72b1066bde16 ==============================
+[0m21:13:47.772068 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:13:47.772539 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'profiles_dir': '/home/walterg/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:13:47.833832 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '39873dd6-efd7-4b0d-9205-72b1066bde16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2eac63a510>]}
+[0m21:13:47.845074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '39873dd6-efd7-4b0d-9205-72b1066bde16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2eac982d50>]}
+[0m21:13:47.845786 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m21:13:47.852727 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m21:13:47.868554 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 4 files added, 0 files changed.
+[0m21:13:47.869009 [debug] [MainThread]: Partial parsing: added file: vendas_dw://models/vendas_dw/silver/fct_vendas.sql
+[0m21:13:47.869321 [debug] [MainThread]: Partial parsing: added file: vendas_dw://models/vendas_dw/bronze/sources.yml
+[0m21:13:47.869612 [debug] [MainThread]: Partial parsing: added file: vendas_dw://models/vendas_dw/gold/indicadores_vendas.sql
+[0m21:13:47.869871 [debug] [MainThread]: Partial parsing: added file: vendas_dw://models/vendas_dw/bronze/vendas.sql
+[0m21:13:47.920368 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.vendas_dw.gold
+- models.vendas_dw.bronze
+- models.vendas_dw.silver
+[0m21:13:47.924098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '39873dd6-efd7-4b0d-9205-72b1066bde16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2eac19dc90>]}
+[0m21:13:47.933099 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '39873dd6-efd7-4b0d-9205-72b1066bde16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2eabdfd5d0>]}
+[0m21:13:47.933694 [info ] [MainThread]: Found 3 models, 5 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m21:13:47.934129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '39873dd6-efd7-4b0d-9205-72b1066bde16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2eac969550>]}
+[0m21:13:47.935945 [info ] [MainThread]: 
+[0m21:13:47.936687 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:13:47.937838 [debug] [ThreadPool]: Acquiring new postgres connection 'list_general_rtxt'
+[0m21:13:47.946401 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt"
+[0m21:13:47.946817 [debug] [ThreadPool]: On list_general_rtxt: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "list_general_rtxt"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m21:13:47.947056 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:13:49.521723 [debug] [ThreadPool]: SQL status: SELECT 9 in 2.0 seconds
+[0m21:13:49.522911 [debug] [ThreadPool]: On list_general_rtxt: Close
+[0m21:13:49.524597 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_general_rtxt, now list_general_rtxt_bronze)
+[0m21:13:49.575776 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt_bronze"
+[0m21:13:49.576150 [debug] [ThreadPool]: On list_general_rtxt_bronze: BEGIN
+[0m21:13:49.576381 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:13:51.176908 [debug] [ThreadPool]: SQL status: BEGIN in 2.0 seconds
+[0m21:13:51.177589 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt_bronze"
+[0m21:13:51.178119 [debug] [ThreadPool]: On list_general_rtxt_bronze: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "list_general_rtxt_bronze"} */
+select
+      'general_rtxt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'general_rtxt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'general_rtxt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'bronze'
+  
+[0m21:13:51.381203 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.0 seconds
+[0m21:13:51.382535 [debug] [ThreadPool]: On list_general_rtxt_bronze: ROLLBACK
+[0m21:13:51.569532 [debug] [ThreadPool]: On list_general_rtxt_bronze: Close
+[0m21:13:51.574045 [debug] [MainThread]: Using postgres connection "master"
+[0m21:13:51.574413 [debug] [MainThread]: On master: BEGIN
+[0m21:13:51.574689 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:13:53.033276 [debug] [MainThread]: SQL status: BEGIN in 1.0 seconds
+[0m21:13:53.034085 [debug] [MainThread]: Using postgres connection "master"
+[0m21:13:53.034662 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m21:13:53.270738 [debug] [MainThread]: SQL status: SELECT 1 in 0.0 seconds
+[0m21:13:53.272735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '39873dd6-efd7-4b0d-9205-72b1066bde16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2eac6fe250>]}
+[0m21:13:53.273130 [debug] [MainThread]: On master: ROLLBACK
+[0m21:13:53.460206 [debug] [MainThread]: Using postgres connection "master"
+[0m21:13:53.460950 [debug] [MainThread]: On master: BEGIN
+[0m21:13:53.877918 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m21:13:53.878555 [debug] [MainThread]: On master: COMMIT
+[0m21:13:53.878821 [debug] [MainThread]: Using postgres connection "master"
+[0m21:13:53.879064 [debug] [MainThread]: On master: COMMIT
+[0m21:13:54.091439 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m21:13:54.092137 [debug] [MainThread]: On master: Close
+[0m21:13:54.093064 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:13:54.093466 [info ] [MainThread]: 
+[0m21:13:54.096734 [debug] [Thread-1 (]: Began running node model.vendas_dw.vendas
+[0m21:13:54.097246 [info ] [Thread-1 (]: 1 of 3 START sql view model bronze.vendas ...................................... [RUN]
+[0m21:13:54.097845 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_general_rtxt_bronze, now model.vendas_dw.vendas)
+[0m21:13:54.098191 [debug] [Thread-1 (]: Began compiling node model.vendas_dw.vendas
+[0m21:13:54.103172 [debug] [Thread-1 (]: Writing injected SQL for node "model.vendas_dw.vendas"
+[0m21:13:54.103990 [debug] [Thread-1 (]: Timing info for model.vendas_dw.vendas (compile): 21:13:54.098398 => 21:13:54.103813
+[0m21:13:54.104313 [debug] [Thread-1 (]: Began executing node model.vendas_dw.vendas
+[0m21:13:54.131366 [debug] [Thread-1 (]: Writing runtime sql for node "model.vendas_dw.vendas"
+[0m21:13:54.132493 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.vendas"
+[0m21:13:54.132857 [debug] [Thread-1 (]: On model.vendas_dw.vendas: BEGIN
+[0m21:13:54.133145 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:13:55.492182 [debug] [Thread-1 (]: SQL status: BEGIN in 1.0 seconds
+[0m21:13:55.492670 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.vendas"
+[0m21:13:55.492985 [debug] [Thread-1 (]: On model.vendas_dw.vendas: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.vendas"} */
+
+  create view "general_rtxt"."bronze"."vendas__dbt_tmp"
+    
+    
+  as (
+    SELECT * FROM "seu_banco"."bronze"."vendas"
+  );
+[0m21:13:55.679637 [debug] [Thread-1 (]: Postgres adapter: Postgres error: cross-database references are not implemented: "seu_banco.bronze.vendas"
+LINE 7:     SELECT * FROM "seu_banco"."bronze"."vendas"
+                          ^
+
+[0m21:13:55.680127 [debug] [Thread-1 (]: On model.vendas_dw.vendas: ROLLBACK
+[0m21:13:55.864922 [debug] [Thread-1 (]: Timing info for model.vendas_dw.vendas (execute): 21:13:54.104542 => 21:13:55.864657
+[0m21:13:55.865302 [debug] [Thread-1 (]: On model.vendas_dw.vendas: Close
+[0m21:13:55.873777 [debug] [Thread-1 (]: Database Error in model vendas (models/vendas_dw/bronze/vendas.sql)
+  cross-database references are not implemented: "seu_banco.bronze.vendas"
+  LINE 7:     SELECT * FROM "seu_banco"."bronze"."vendas"
+                            ^
+  compiled Code at target/run/vendas_dw/models/vendas_dw/bronze/vendas.sql
+[0m21:13:55.874270 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '39873dd6-efd7-4b0d-9205-72b1066bde16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2eac3d7a10>]}
+[0m21:13:55.874778 [error] [Thread-1 (]: 1 of 3 ERROR creating sql view model bronze.vendas ............................. [[31mERROR[0m in 1.78s]
+[0m21:13:55.875318 [debug] [Thread-1 (]: Finished running node model.vendas_dw.vendas
+[0m21:13:55.877578 [debug] [Thread-3 (]: Began running node model.vendas_dw.fct_vendas
+[0m21:13:55.878411 [info ] [Thread-3 (]: 2 of 3 SKIP relation bronze.fct_vendas ......................................... [[33mSKIP[0m]
+[0m21:13:55.879178 [debug] [Thread-3 (]: Finished running node model.vendas_dw.fct_vendas
+[0m21:13:55.880394 [debug] [Thread-2 (]: Began running node model.vendas_dw.indicadores_vendas
+[0m21:13:55.880966 [info ] [Thread-2 (]: 3 of 3 SKIP relation bronze.indicadores_vendas ................................. [[33mSKIP[0m]
+[0m21:13:55.881404 [debug] [Thread-2 (]: Finished running node model.vendas_dw.indicadores_vendas
+[0m21:13:55.883284 [debug] [MainThread]: Using postgres connection "master"
+[0m21:13:55.883666 [debug] [MainThread]: On master: BEGIN
+[0m21:13:55.883908 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:13:57.255526 [debug] [MainThread]: SQL status: BEGIN in 1.0 seconds
+[0m21:13:57.256070 [debug] [MainThread]: On master: COMMIT
+[0m21:13:57.256313 [debug] [MainThread]: Using postgres connection "master"
+[0m21:13:57.256578 [debug] [MainThread]: On master: COMMIT
+[0m21:13:57.442605 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m21:13:57.443324 [debug] [MainThread]: On master: Close
+[0m21:13:57.443930 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:13:57.444204 [debug] [MainThread]: Connection 'model.vendas_dw.vendas' was properly closed.
+[0m21:13:57.444526 [info ] [MainThread]: 
+[0m21:13:57.444836 [info ] [MainThread]: Finished running 3 view models in 0 hours 0 minutes and 9.51 seconds (9.51s).
+[0m21:13:57.445409 [debug] [MainThread]: Command end result
+[0m21:13:57.451330 [info ] [MainThread]: 
+[0m21:13:57.451766 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m21:13:57.452069 [info ] [MainThread]: 
+[0m21:13:57.452350 [error] [MainThread]: [33mDatabase Error in model vendas (models/vendas_dw/bronze/vendas.sql)[0m
+[0m21:13:57.452648 [error] [MainThread]:   cross-database references are not implemented: "seu_banco.bronze.vendas"
+[0m21:13:57.452904 [error] [MainThread]:   LINE 7:     SELECT * FROM "seu_banco"."bronze"."vendas"
+[0m21:13:57.453171 [error] [MainThread]:                             ^
+[0m21:13:57.453426 [error] [MainThread]:   compiled Code at target/run/vendas_dw/models/vendas_dw/bronze/vendas.sql
+[0m21:13:57.453735 [info ] [MainThread]: 
+[0m21:13:57.454053 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=2 TOTAL=3
+[0m21:13:57.454593 [debug] [MainThread]: Command `dbt run` failed at 21:13:57.454467 after 9.69 seconds
+[0m21:13:57.454976 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ead1a45d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ead1a4710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2eac6b62d0>]}
+[0m21:13:57.455307 [debug] [MainThread]: Flushing usage events
+[0m21:14:52.364188 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e38053f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e3836d450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e38053950>]}
+
+
+============================== 21:14:52.366537 | 97b5ca3a-3847-4497-8210-998a6839bdf7 ==============================
+[0m21:14:52.366537 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:14:52.366991 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/walterg/.dbt', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m21:14:52.428258 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '97b5ca3a-3847-4497-8210-998a6839bdf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e380c27d0>]}
+[0m21:14:52.439948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '97b5ca3a-3847-4497-8210-998a6839bdf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e3821ec50>]}
+[0m21:14:52.440642 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m21:14:52.448012 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m21:14:52.464251 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m21:14:52.465004 [debug] [MainThread]: Partial parsing: updated file: vendas_dw://models/vendas_dw/bronze/sources.yml
+[0m21:14:52.517331 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.vendas_dw.gold
+- models.vendas_dw.bronze
+- models.vendas_dw.silver
+[0m21:14:52.521131 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '97b5ca3a-3847-4497-8210-998a6839bdf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e37d3fc90>]}
+[0m21:14:52.530128 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '97b5ca3a-3847-4497-8210-998a6839bdf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e37793e10>]}
+[0m21:14:52.530664 [info ] [MainThread]: Found 3 models, 5 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m21:14:52.530971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '97b5ca3a-3847-4497-8210-998a6839bdf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e37b7ea10>]}
+[0m21:14:52.532685 [info ] [MainThread]: 
+[0m21:14:52.533400 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:14:52.534756 [debug] [ThreadPool]: Acquiring new postgres connection 'list_general_rtxt'
+[0m21:14:52.600178 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt"
+[0m21:14:52.600579 [debug] [ThreadPool]: On list_general_rtxt: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "list_general_rtxt"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m21:14:52.600819 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:14:54.357728 [debug] [ThreadPool]: SQL status: SELECT 9 in 2.0 seconds
+[0m21:14:54.359283 [debug] [ThreadPool]: On list_general_rtxt: Close
+[0m21:14:54.361086 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_general_rtxt, now list_general_rtxt_bronze)
+[0m21:14:54.365385 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt_bronze"
+[0m21:14:54.365763 [debug] [ThreadPool]: On list_general_rtxt_bronze: BEGIN
+[0m21:14:54.365990 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:14:55.830181 [debug] [ThreadPool]: SQL status: BEGIN in 1.0 seconds
+[0m21:14:55.830918 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt_bronze"
+[0m21:14:55.831167 [debug] [ThreadPool]: On list_general_rtxt_bronze: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "list_general_rtxt_bronze"} */
+select
+      'general_rtxt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'general_rtxt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'general_rtxt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'bronze'
+  
+[0m21:14:56.022474 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.0 seconds
+[0m21:14:56.024687 [debug] [ThreadPool]: On list_general_rtxt_bronze: ROLLBACK
+[0m21:14:56.216008 [debug] [ThreadPool]: On list_general_rtxt_bronze: Close
+[0m21:14:56.221259 [debug] [MainThread]: Using postgres connection "master"
+[0m21:14:56.221661 [debug] [MainThread]: On master: BEGIN
+[0m21:14:56.221914 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:14:57.602469 [debug] [MainThread]: SQL status: BEGIN in 1.0 seconds
+[0m21:14:57.603254 [debug] [MainThread]: Using postgres connection "master"
+[0m21:14:57.603549 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m21:14:57.800138 [debug] [MainThread]: SQL status: SELECT 1 in 0.0 seconds
+[0m21:14:57.801869 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '97b5ca3a-3847-4497-8210-998a6839bdf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e38f6aad0>]}
+[0m21:14:57.802301 [debug] [MainThread]: On master: ROLLBACK
+[0m21:14:57.996335 [debug] [MainThread]: Using postgres connection "master"
+[0m21:14:57.997000 [debug] [MainThread]: On master: BEGIN
+[0m21:14:58.369684 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m21:14:58.370370 [debug] [MainThread]: On master: COMMIT
+[0m21:14:58.370693 [debug] [MainThread]: Using postgres connection "master"
+[0m21:14:58.370934 [debug] [MainThread]: On master: COMMIT
+[0m21:14:58.588074 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m21:14:58.589004 [debug] [MainThread]: On master: Close
+[0m21:14:58.589646 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:14:58.589994 [info ] [MainThread]: 
+[0m21:14:58.592792 [debug] [Thread-1 (]: Began running node model.vendas_dw.vendas
+[0m21:14:58.593684 [info ] [Thread-1 (]: 1 of 3 START sql view model bronze.vendas ...................................... [RUN]
+[0m21:14:58.594327 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_general_rtxt_bronze, now model.vendas_dw.vendas)
+[0m21:14:58.594675 [debug] [Thread-1 (]: Began compiling node model.vendas_dw.vendas
+[0m21:14:58.599732 [debug] [Thread-1 (]: Writing injected SQL for node "model.vendas_dw.vendas"
+[0m21:14:58.600386 [debug] [Thread-1 (]: Timing info for model.vendas_dw.vendas (compile): 21:14:58.594890 => 21:14:58.600233
+[0m21:14:58.600784 [debug] [Thread-1 (]: Began executing node model.vendas_dw.vendas
+[0m21:14:58.625900 [debug] [Thread-1 (]: Writing runtime sql for node "model.vendas_dw.vendas"
+[0m21:14:58.626594 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.vendas"
+[0m21:14:58.626954 [debug] [Thread-1 (]: On model.vendas_dw.vendas: BEGIN
+[0m21:14:58.627215 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:15:00.051833 [debug] [Thread-1 (]: SQL status: BEGIN in 1.0 seconds
+[0m21:15:00.052264 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.vendas"
+[0m21:15:00.052545 [debug] [Thread-1 (]: On model.vendas_dw.vendas: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.vendas"} */
+
+  create view "general_rtxt"."bronze"."vendas__dbt_tmp"
+    
+    
+  as (
+    SELECT * FROM "general_rtxt"."bronze"."vendas"
+  );
+[0m21:15:00.257615 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m21:15:00.262352 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.vendas"
+[0m21:15:00.262767 [debug] [Thread-1 (]: On model.vendas_dw.vendas: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.vendas"} */
+alter table "general_rtxt"."bronze"."vendas" rename to "vendas__dbt_backup"
+[0m21:15:00.462991 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m21:15:00.465752 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.vendas"
+[0m21:15:00.466104 [debug] [Thread-1 (]: On model.vendas_dw.vendas: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.vendas"} */
+alter table "general_rtxt"."bronze"."vendas__dbt_tmp" rename to "vendas"
+[0m21:15:00.659439 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m21:15:00.672549 [debug] [Thread-1 (]: On model.vendas_dw.vendas: COMMIT
+[0m21:15:00.672967 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.vendas"
+[0m21:15:00.673228 [debug] [Thread-1 (]: On model.vendas_dw.vendas: COMMIT
+[0m21:15:00.871895 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m21:15:00.878378 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.vendas"
+[0m21:15:00.878795 [debug] [Thread-1 (]: On model.vendas_dw.vendas: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.vendas"} */
+drop table if exists "general_rtxt"."bronze"."vendas__dbt_backup" cascade
+[0m21:15:01.530640 [debug] [Thread-1 (]: SQL status: DROP TABLE in 1.0 seconds
+[0m21:15:01.532016 [debug] [Thread-1 (]: Timing info for model.vendas_dw.vendas (execute): 21:14:58.601058 => 21:15:01.531870
+[0m21:15:01.532362 [debug] [Thread-1 (]: On model.vendas_dw.vendas: Close
+[0m21:15:01.533067 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '97b5ca3a-3847-4497-8210-998a6839bdf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e38069e90>]}
+[0m21:15:01.533615 [info ] [Thread-1 (]: 1 of 3 OK created sql view model bronze.vendas ................................. [[32mCREATE VIEW[0m in 2.94s]
+[0m21:15:01.534083 [debug] [Thread-1 (]: Finished running node model.vendas_dw.vendas
+[0m21:15:01.535460 [debug] [Thread-3 (]: Began running node model.vendas_dw.fct_vendas
+[0m21:15:01.536558 [info ] [Thread-3 (]: 2 of 3 START sql view model bronze.fct_vendas .................................. [RUN]
+[0m21:15:01.537704 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.vendas_dw.fct_vendas'
+[0m21:15:01.538038 [debug] [Thread-3 (]: Began compiling node model.vendas_dw.fct_vendas
+[0m21:15:01.540301 [debug] [Thread-3 (]: Writing injected SQL for node "model.vendas_dw.fct_vendas"
+[0m21:15:01.541115 [debug] [Thread-3 (]: Timing info for model.vendas_dw.fct_vendas (compile): 21:15:01.538244 => 21:15:01.540891
+[0m21:15:01.541498 [debug] [Thread-3 (]: Began executing node model.vendas_dw.fct_vendas
+[0m21:15:01.546337 [debug] [Thread-3 (]: Writing runtime sql for node "model.vendas_dw.fct_vendas"
+[0m21:15:01.547151 [debug] [Thread-3 (]: Using postgres connection "model.vendas_dw.fct_vendas"
+[0m21:15:01.547635 [debug] [Thread-3 (]: On model.vendas_dw.fct_vendas: BEGIN
+[0m21:15:01.548160 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m21:15:03.154174 [debug] [Thread-3 (]: SQL status: BEGIN in 2.0 seconds
+[0m21:15:03.154759 [debug] [Thread-3 (]: Using postgres connection "model.vendas_dw.fct_vendas"
+[0m21:15:03.155059 [debug] [Thread-3 (]: On model.vendas_dw.fct_vendas: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.fct_vendas"} */
+
+  create view "general_rtxt"."bronze"."fct_vendas__dbt_tmp"
+    
+    
+  as (
+    WITH vendas_clean AS (
+    SELECT
+        id_venda,
+        id_produto,
+        preco,
+        quantidade,
+        data_venda::date AS data_venda,
+        id_cliente,
+        id_loja,
+        id_vendedor,
+        meio_pagamento,
+        parcelamento
+    FROM "general_rtxt"."bronze"."vendas"
+)
+SELECT * FROM vendas_clean
+  );
+[0m21:15:03.344143 [debug] [Thread-3 (]: Postgres adapter: Postgres error: relation "bronze.vendas" does not exist
+LINE 19:     FROM "general_rtxt"."bronze"."vendas"
+                  ^
+
+[0m21:15:03.344810 [debug] [Thread-3 (]: On model.vendas_dw.fct_vendas: ROLLBACK
+[0m21:15:03.535067 [debug] [Thread-3 (]: Timing info for model.vendas_dw.fct_vendas (execute): 21:15:01.541716 => 21:15:03.534666
+[0m21:15:03.535555 [debug] [Thread-3 (]: On model.vendas_dw.fct_vendas: Close
+[0m21:15:03.538377 [debug] [Thread-3 (]: Database Error in model fct_vendas (models/vendas_dw/silver/fct_vendas.sql)
+  relation "bronze.vendas" does not exist
+  LINE 19:     FROM "general_rtxt"."bronze"."vendas"
+                    ^
+  compiled Code at target/run/vendas_dw/models/vendas_dw/silver/fct_vendas.sql
+[0m21:15:03.538913 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '97b5ca3a-3847-4497-8210-998a6839bdf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e383459d0>]}
+[0m21:15:03.539421 [error] [Thread-3 (]: 2 of 3 ERROR creating sql view model bronze.fct_vendas ......................... [[31mERROR[0m in 2.00s]
+[0m21:15:03.540007 [debug] [Thread-3 (]: Finished running node model.vendas_dw.fct_vendas
+[0m21:15:03.542268 [debug] [Thread-2 (]: Began running node model.vendas_dw.indicadores_vendas
+[0m21:15:03.542770 [info ] [Thread-2 (]: 3 of 3 SKIP relation bronze.indicadores_vendas ................................. [[33mSKIP[0m]
+[0m21:15:03.543158 [debug] [Thread-2 (]: Finished running node model.vendas_dw.indicadores_vendas
+[0m21:15:03.547303 [debug] [MainThread]: Using postgres connection "master"
+[0m21:15:03.547753 [debug] [MainThread]: On master: BEGIN
+[0m21:15:03.548111 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:15:04.943888 [debug] [MainThread]: SQL status: BEGIN in 1.0 seconds
+[0m21:15:04.944605 [debug] [MainThread]: On master: COMMIT
+[0m21:15:04.945174 [debug] [MainThread]: Using postgres connection "master"
+[0m21:15:04.945698 [debug] [MainThread]: On master: COMMIT
+[0m21:15:05.132722 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m21:15:05.133377 [debug] [MainThread]: On master: Close
+[0m21:15:05.133990 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:15:05.134251 [debug] [MainThread]: Connection 'model.vendas_dw.vendas' was properly closed.
+[0m21:15:05.134488 [debug] [MainThread]: Connection 'model.vendas_dw.fct_vendas' was properly closed.
+[0m21:15:05.134781 [info ] [MainThread]: 
+[0m21:15:05.135061 [info ] [MainThread]: Finished running 3 view models in 0 hours 0 minutes and 12.60 seconds (12.60s).
+[0m21:15:05.135676 [debug] [MainThread]: Command end result
+[0m21:15:05.141673 [info ] [MainThread]: 
+[0m21:15:05.142172 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m21:15:05.142509 [info ] [MainThread]: 
+[0m21:15:05.142820 [error] [MainThread]: [33mDatabase Error in model fct_vendas (models/vendas_dw/silver/fct_vendas.sql)[0m
+[0m21:15:05.143087 [error] [MainThread]:   relation "bronze.vendas" does not exist
+[0m21:15:05.143398 [error] [MainThread]:   LINE 19:     FROM "general_rtxt"."bronze"."vendas"
+[0m21:15:05.143701 [error] [MainThread]:                     ^
+[0m21:15:05.143965 [error] [MainThread]:   compiled Code at target/run/vendas_dw/models/vendas_dw/silver/fct_vendas.sql
+[0m21:15:05.144256 [info ] [MainThread]: 
+[0m21:15:05.144697 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=1 TOTAL=3
+[0m21:15:05.145308 [debug] [MainThread]: Command `dbt run` failed at 21:15:05.145192 after 12.79 seconds
+[0m21:15:05.145707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e39aed210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e3835bed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e39981a90>]}
+[0m21:15:05.146052 [debug] [MainThread]: Flushing usage events
+[0m21:16:18.774543 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f74ea4bca10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f74ea420490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f74eafa7950>]}
+
+
+============================== 21:16:18.776862 | 800e2787-4480-4702-8c9a-850fe25caf2f ==============================
+[0m21:16:18.776862 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:16:18.777289 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'fail_fast': 'False', 'profiles_dir': '/home/walterg/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m21:16:18.837522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '800e2787-4480-4702-8c9a-850fe25caf2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f74ebe4d310>]}
+[0m21:16:18.848643 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '800e2787-4480-4702-8c9a-850fe25caf2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f74ea464ad0>]}
+[0m21:16:18.849294 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m21:16:18.856724 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m21:16:18.876244 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m21:16:18.876886 [debug] [MainThread]: Partial parsing: updated file: vendas_dw://models/vendas_dw/bronze/vendas.sql
+[0m21:16:18.908671 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.vendas_dw.gold
+- models.vendas_dw.bronze
+- models.vendas_dw.silver
+[0m21:16:18.912347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '800e2787-4480-4702-8c9a-850fe25caf2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f74e9fb40d0>]}
+[0m21:16:18.920965 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '800e2787-4480-4702-8c9a-850fe25caf2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f74e9f8a510>]}
+[0m21:16:18.921441 [info ] [MainThread]: Found 3 models, 5 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m21:16:18.921818 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '800e2787-4480-4702-8c9a-850fe25caf2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f74e9f4e910>]}
+[0m21:16:18.923246 [info ] [MainThread]: 
+[0m21:16:18.923995 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:16:18.925742 [debug] [ThreadPool]: Acquiring new postgres connection 'list_general_rtxt'
+[0m21:16:18.934131 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt"
+[0m21:16:18.934530 [debug] [ThreadPool]: On list_general_rtxt: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "list_general_rtxt"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m21:16:18.934785 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:16:20.357012 [debug] [ThreadPool]: SQL status: SELECT 9 in 1.0 seconds
+[0m21:16:20.358620 [debug] [ThreadPool]: On list_general_rtxt: Close
+[0m21:16:20.360655 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_general_rtxt, now list_general_rtxt_bronze)
+[0m21:16:20.365214 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt_bronze"
+[0m21:16:20.365605 [debug] [ThreadPool]: On list_general_rtxt_bronze: BEGIN
+[0m21:16:20.365860 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:16:22.032253 [debug] [ThreadPool]: SQL status: BEGIN in 2.0 seconds
+[0m21:16:22.032765 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt_bronze"
+[0m21:16:22.033014 [debug] [ThreadPool]: On list_general_rtxt_bronze: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "list_general_rtxt_bronze"} */
+select
+      'general_rtxt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'general_rtxt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'general_rtxt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'bronze'
+  
+[0m21:16:22.223722 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.0 seconds
+[0m21:16:22.225601 [debug] [ThreadPool]: On list_general_rtxt_bronze: ROLLBACK
+[0m21:16:22.428550 [debug] [ThreadPool]: On list_general_rtxt_bronze: Close
+[0m21:16:22.433853 [debug] [MainThread]: Using postgres connection "master"
+[0m21:16:22.434235 [debug] [MainThread]: On master: BEGIN
+[0m21:16:22.434489 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:16:23.817891 [debug] [MainThread]: SQL status: BEGIN in 1.0 seconds
+[0m21:16:23.818604 [debug] [MainThread]: Using postgres connection "master"
+[0m21:16:23.819331 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m21:16:24.017133 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m21:16:24.018535 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '800e2787-4480-4702-8c9a-850fe25caf2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f74ea135a50>]}
+[0m21:16:24.018931 [debug] [MainThread]: On master: ROLLBACK
+[0m21:16:24.205136 [debug] [MainThread]: Using postgres connection "master"
+[0m21:16:24.205882 [debug] [MainThread]: On master: BEGIN
+[0m21:16:24.597577 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m21:16:24.598431 [debug] [MainThread]: On master: COMMIT
+[0m21:16:24.598954 [debug] [MainThread]: Using postgres connection "master"
+[0m21:16:24.599269 [debug] [MainThread]: On master: COMMIT
+[0m21:16:24.788123 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m21:16:24.788968 [debug] [MainThread]: On master: Close
+[0m21:16:24.789841 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:16:24.790153 [info ] [MainThread]: 
+[0m21:16:24.793543 [debug] [Thread-1 (]: Began running node model.vendas_dw.vendas
+[0m21:16:24.794658 [info ] [Thread-1 (]: 1 of 3 START sql table model bronze.vendas ..................................... [RUN]
+[0m21:16:24.795216 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_general_rtxt_bronze, now model.vendas_dw.vendas)
+[0m21:16:24.795614 [debug] [Thread-1 (]: Began compiling node model.vendas_dw.vendas
+[0m21:16:24.801184 [debug] [Thread-1 (]: Writing injected SQL for node "model.vendas_dw.vendas"
+[0m21:16:24.802101 [debug] [Thread-1 (]: Timing info for model.vendas_dw.vendas (compile): 21:16:24.795845 => 21:16:24.801839
+[0m21:16:24.802527 [debug] [Thread-1 (]: Began executing node model.vendas_dw.vendas
+[0m21:16:24.877525 [debug] [Thread-1 (]: Writing runtime sql for node "model.vendas_dw.vendas"
+[0m21:16:24.878155 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.vendas"
+[0m21:16:24.878464 [debug] [Thread-1 (]: On model.vendas_dw.vendas: BEGIN
+[0m21:16:24.878754 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:16:26.264380 [debug] [Thread-1 (]: SQL status: BEGIN in 1.0 seconds
+[0m21:16:26.265364 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.vendas"
+[0m21:16:26.265692 [debug] [Thread-1 (]: On model.vendas_dw.vendas: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.vendas"} */
+
+  
+    
+
+  create  table "general_rtxt"."bronze"."vendas__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+SELECT * FROM "general_rtxt"."bronze"."vendas"
+  );
+  
+[0m21:16:26.452022 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "bronze.vendas" does not exist
+LINE 13: SELECT * FROM "general_rtxt"."bronze"."vendas"
+                       ^
+
+[0m21:16:26.452822 [debug] [Thread-1 (]: On model.vendas_dw.vendas: ROLLBACK
+[0m21:16:26.639452 [debug] [Thread-1 (]: Timing info for model.vendas_dw.vendas (execute): 21:16:24.802754 => 21:16:26.639067
+[0m21:16:26.639898 [debug] [Thread-1 (]: On model.vendas_dw.vendas: Close
+[0m21:16:26.642580 [debug] [Thread-1 (]: Database Error in model vendas (models/vendas_dw/bronze/vendas.sql)
+  relation "bronze.vendas" does not exist
+  LINE 13: SELECT * FROM "general_rtxt"."bronze"."vendas"
+                         ^
+  compiled Code at target/run/vendas_dw/models/vendas_dw/bronze/vendas.sql
+[0m21:16:26.643088 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '800e2787-4480-4702-8c9a-850fe25caf2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f74e9ff8290>]}
+[0m21:16:26.643603 [error] [Thread-1 (]: 1 of 3 ERROR creating sql table model bronze.vendas ............................ [[31mERROR[0m in 1.85s]
+[0m21:16:26.644099 [debug] [Thread-1 (]: Finished running node model.vendas_dw.vendas
+[0m21:16:26.646810 [debug] [Thread-3 (]: Began running node model.vendas_dw.fct_vendas
+[0m21:16:26.647326 [info ] [Thread-3 (]: 2 of 3 SKIP relation bronze.fct_vendas ......................................... [[33mSKIP[0m]
+[0m21:16:26.647681 [debug] [Thread-3 (]: Finished running node model.vendas_dw.fct_vendas
+[0m21:16:26.650825 [debug] [Thread-2 (]: Began running node model.vendas_dw.indicadores_vendas
+[0m21:16:26.651432 [info ] [Thread-2 (]: 3 of 3 SKIP relation bronze.indicadores_vendas ................................. [[33mSKIP[0m]
+[0m21:16:26.651920 [debug] [Thread-2 (]: Finished running node model.vendas_dw.indicadores_vendas
+[0m21:16:26.654558 [debug] [MainThread]: Using postgres connection "master"
+[0m21:16:26.655137 [debug] [MainThread]: On master: BEGIN
+[0m21:16:26.655390 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:16:28.026576 [debug] [MainThread]: SQL status: BEGIN in 1.0 seconds
+[0m21:16:28.027263 [debug] [MainThread]: On master: COMMIT
+[0m21:16:28.027734 [debug] [MainThread]: Using postgres connection "master"
+[0m21:16:28.027969 [debug] [MainThread]: On master: COMMIT
+[0m21:16:28.213682 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m21:16:28.214355 [debug] [MainThread]: On master: Close
+[0m21:16:28.214972 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:16:28.215233 [debug] [MainThread]: Connection 'model.vendas_dw.vendas' was properly closed.
+[0m21:16:28.215546 [info ] [MainThread]: 
+[0m21:16:28.215861 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 9.29 seconds (9.29s).
+[0m21:16:28.216422 [debug] [MainThread]: Command end result
+[0m21:16:28.222432 [info ] [MainThread]: 
+[0m21:16:28.222895 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m21:16:28.223181 [info ] [MainThread]: 
+[0m21:16:28.223451 [error] [MainThread]: [33mDatabase Error in model vendas (models/vendas_dw/bronze/vendas.sql)[0m
+[0m21:16:28.223727 [error] [MainThread]:   relation "bronze.vendas" does not exist
+[0m21:16:28.223980 [error] [MainThread]:   LINE 13: SELECT * FROM "general_rtxt"."bronze"."vendas"
+[0m21:16:28.224233 [error] [MainThread]:                          ^
+[0m21:16:28.224503 [error] [MainThread]:   compiled Code at target/run/vendas_dw/models/vendas_dw/bronze/vendas.sql
+[0m21:16:28.224791 [info ] [MainThread]: 
+[0m21:16:28.225098 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=2 TOTAL=3
+[0m21:16:28.225643 [debug] [MainThread]: Command `dbt run` failed at 21:16:28.225557 after 9.46 seconds
+[0m21:16:28.225971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f74ef003050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f74ef0c4a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f74ea1ac790>]}
+[0m21:16:28.226309 [debug] [MainThread]: Flushing usage events
+[0m21:21:40.567612 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ecf74e9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ed02f3bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ecf4110d0>]}
+
+
+============================== 21:21:40.569991 | 78431dcf-dc22-474b-a259-050de698e68a ==============================
+[0m21:21:40.569991 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:21:40.570425 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/walterg/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt clean', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:21:40.598686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '78431dcf-dc22-474b-a259-050de698e68a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ecf1215d0>]}
+[0m21:21:40.601811 [debug] [MainThread]: Command `dbt clean` succeeded at 21:21:40.601721 after 0.04 seconds
+[0m21:21:40.602128 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ecf312990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ecf10fe90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ecf73d810>]}
+[0m21:21:40.602422 [debug] [MainThread]: Flushing usage events
+[0m21:21:43.084268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7facc763a390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7facc796b450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7facc9f9abd0>]}
+
+
+============================== 21:21:43.086739 | 6982d7ff-6801-4d4c-b047-3ffc73dd620f ==============================
+[0m21:21:43.086739 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:21:43.087161 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'version_check': 'True', 'profiles_dir': '/home/walterg/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt parse', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m21:21:43.146270 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6982d7ff-6801-4d4c-b047-3ffc73dd620f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7facc763ab50>]}
+[0m21:21:43.157396 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6982d7ff-6801-4d4c-b047-3ffc73dd620f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7facc84be410>]}
+[0m21:21:43.158035 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m21:21:43.164731 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m21:21:43.165261 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:21:43.165583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '6982d7ff-6801-4d4c-b047-3ffc73dd620f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7facc73c9b10>]}
+[0m21:21:43.671125 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.vendas_dw.silver
+- models.vendas_dw.gold
+- models.vendas_dw.bronze
+[0m21:21:43.674789 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6982d7ff-6801-4d4c-b047-3ffc73dd620f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7facc723ea50>]}
+[0m21:21:43.675454 [info ] [MainThread]: Performance info: /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/target/perf_info.json
+[0m21:21:43.683047 [debug] [MainThread]: Command `dbt parse` succeeded at 21:21:43.682889 after 0.61 seconds
+[0m21:21:43.683422 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7facc7955210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7facc731d5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faccc37ec90>]}
+[0m21:21:43.683795 [debug] [MainThread]: Flushing usage events
+[0m21:21:46.238688 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbc076aad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbbcdc5550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbbc6991d0>]}
+
+
+============================== 21:21:46.241890 | cc3d67ee-c8d2-4ae0-93a6-f5a5c15fe2cf ==============================
+[0m21:21:46.241890 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:21:46.242389 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/walterg/.dbt', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m21:21:46.299567 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cc3d67ee-c8d2-4ae0-93a6-f5a5c15fe2cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbbc583b90>]}
+[0m21:21:46.312996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cc3d67ee-c8d2-4ae0-93a6-f5a5c15fe2cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbbc234f10>]}
+[0m21:21:46.313688 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m21:21:46.320311 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m21:21:46.335741 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:21:46.336099 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:21:46.336594 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.vendas_dw.bronze
+- models.vendas_dw.silver
+- models.vendas_dw.gold
+[0m21:21:46.340349 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cc3d67ee-c8d2-4ae0-93a6-f5a5c15fe2cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbbc2f9b50>]}
+[0m21:21:46.349229 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cc3d67ee-c8d2-4ae0-93a6-f5a5c15fe2cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbbbda3110>]}
+[0m21:21:46.349738 [info ] [MainThread]: Found 2 models, 5 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m21:21:46.350034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cc3d67ee-c8d2-4ae0-93a6-f5a5c15fe2cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbbc728e50>]}
+[0m21:21:46.351341 [info ] [MainThread]: 
+[0m21:21:46.352008 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:21:46.353182 [debug] [ThreadPool]: Acquiring new postgres connection 'list_general_rtxt'
+[0m21:21:46.363138 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt"
+[0m21:21:46.363586 [debug] [ThreadPool]: On list_general_rtxt: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "list_general_rtxt"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m21:21:46.363835 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:21:48.257169 [debug] [ThreadPool]: SQL status: SELECT 9 in 2.0 seconds
+[0m21:21:48.258356 [debug] [ThreadPool]: On list_general_rtxt: Close
+[0m21:21:48.259940 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_general_rtxt, now list_general_rtxt_bronze)
+[0m21:21:48.264588 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt_bronze"
+[0m21:21:48.264973 [debug] [ThreadPool]: On list_general_rtxt_bronze: BEGIN
+[0m21:21:48.265212 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:21:49.684267 [debug] [ThreadPool]: SQL status: BEGIN in 1.0 seconds
+[0m21:21:49.685262 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt_bronze"
+[0m21:21:49.685573 [debug] [ThreadPool]: On list_general_rtxt_bronze: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "list_general_rtxt_bronze"} */
+select
+      'general_rtxt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'general_rtxt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'general_rtxt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'bronze'
+  
+[0m21:21:49.875613 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.0 seconds
+[0m21:21:49.877284 [debug] [ThreadPool]: On list_general_rtxt_bronze: ROLLBACK
+[0m21:21:50.064672 [debug] [ThreadPool]: On list_general_rtxt_bronze: Close
+[0m21:21:50.069131 [debug] [MainThread]: Using postgres connection "master"
+[0m21:21:50.069494 [debug] [MainThread]: On master: BEGIN
+[0m21:21:50.069747 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:21:51.489069 [debug] [MainThread]: SQL status: BEGIN in 1.0 seconds
+[0m21:21:51.489737 [debug] [MainThread]: Using postgres connection "master"
+[0m21:21:51.490037 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m21:21:51.686998 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m21:21:51.688505 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cc3d67ee-c8d2-4ae0-93a6-f5a5c15fe2cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbbc566090>]}
+[0m21:21:51.688993 [debug] [MainThread]: On master: ROLLBACK
+[0m21:21:51.874428 [debug] [MainThread]: Using postgres connection "master"
+[0m21:21:51.875159 [debug] [MainThread]: On master: BEGIN
+[0m21:21:52.248279 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m21:21:52.248998 [debug] [MainThread]: On master: COMMIT
+[0m21:21:52.249249 [debug] [MainThread]: Using postgres connection "master"
+[0m21:21:52.249489 [debug] [MainThread]: On master: COMMIT
+[0m21:21:52.436729 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m21:21:52.437576 [debug] [MainThread]: On master: Close
+[0m21:21:52.438184 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:21:52.438543 [info ] [MainThread]: 
+[0m21:21:52.441405 [debug] [Thread-1 (]: Began running node model.vendas_dw.fct_vendas
+[0m21:21:52.442309 [info ] [Thread-1 (]: 1 of 2 START sql view model bronze.fct_vendas .................................. [RUN]
+[0m21:21:52.443590 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_general_rtxt_bronze, now model.vendas_dw.fct_vendas)
+[0m21:21:52.443888 [debug] [Thread-1 (]: Began compiling node model.vendas_dw.fct_vendas
+[0m21:21:52.449266 [debug] [Thread-1 (]: Writing injected SQL for node "model.vendas_dw.fct_vendas"
+[0m21:21:52.450167 [debug] [Thread-1 (]: Timing info for model.vendas_dw.fct_vendas (compile): 21:21:52.444091 => 21:21:52.449947
+[0m21:21:52.450529 [debug] [Thread-1 (]: Began executing node model.vendas_dw.fct_vendas
+[0m21:21:52.475135 [debug] [Thread-1 (]: Writing runtime sql for node "model.vendas_dw.fct_vendas"
+[0m21:21:52.475928 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.fct_vendas"
+[0m21:21:52.476279 [debug] [Thread-1 (]: On model.vendas_dw.fct_vendas: BEGIN
+[0m21:21:52.476585 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:21:53.923584 [debug] [Thread-1 (]: SQL status: BEGIN in 1.0 seconds
+[0m21:21:53.924278 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.fct_vendas"
+[0m21:21:53.924580 [debug] [Thread-1 (]: On model.vendas_dw.fct_vendas: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.fct_vendas"} */
+
+  create view "general_rtxt"."bronze"."fct_vendas__dbt_tmp"
+    
+    
+  as (
+    SELECT
+    id_venda,
+    id_produto,
+    preco,
+    quantidade,
+    CAST(data_venda AS date) AS data_venda,
+    id_cliente,
+    id_loja,
+    id_vendedor,
+    meio_pagamento,
+    parcelamento
+FROM "general_rtxt"."bronze"."vendas"
+  );
+[0m21:21:54.116657 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "bronze.vendas" does not exist
+LINE 18: FROM "general_rtxt"."bronze"."vendas"
+              ^
+
+[0m21:21:54.117099 [debug] [Thread-1 (]: On model.vendas_dw.fct_vendas: ROLLBACK
+[0m21:21:54.306625 [debug] [Thread-1 (]: Timing info for model.vendas_dw.fct_vendas (execute): 21:21:52.450741 => 21:21:54.306189
+[0m21:21:54.307410 [debug] [Thread-1 (]: On model.vendas_dw.fct_vendas: Close
+[0m21:21:54.310444 [debug] [Thread-1 (]: Database Error in model fct_vendas (models/vendas_dw/silver/fct_vendas.sql)
+  relation "bronze.vendas" does not exist
+  LINE 18: FROM "general_rtxt"."bronze"."vendas"
+                ^
+  compiled Code at target/run/vendas_dw/models/vendas_dw/silver/fct_vendas.sql
+[0m21:21:54.311004 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cc3d67ee-c8d2-4ae0-93a6-f5a5c15fe2cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbbb984090>]}
+[0m21:21:54.311532 [error] [Thread-1 (]: 1 of 2 ERROR creating sql view model bronze.fct_vendas ......................... [[31mERROR[0m in 1.87s]
+[0m21:21:54.312096 [debug] [Thread-1 (]: Finished running node model.vendas_dw.fct_vendas
+[0m21:21:54.313812 [debug] [Thread-3 (]: Began running node model.vendas_dw.indicadores_vendas
+[0m21:21:54.314260 [info ] [Thread-3 (]: 2 of 2 SKIP relation bronze.indicadores_vendas ................................. [[33mSKIP[0m]
+[0m21:21:54.314669 [debug] [Thread-3 (]: Finished running node model.vendas_dw.indicadores_vendas
+[0m21:21:54.317762 [debug] [MainThread]: Using postgres connection "master"
+[0m21:21:54.318729 [debug] [MainThread]: On master: BEGIN
+[0m21:21:54.319740 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:21:55.870840 [debug] [MainThread]: SQL status: BEGIN in 2.0 seconds
+[0m21:21:55.871791 [debug] [MainThread]: On master: COMMIT
+[0m21:21:55.872568 [debug] [MainThread]: Using postgres connection "master"
+[0m21:21:55.873176 [debug] [MainThread]: On master: COMMIT
+[0m21:21:56.061418 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m21:21:56.062379 [debug] [MainThread]: On master: Close
+[0m21:21:56.062998 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:21:56.063272 [debug] [MainThread]: Connection 'model.vendas_dw.fct_vendas' was properly closed.
+[0m21:21:56.063599 [info ] [MainThread]: 
+[0m21:21:56.063889 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 9.71 seconds (9.71s).
+[0m21:21:56.064409 [debug] [MainThread]: Command end result
+[0m21:21:56.072887 [info ] [MainThread]: 
+[0m21:21:56.073404 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m21:21:56.073728 [info ] [MainThread]: 
+[0m21:21:56.074060 [error] [MainThread]: [33mDatabase Error in model fct_vendas (models/vendas_dw/silver/fct_vendas.sql)[0m
+[0m21:21:56.074357 [error] [MainThread]:   relation "bronze.vendas" does not exist
+[0m21:21:56.074686 [error] [MainThread]:   LINE 18: FROM "general_rtxt"."bronze"."vendas"
+[0m21:21:56.074954 [error] [MainThread]:                 ^
+[0m21:21:56.075227 [error] [MainThread]:   compiled Code at target/run/vendas_dw/models/vendas_dw/silver/fct_vendas.sql
+[0m21:21:56.075617 [info ] [MainThread]: 
+[0m21:21:56.076049 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 TOTAL=2
+[0m21:21:56.076684 [debug] [MainThread]: Command `dbt run` failed at 21:21:56.076591 after 9.84 seconds
+[0m21:21:56.077067 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbbc5f2c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbbbd754d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbbc7d2290>]}
+[0m21:21:56.077468 [debug] [MainThread]: Flushing usage events
+[0m21:22:15.154033 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefb5d7db50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefb68ee5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefb5d678d0>]}
+
+
+============================== 21:22:15.156453 | 120c6131-734c-4222-932f-015d5e9bcbe2 ==============================
+[0m21:22:15.156453 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:22:15.156998 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'profiles_dir': '/home/walterg/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m21:22:15.157396 [info ] [MainThread]: dbt version: 1.6.0
+[0m21:22:15.157815 [info ] [MainThread]: python version: 3.11.2
+[0m21:22:15.158338 [info ] [MainThread]: python path: /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/bin/python3
+[0m21:22:15.158760 [info ] [MainThread]: os info: Linux-6.10.7-policorp-amd64-x86_64-with-glibc2.36
+[0m21:22:15.197602 [info ] [MainThread]: Using profiles dir at /home/walterg/.dbt
+[0m21:22:15.198567 [info ] [MainThread]: Using profiles.yml file at /home/walterg/.dbt/profiles.yml
+[0m21:22:15.199233 [info ] [MainThread]: Using dbt_project.yml file at /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/dbt_project.yml
+[0m21:22:15.200219 [info ] [MainThread]: adapter type: postgres
+[0m21:22:15.201079 [info ] [MainThread]: adapter version: 1.6.0
+[0m21:22:15.232152 [info ] [MainThread]: Configuration:
+[0m21:22:15.233041 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:22:15.233776 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:22:15.234566 [info ] [MainThread]: Required dependencies:
+[0m21:22:15.235240 [debug] [MainThread]: Executing "git --help"
+[0m21:22:15.238354 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:22:15.239087 [debug] [MainThread]: STDERR: "b''"
+[0m21:22:15.239671 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:22:15.240188 [info ] [MainThread]: Connection:
+[0m21:22:15.240716 [info ] [MainThread]:   host: dpg-d0khna8gjchc73ae1r1g-a.oregon-postgres.render.com
+[0m21:22:15.241249 [info ] [MainThread]:   port: 5432
+[0m21:22:15.241802 [info ] [MainThread]:   user: postgresadmin
+[0m21:22:15.242283 [info ] [MainThread]:   database: general_rtxt
+[0m21:22:15.242907 [info ] [MainThread]:   schema: bronze
+[0m21:22:15.243427 [info ] [MainThread]:   connect_timeout: 10
+[0m21:22:15.243967 [info ] [MainThread]:   role: None
+[0m21:22:15.244457 [info ] [MainThread]:   search_path: None
+[0m21:22:15.245023 [info ] [MainThread]:   keepalives_idle: 0
+[0m21:22:15.245735 [info ] [MainThread]:   sslmode: None
+[0m21:22:15.246303 [info ] [MainThread]:   sslcert: None
+[0m21:22:15.246872 [info ] [MainThread]:   sslkey: None
+[0m21:22:15.247468 [info ] [MainThread]:   sslrootcert: None
+[0m21:22:15.248051 [info ] [MainThread]:   application_name: dbt
+[0m21:22:15.248707 [info ] [MainThread]:   retries: 1
+[0m21:22:15.249543 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m21:22:15.250710 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m21:22:15.251315 [debug] [MainThread]: Using postgres connection "debug"
+[0m21:22:15.251952 [debug] [MainThread]: On debug: select 1 as id
+[0m21:22:15.252569 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:22:16.649152 [debug] [MainThread]: SQL status: SELECT 1 in 1.0 seconds
+[0m21:22:16.650496 [debug] [MainThread]: On debug: Close
+[0m21:22:16.650968 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:22:16.651265 [info ] [MainThread]: [32mAll checks passed![0m
+[0m21:22:16.651737 [debug] [MainThread]: Command `dbt debug` succeeded at 21:22:16.651654 after 1.50 seconds
+[0m21:22:16.651993 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:22:16.652259 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefb81c8d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefb5df3c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefb5afa110>]}
+[0m21:22:16.652572 [debug] [MainThread]: Flushing usage events
+[0m21:25:34.763875 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f97652f5750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9765742250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9764fb4f90>]}
+
+
+============================== 21:25:34.766276 | 65e03dec-3f99-4af9-9d42-758267a6ba8f ==============================
+[0m21:25:34.766276 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:25:34.766704 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/walterg/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt clean', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:25:34.808779 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '65e03dec-3f99-4af9-9d42-758267a6ba8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9764f452d0>]}
+[0m21:25:34.814176 [debug] [MainThread]: Command `dbt clean` succeeded at 21:25:34.814015 after 0.06 seconds
+[0m21:25:34.814811 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9765614b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9769b65d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9769cbbc10>]}
+[0m21:25:34.815434 [debug] [MainThread]: Flushing usage events
+[0m21:25:37.320412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e55196910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e52a7d910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e52a39a10>]}
+
+
+============================== 21:25:37.322933 | de1b3318-fcd1-4d9d-b9a2-3facee6d354e ==============================
+[0m21:25:37.322933 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:25:37.323365 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/walterg/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt parse', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:25:37.386659 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'de1b3318-fcd1-4d9d-b9a2-3facee6d354e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e52f78310>]}
+[0m21:25:37.397651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'de1b3318-fcd1-4d9d-b9a2-3facee6d354e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e52435310>]}
+[0m21:25:37.398309 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m21:25:37.405974 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m21:25:37.406515 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:25:37.406843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'de1b3318-fcd1-4d9d-b9a2-3facee6d354e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e5274fd50>]}
+[0m21:25:37.906549 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.vendas_dw.silver
+- models.vendas_dw.gold
+- models.vendas_dw.bronze
+[0m21:25:37.910332 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'de1b3318-fcd1-4d9d-b9a2-3facee6d354e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e524a0510>]}
+[0m21:25:37.911111 [info ] [MainThread]: Performance info: /home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/target/perf_info.json
+[0m21:25:37.918989 [debug] [MainThread]: Command `dbt parse` succeeded at 21:25:37.918835 after 0.60 seconds
+[0m21:25:37.919390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e52419590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e574c4c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5e57402f50>]}
+[0m21:25:37.919780 [debug] [MainThread]: Flushing usage events
+[0m21:25:40.480754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8de505710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8e0f83ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8de721950>]}
+
+
+============================== 21:25:40.483194 | 934264dd-4aa2-4442-9802-710bf2e36259 ==============================
+[0m21:25:40.483194 [info ] [MainThread]: Running with dbt=1.6.0
+[0m21:25:40.483654 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/walterg/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m21:25:40.542026 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '934264dd-4aa2-4442-9802-710bf2e36259', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8de558850>]}
+[0m21:25:40.553082 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '934264dd-4aa2-4442-9802-710bf2e36259', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8de834f50>]}
+[0m21:25:40.553743 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m21:25:40.560448 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m21:25:40.576210 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:25:40.576696 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:25:40.577270 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.vendas_dw.gold
+- models.vendas_dw.bronze
+- models.vendas_dw.silver
+[0m21:25:40.581648 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '934264dd-4aa2-4442-9802-710bf2e36259', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8dddc6e90>]}
+[0m21:25:40.590335 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '934264dd-4aa2-4442-9802-710bf2e36259', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8ddd33410>]}
+[0m21:25:40.590899 [info ] [MainThread]: Found 2 models, 5 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m21:25:40.591442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '934264dd-4aa2-4442-9802-710bf2e36259', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8de675dd0>]}
+[0m21:25:40.593095 [info ] [MainThread]: 
+[0m21:25:40.593963 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:25:40.595509 [debug] [ThreadPool]: Acquiring new postgres connection 'list_general_rtxt'
+[0m21:25:40.603732 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt"
+[0m21:25:40.604118 [debug] [ThreadPool]: On list_general_rtxt: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "list_general_rtxt"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m21:25:40.604365 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:25:42.010773 [debug] [ThreadPool]: SQL status: SELECT 9 in 1.0 seconds
+[0m21:25:42.011922 [debug] [ThreadPool]: On list_general_rtxt: Close
+[0m21:25:42.015007 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_general_rtxt, now list_general_rtxt_bronze)
+[0m21:25:42.019741 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt_bronze"
+[0m21:25:42.020119 [debug] [ThreadPool]: On list_general_rtxt_bronze: BEGIN
+[0m21:25:42.020369 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:25:43.601845 [debug] [ThreadPool]: SQL status: BEGIN in 2.0 seconds
+[0m21:25:43.602427 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt_bronze"
+[0m21:25:43.602700 [debug] [ThreadPool]: On list_general_rtxt_bronze: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "list_general_rtxt_bronze"} */
+select
+      'general_rtxt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'general_rtxt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'general_rtxt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'bronze'
+  
+[0m21:25:43.791657 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.0 seconds
+[0m21:25:43.793221 [debug] [ThreadPool]: On list_general_rtxt_bronze: ROLLBACK
+[0m21:25:43.979923 [debug] [ThreadPool]: On list_general_rtxt_bronze: Close
+[0m21:25:43.984196 [debug] [MainThread]: Using postgres connection "master"
+[0m21:25:43.984574 [debug] [MainThread]: On master: BEGIN
+[0m21:25:43.984802 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:25:45.348228 [debug] [MainThread]: SQL status: BEGIN in 1.0 seconds
+[0m21:25:45.348945 [debug] [MainThread]: Using postgres connection "master"
+[0m21:25:45.349620 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m21:25:45.541832 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m21:25:45.543251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '934264dd-4aa2-4442-9802-710bf2e36259', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8de72c150>]}
+[0m21:25:45.543627 [debug] [MainThread]: On master: ROLLBACK
+[0m21:25:45.730568 [debug] [MainThread]: Using postgres connection "master"
+[0m21:25:45.731306 [debug] [MainThread]: On master: BEGIN
+[0m21:25:46.103154 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m21:25:46.103976 [debug] [MainThread]: On master: COMMIT
+[0m21:25:46.104212 [debug] [MainThread]: Using postgres connection "master"
+[0m21:25:46.104437 [debug] [MainThread]: On master: COMMIT
+[0m21:25:46.290983 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m21:25:46.291539 [debug] [MainThread]: On master: Close
+[0m21:25:46.292163 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:25:46.292462 [info ] [MainThread]: 
+[0m21:25:46.295072 [debug] [Thread-1 (]: Began running node model.vendas_dw.fct_vendas
+[0m21:25:46.295719 [info ] [Thread-1 (]: 1 of 2 START sql view model bronze.fct_vendas .................................. [RUN]
+[0m21:25:46.296463 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_general_rtxt_bronze, now model.vendas_dw.fct_vendas)
+[0m21:25:46.297087 [debug] [Thread-1 (]: Began compiling node model.vendas_dw.fct_vendas
+[0m21:25:46.302453 [debug] [Thread-1 (]: Writing injected SQL for node "model.vendas_dw.fct_vendas"
+[0m21:25:46.303328 [debug] [Thread-1 (]: Timing info for model.vendas_dw.fct_vendas (compile): 21:25:46.297308 => 21:25:46.303133
+[0m21:25:46.303759 [debug] [Thread-1 (]: Began executing node model.vendas_dw.fct_vendas
+[0m21:25:46.329019 [debug] [Thread-1 (]: Writing runtime sql for node "model.vendas_dw.fct_vendas"
+[0m21:25:46.329804 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.fct_vendas"
+[0m21:25:46.330114 [debug] [Thread-1 (]: On model.vendas_dw.fct_vendas: BEGIN
+[0m21:25:46.330384 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:25:47.728768 [debug] [Thread-1 (]: SQL status: BEGIN in 1.0 seconds
+[0m21:25:47.729192 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.fct_vendas"
+[0m21:25:47.729469 [debug] [Thread-1 (]: On model.vendas_dw.fct_vendas: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.fct_vendas"} */
+
+  create view "general_rtxt"."bronze"."fct_vendas__dbt_tmp"
+    
+    
+  as (
+    SELECT
+    id_venda,
+    id_produto,
+    preco,
+    quantidade,
+    CAST(data_venda AS date) AS data_venda,
+    id_cliente,
+    id_loja,
+    id_vendedor,
+    meio_pagamento,
+    parcelamento
+FROM "general_rtxt"."bronze"."vendas"
+  );
+[0m21:25:47.913249 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "bronze.vendas" does not exist
+LINE 18: FROM "general_rtxt"."bronze"."vendas"
+              ^
+
+[0m21:25:47.914032 [debug] [Thread-1 (]: On model.vendas_dw.fct_vendas: ROLLBACK
+[0m21:25:48.099951 [debug] [Thread-1 (]: Timing info for model.vendas_dw.fct_vendas (execute): 21:25:46.304045 => 21:25:48.099447
+[0m21:25:48.100354 [debug] [Thread-1 (]: On model.vendas_dw.fct_vendas: Close
+[0m21:25:48.102983 [debug] [Thread-1 (]: Database Error in model fct_vendas (models/vendas_dw/silver/fct_vendas.sql)
+  relation "bronze.vendas" does not exist
+  LINE 18: FROM "general_rtxt"."bronze"."vendas"
+                ^
+  compiled Code at target/run/vendas_dw/models/vendas_dw/silver/fct_vendas.sql
+[0m21:25:48.103447 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '934264dd-4aa2-4442-9802-710bf2e36259', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8de53d190>]}
+[0m21:25:48.103957 [error] [Thread-1 (]: 1 of 2 ERROR creating sql view model bronze.fct_vendas ......................... [[31mERROR[0m in 1.81s]
+[0m21:25:48.104454 [debug] [Thread-1 (]: Finished running node model.vendas_dw.fct_vendas
+[0m21:25:48.106742 [debug] [Thread-3 (]: Began running node model.vendas_dw.indicadores_vendas
+[0m21:25:48.107529 [info ] [Thread-3 (]: 2 of 2 SKIP relation bronze.indicadores_vendas ................................. [[33mSKIP[0m]
+[0m21:25:48.108449 [debug] [Thread-3 (]: Finished running node model.vendas_dw.indicadores_vendas
+[0m21:25:48.110887 [debug] [MainThread]: Using postgres connection "master"
+[0m21:25:48.111249 [debug] [MainThread]: On master: BEGIN
+[0m21:25:48.111509 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:25:49.535670 [debug] [MainThread]: SQL status: BEGIN in 1.0 seconds
+[0m21:25:49.536355 [debug] [MainThread]: On master: COMMIT
+[0m21:25:49.536955 [debug] [MainThread]: Using postgres connection "master"
+[0m21:25:49.537372 [debug] [MainThread]: On master: COMMIT
+[0m21:25:49.751195 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m21:25:49.752092 [debug] [MainThread]: On master: Close
+[0m21:25:49.752696 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:25:49.752940 [debug] [MainThread]: Connection 'model.vendas_dw.fct_vendas' was properly closed.
+[0m21:25:49.753213 [info ] [MainThread]: 
+[0m21:25:49.753517 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 9.16 seconds (9.16s).
+[0m21:25:49.754056 [debug] [MainThread]: Command end result
+[0m21:25:49.759774 [info ] [MainThread]: 
+[0m21:25:49.760178 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m21:25:49.760456 [info ] [MainThread]: 
+[0m21:25:49.760764 [error] [MainThread]: [33mDatabase Error in model fct_vendas (models/vendas_dw/silver/fct_vendas.sql)[0m
+[0m21:25:49.761034 [error] [MainThread]:   relation "bronze.vendas" does not exist
+[0m21:25:49.761352 [error] [MainThread]:   LINE 18: FROM "general_rtxt"."bronze"."vendas"
+[0m21:25:49.761670 [error] [MainThread]:                 ^
+[0m21:25:49.761929 [error] [MainThread]:   compiled Code at target/run/vendas_dw/models/vendas_dw/silver/fct_vendas.sql
+[0m21:25:49.762191 [info ] [MainThread]: 
+[0m21:25:49.762500 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 TOTAL=2
+[0m21:25:49.763061 [debug] [MainThread]: Command `dbt run` failed at 21:25:49.762967 after 9.29 seconds
+[0m21:25:49.763376 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8de52bd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8de529550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8e0c23e50>]}
+[0m21:25:49.763694 [debug] [MainThread]: Flushing usage events
