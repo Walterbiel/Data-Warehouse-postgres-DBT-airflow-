@@ -329,14 +329,137 @@ dbt debug
 
 ---
 
-## 🎯 Objetivos da Live
+---
 
-- Demonstrar como estruturar um DW do zero com dados transacionais.
-- Aplicar boas práticas de modelagem dimensional.
-- Apresentar o fluxo de camadas (bronze → silver → gold) com dbt.
-- Mostrar indicadores de negócio em SQL a partir da camada gold.
+## 🗂️ Estrutura de diretórios
+
+```
+models/
+├─ sources.yml               # definição das fontes bronze
+├─ silver/
+│  ├─ stg_vendas.sql
+│  ├─ stg_devolucoes.sql
+│  ├─ dim_produtos.sql
+│  ├─ dim_lojas.sql
+│  └─ dim_vendedores.sql
+└─ gold/
+   ├─ fct_vendas.sql
+   ├─ fct_devolucoes.sql
+   ├─ mart_receita_diaria_loja.sql
+   └─ mart_receita_mensal_categoria.sql
+```
+
+> **Materialização**  
+> - Todos os modelos usam `{{ config(materialized='table') }}`.  
+> - Os *schemas* (**bronze**, **silver**, **gold**) são definidos no `project.yaml`.
 
 ---
+
+## 1  🌱 Fonte única (`sources.yml`)
+
+- **schema**: `bronze`
+- **tabelas**: `vendas`, `devolucoes`, `produtos`, `lojas`, `vendedores`
+
+Estas tabelas são carregadas dos CSV/XLSX originais e permanecem **imutáveis**.
+
+---
+
+## 2  🥈 Camada Silver — *Staging* e Dimensões
+
+| Script | Descrição resumida | Entradas | Saída |
+|--------|-------------------|----------|-------|
+| **`stg_vendas.sql`** | Normaliza a tabela bruta de vendas. Faz *cast* de tipos, padroniza `meio_pagamento` e garante nomes consistentes. | `bronze.vendas` | `silver.stg_vendas` |
+| **`stg_devolucoes.sql`** | Converte tipos e mantém coluna `motivo`. | `bronze.devolucoes` | `silver.stg_devolucoes` |
+| **`dim_produtos.sql`** | Dimensão Produto (id, nome, categoria, % imposto). | `bronze.produtos` | `silver.dim_produtos` |
+| **`dim_lojas.sql`** | Dimensão Loja (endereços normalizados). | `bronze.lojas` | `silver.dim_lojas` |
+| **`dim_vendedores.sql`** | Dimensão Vendedor (datas convertidas). | `bronze.vendedores` | `silver.dim_vendedores` |
+
+### 2.1  `stg_vendas.sql` — detalhes  
+| Coluna final | Tipo | Transformação |
+|--------------|------|---------------|
+| `id_venda` | `BIGINT` | `cast(id_venda as bigint)` |
+| `id_produto` | `INT` | — |
+| `preco` | `NUMERIC(12,2)` | — |
+| `quantidade` | `INT` | — |
+| `data_venda` | `DATE` | — |
+| `id_cliente` | `INT` | — |
+| `id_loja` | `INT` | — |
+| `id_vendedor` | `INT` | — |
+| `meio_pagamento` | `TEXT` | `lower(trim(meio_pagamento))` |
+| `parcelamento` | `SMALLINT` | — |
+
+*(scripts das dimensões seguem padrão semelhante de `CAST`, renomeação e limpeza de texto)*
+
+---
+
+## 3  🥇 Camada Gold — Fatos & Marts
+
+| Script | Propósito | Métricas/Transformações | Relacionamentos |
+|--------|-----------|-------------------------|-----------------|
+| **`fct_vendas.sql`** | Fato granular de vendas. | `receita_bruta = quantidade * preco` + join com dimensões. | `id_produto`, `id_loja`, `id_vendedor` |
+| **`fct_devolucoes.sql`** | Fato de devoluções. | `valor_devolvido = quantidade * preco`. Mantém `motivo`. | usa dimensões via IDs (opcional) |
+| **`mart_receita_diaria_loja.sql`** | Mart operacional: receita diária por loja. | `sum(receita_bruta)`, `count(distinct id_venda)`, `sum(quantidade)`. | deriva de `fct_vendas` |
+| **`mart_receita_mensal_categoria.sql`** | Mart tático: receita mensal × categoria. | `date_trunc('month', data_venda)` → `mes`; `sum(receita_bruta)`. | deriva de `fct_vendas` |
+
+### 3.1  `fct_vendas.sql` — fluxo simplificado
+```mermaid
+graph TD
+    subgraph Silver
+        A(stg_vendas) -->|FK| B(dim_produtos)
+        A -->|FK| C(dim_lojas)
+        A -->|FK| D(dim_vendedores)
+    end
+    A -->|JOIN| E(fct_vendas - Gold)
+```
+
+### 3.2  `mart_receita_diaria_loja.sql`
+```sql
+select
+    data_venda,
+    id_loja,
+    nome_loja,
+    sum(receita_bruta) as receita_diaria,
+    count(distinct id_venda) as qtd_vendas,
+    sum(quantidade) as itens_vendidos
+from {{ ref('fct_vendas') }}
+group by data_venda, id_loja, nome_loja;
+```
+> **Uso**: Painéis operacionais (metas diárias, comparativo de lojas).
+
+---
+
+## 4  🚀 Execução sugerida para a aula
+
+```bash
+# 1) Materializar staging
+dbt run --select silver
+
+# 2) Materializar fatos e marts
+dbt run --select gold
+
+# 3) Explorar lineage
+dbt docs generate
+dbt docs serve
+```
+
+### Tópicos para demonstrar
+1. **Cast de tipos** e por que isso deve ficar fora do BI.  
+2. **Separação de responsabilidade** (bronze imutável, silver conforma, gold agrega).  
+3. **Lineage** no dbt Docs: como rastrear colunas.  
+4. **Incremental vs. table**: quando trocar materialização.  
+5. **Tests**: `unique`/`not_null` em IDs das dimensões e fatos.
+
+---
+
+## 5  📌 Resumo rápido
+
+| Camada | Objetivo | Exemplos |
+|--------|----------|----------|
+| **Bronze** | Raw, somente ingestão. | CSV/XLSX originais. |
+| **Silver** | Limpeza, tipagem, PK/FK, conformidade. | `stg_vendas`, `dim_*`. |
+| **Gold** | Consumíveis por BI, agregações, modelos de negócio. | `fct_*`, `mart_*`. |
+
+------------------------------------------------------------------------------------------
 
 ## 🧠 Autor
 
