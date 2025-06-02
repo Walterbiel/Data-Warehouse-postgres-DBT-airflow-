@@ -1,6 +1,6 @@
 {{ config(materialized = 'table') }}
 
-with source as (
+with src as (
 
     select
         cast(id                as int)   as id_vendedor,
@@ -13,4 +13,4 @@ with source as (
 )
 
 select *
-from source;
+from src

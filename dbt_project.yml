@@ -1,28 +1,16 @@
-name: 'vendas_dw'
-version: '1.0.0'
+name: vendas_dw
+version: 1.0.0
 config-version: 2
 
-profile: 'vendas_dw'
-
+profile: vendas_dw
 model-paths: ["models"]
-analysis-paths: ["analyses"]
-test-paths: ["tests"]
-seed-paths: ["seeds"]
-macro-paths: ["macros"]
-snapshot-paths: ["snapshots"]
-
-clean-targets:
-  - "target"
-  - "dbt_packages"
 
 models:
-  vendas_dw:
-    bronze:
-      +materialized: table
-      +schema: bronze
-    silver:
-      +materialized: table
+  vendas_dw:            # 👈 1º nível = nome do projeto (obrigatório)
+    silver:             # 👈 pasta models/silver
       +schema: silver
-    gold:
       +materialized: table
+
+    gold:               # 👈 pasta models/gold
       +schema: gold
+      +materialized: table
