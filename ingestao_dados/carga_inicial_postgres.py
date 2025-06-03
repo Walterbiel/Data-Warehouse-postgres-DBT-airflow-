@@ -24,7 +24,7 @@ common = dict(
     if_exists="append", 
     index=False,
     method="multi",
-    chunksize=10_000,
+    chunksize=100_000,
 )
 
 # 4) Inserção em transação única
