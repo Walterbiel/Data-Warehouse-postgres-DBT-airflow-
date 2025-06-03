@@ -1,7 +1,7 @@
-{{ config(materialized = 'view') }}
+
 
 with fct as (
-    select * from {{ ref('fct_vendas') }}
+    select * from "general_rtxt"."bronze_gold"."fct_vendas"
 )
 
 select

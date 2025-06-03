@@ -1,20 +1,0 @@
-[2025-05-31T21:28:02.908-0300] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: chamar_api_vendas.chamar_api scheduled__2025-06-01T00:27:00+00:00 [queued]>
-[2025-05-31T21:28:02.911-0300] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: chamar_api_vendas.chamar_api scheduled__2025-06-01T00:27:00+00:00 [queued]>
-[2025-05-31T21:28:02.912-0300] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
-[2025-05-31T21:28:02.922-0300] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): chamar_api> on 2025-06-01 00:27:00+00:00
-[2025-05-31T21:28:02.928-0300] {standard_task_runner.py:60} INFO - Started process 41276 to run task
-[2025-05-31T21:28:02.931-0300] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'chamar_api_vendas', 'chamar_api', 'scheduled__2025-06-01T00:27:00+00:00', '--job-id', '127', '--raw', '--subdir', 'DAGS_FOLDER/chamar_api_vendas.py', '--cfg-path', '/tmp/tmpyufe3rbd']
-[2025-05-31T21:28:02.933-0300] {standard_task_runner.py:88} INFO - Job 127: Subtask chamar_api
-[2025-05-31T21:28:02.960-0300] {task_command.py:423} INFO - Running <TaskInstance: chamar_api_vendas.chamar_api scheduled__2025-06-01T00:27:00+00:00 [running]> on host walter-vjfe59f11xb1011h
-[2025-05-31T21:28:03.007-0300] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='chamar_api_vendas' AIRFLOW_CTX_TASK_ID='chamar_api' AIRFLOW_CTX_EXECUTION_DATE='2025-06-01T00:27:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-01T00:27:00+00:00'
-[2025-05-31T21:28:03.009-0300] {subprocess.py:63} INFO - Tmp dir root location: /tmp
-[2025-05-31T21:28:03.009-0300] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "curl -X POST 'http://127.0.0.1:8002/gerar-vendas' -H 'accept: application/json'"]
-[2025-05-31T21:28:03.023-0300] {subprocess.py:86} INFO - Output:
-[2025-05-31T21:28:03.029-0300] {subprocess.py:93} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-[2025-05-31T21:28:03.029-0300] {subprocess.py:93} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
-[2025-05-31T21:28:04.445-0300] {subprocess.py:93} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100    21  100    21    0     0     14      0  0:00:01  0:00:01 --:--:--    14
-[2025-05-31T21:28:04.446-0300] {subprocess.py:93} INFO - Internal Server Error
-[2025-05-31T21:28:04.447-0300] {subprocess.py:97} INFO - Command exited with return code 0
-[2025-05-31T21:28:04.461-0300] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=chamar_api_vendas, task_id=chamar_api, execution_date=20250601T002700, start_date=20250601T002802, end_date=20250601T002804
-[2025-05-31T21:28:04.512-0300] {local_task_job_runner.py:234} INFO - Task exited with return code 0
-[2025-05-31T21:28:04.520-0300] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

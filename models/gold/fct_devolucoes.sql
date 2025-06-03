@@ -1,4 +1,4 @@
-{{ config(materialized = 'table') }}
+{{ config(materialized = 'view') }}
 
 with devol as (
     select * from {{ ref('stg_devolucoes') }}

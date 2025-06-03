@@ -1,9 +1,14 @@
-{{ 
-  config(
-    materialized = 'view',
-    schema       = 'silver'
-  ) 
-}}
+
+  
+    
+
+  create  table "general_rtxt"."bronze_silver"."indicadores_vendas__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
 
 WITH base AS (
     SELECT
@@ -12,7 +17,7 @@ WITH base AS (
         preco,
         quantidade,
         id_venda
-    FROM {{ ref('fct_vendas') }}
+    FROM "general_rtxt"."bronze_gold"."fct_vendas"
 )
 SELECT
     data_venda,
@@ -21,3 +26,5 @@ SELECT
     COUNT(DISTINCT id_venda) AS qtd_vendas
 FROM base
 GROUP BY data_venda, id_loja
+  );
+  

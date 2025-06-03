@@ -6,7 +6,7 @@ with src as (
         cast(id_loja  as int)   as id_loja,
         nome_loja,
         logradouro,
-        cast("número" as int)   as numero,
+        cast("numero" as int)   as numero,
         bairro,
         cidade,
         estado,

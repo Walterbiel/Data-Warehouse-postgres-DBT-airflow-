@@ -1,7 +1,17 @@
-{{ config(materialized = 'view') }}
+
+  
+    
+
+  create  table "general_rtxt"."bronze_gold"."mart_receita_mensal_categoria__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
 
 with fct as (
-    select * from {{ ref('fct_vendas') }}
+    select * from "general_rtxt"."bronze_gold"."fct_vendas"
 ),
 
 base as (
@@ -15,3 +25,5 @@ base as (
 )
 
 select * from base
+  );
+  

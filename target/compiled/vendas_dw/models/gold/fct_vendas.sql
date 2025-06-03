@@ -1,14 +1,12 @@
-{{ config(
-    materialized = 'view'
-) }}
+
 
 WITH ventes AS (
-    SELECT * FROM {{ ref('stg_vendas') }}
+    SELECT * FROM "general_rtxt"."bronze_silver"."stg_vendas"
 ),
 
-dim_produtos   AS (SELECT * FROM {{ ref('dim_produtos')   }}),
-dim_lojas      AS (SELECT * FROM {{ ref('dim_lojas')      }}),
-dim_vendedores AS (SELECT * FROM {{ ref('dim_vendedores') }})
+dim_produtos   AS (SELECT * FROM "general_rtxt"."bronze_silver"."dim_produtos"),
+dim_lojas      AS (SELECT * FROM "general_rtxt"."bronze_silver"."dim_lojas"),
+dim_vendedores AS (SELECT * FROM "general_rtxt"."bronze_silver"."dim_vendedores")
 
 SELECT
     v.id_venda,

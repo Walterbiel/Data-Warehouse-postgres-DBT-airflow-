@@ -1,13 +1,8 @@
 
-  
+  create view "general_rtxt"."bronze_gold"."fct_devolucoes__dbt_tmp"
     
-
-  create  table "general_rtxt"."bronze_gold"."fct_devolucoes__dbt_tmp"
-  
-  
-    as
-  
-  (
+    
+  as (
     
 
 with devol as (
@@ -28,4 +23,3 @@ select
     motivo
 from devol
   );
-  

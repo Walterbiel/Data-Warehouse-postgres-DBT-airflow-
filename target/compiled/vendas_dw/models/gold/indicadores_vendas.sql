@@ -1,9 +1,4 @@
-{{ 
-  config(
-    materialized = 'view',
-    schema       = 'silver'
-  ) 
-}}
+
 
 WITH base AS (
     SELECT
@@ -12,7 +7,7 @@ WITH base AS (
         preco,
         quantidade,
         id_venda
-    FROM {{ ref('fct_vendas') }}
+    FROM "general_rtxt"."bronze_gold"."fct_vendas"
 )
 SELECT
     data_venda,
