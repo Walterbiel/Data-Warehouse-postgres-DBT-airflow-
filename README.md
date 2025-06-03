@@ -68,7 +68,115 @@ python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().d
 ```bash
 mkdir -p dags logs plugins dbt
 ```
+#### 4. Gerar dados fake e subir dados para o postgres
 
+# Scripts DDL – Camada **bronze**
+
+> **Execute** estes comandos no PostgreSQL antes da ingestão.  
+> Cada tabela recebe uma chave primária surrogate (`BIGSERIAL`) iniciando em 1.
+
+---
+
+## 1. Criar schema
+
+```sql
+CREATE SCHEMA IF NOT EXISTS bronze;
+```
+
+---
+
+## 2. Tabela `bronze.vendas`
+
+```sql
+CREATE TABLE IF NOT EXISTS bronze.vendas (
+    pk_vendas       BIGSERIAL PRIMARY KEY,
+    id_venda        BIGINT        NOT NULL,
+    id_produto      INTEGER       NOT NULL,
+    preco           NUMERIC(12,2) NOT NULL,
+    quantidade      INTEGER       NOT NULL,
+    data_venda      DATE          NOT NULL,
+    id_cliente      INTEGER,
+    id_loja         INTEGER,
+    id_vendedor     INTEGER,
+    meio_pagamento  TEXT,
+    parcelamento    SMALLINT
+);
+
+CREATE INDEX IF NOT EXISTS idx_vendas_id_venda ON bronze.vendas (id_venda);
+CREATE INDEX IF NOT EXISTS idx_vendas_data     ON bronze.vendas (data_venda);
+CREATE INDEX IF NOT EXISTS idx_vendas_produto  ON bronze.vendas (id_produto);
+```
+
+---
+
+## 3. Tabela `bronze.devolucoes`
+
+```sql
+CREATE TABLE IF NOT EXISTS bronze.devolucoes (
+    pk_devolucao    BIGSERIAL PRIMARY KEY,
+    id_venda        BIGINT    NOT NULL,
+    id_produto      INTEGER   NOT NULL,
+    preco           NUMERIC(12,2) NOT NULL,
+    quantidade      INTEGER   NOT NULL,
+    data_venda      DATE      NOT NULL,
+    data_devolucao  DATE      NOT NULL,
+    id_cliente      INTEGER,
+    id_loja         INTEGER,
+    id_vendedor     INTEGER,
+    motivo          TEXT,
+    UNIQUE (id_venda, id_produto)
+);
+
+CREATE INDEX IF NOT EXISTS idx_dev_data_devolucao
+    ON bronze.devolucoes (data_devolucao);
+```
+
+---
+
+## 4. Tabela `bronze.produtos`
+
+```sql
+CREATE TABLE IF NOT EXISTS bronze.produtos (
+    pk_produto          BIGSERIAL PRIMARY KEY,
+    id_produto          INTEGER UNIQUE NOT NULL,
+    nome_produto        TEXT    NOT NULL,
+    categoria           TEXT,
+    percentual_imposto  NUMERIC(5,2)
+);
+```
+
+---
+
+## 5. Tabela `bronze.lojas`
+
+```sql
+CREATE TABLE IF NOT EXISTS bronze.lojas (
+    pk_loja     BIGSERIAL PRIMARY KEY,
+    id_loja     INTEGER UNIQUE NOT NULL,
+    nome_loja   TEXT    NOT NULL,
+    logradouro  TEXT,
+    numero      INTEGER,
+    bairro      TEXT,
+    cidade      TEXT,
+    estado      CHAR(2),
+    cep         VARCHAR(10)
+);
+```
+
+---
+
+## 6. Tabela `bronze.vendedores`
+
+```sql
+CREATE TABLE IF NOT EXISTS bronze.vendedores (
+    pk_vendedor     BIGSERIAL PRIMARY KEY,
+    id_vendedor     INTEGER UNIQUE NOT NULL,
+    nome_vendedor   TEXT    NOT NULL,
+    data_admissao   DATE,
+    endereco_vendedor TEXT,
+    data_nascimento DATE
+);
+```
 ---
 
 ## Orquestração com Apache Airflow (sem Docker)
@@ -259,56 +367,6 @@ sources:
       - name: produtos
       - name: lojas
       - name: vendedores
-```
-
----
-
-### 5. Exemplo de Modelo Bronze
-
-`models/bronze/vendas.sql`:
-
-```sql
-SELECT * FROM {{ source('bronze', 'vendas') }}
-```
-
----
-
-### 6. Exemplo de Modelo Silver
-
-`models/silver/fct_vendas.sql`:
-
-```sql
-WITH vendas_clean AS (
-    SELECT
-        id_venda,
-        id_produto,
-        preco,
-        quantidade,
-        data_venda::date AS data_venda,
-        id_cliente,
-        id_loja,
-        id_vendedor,
-        meio_pagamento,
-        parcelamento
-    FROM {{ ref('vendas') }}
-)
-SELECT * FROM vendas_clean
-```
-
----
-
-### 7. Exemplo de Modelo Gold
-
-`models/gold/indicadores_vendas.sql`:
-
-```sql
-SELECT
-    data_venda,
-    id_loja,
-    SUM(preco * quantidade) AS receita_total,
-    COUNT(DISTINCT id_venda) AS qtd_vendas
-FROM {{ ref('fct_vendas') }}
-GROUP BY data_venda, id_loja
 ```
 
 ---

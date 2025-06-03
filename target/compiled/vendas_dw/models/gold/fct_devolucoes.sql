@@ -1,7 +1,7 @@
-{{ config(materialized = 'table') }}
+
 
 with devol as (
-    select * from {{ ref('stg_devolucoes') }}
+    select * from "general_rtxt"."bronze_silver"."stg_devolucoes"
 )
 
 select

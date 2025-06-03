@@ -12,4 +12,4 @@ select
     count(distinct id_venda)                     as qtd_vendas,
     sum(quantidade)                              as itens_vendidos
 from fct
-group by data_venda, id_loja, nome_loja;
+group by data_venda, id_loja, nome_loja

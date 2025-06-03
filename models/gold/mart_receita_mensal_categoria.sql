@@ -14,4 +14,4 @@ base as (
     group by 1, 2
 )
 
-select * from base;
+select * from base

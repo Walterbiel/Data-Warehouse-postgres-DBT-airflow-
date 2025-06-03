@@ -1,7 +1,17 @@
-{{ config(materialized = 'table') }}
+
+  
+    
+
+  create  table "general_rtxt"."bronze_gold"."fct_devolucoes__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
 
 with devol as (
-    select * from {{ ref('stg_devolucoes') }}
+    select * from "general_rtxt"."bronze_silver"."stg_devolucoes"
 )
 
 select
@@ -17,3 +27,5 @@ select
     quantidade * preco                             as valor_devolvido,
     motivo
 from devol
+  );
+  

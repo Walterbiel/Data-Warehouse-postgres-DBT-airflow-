@@ -1,3 +1,4 @@
+# ----------------------------------------
 # Ferramentas de transformação
 dbt-core==1.6.0
 dbt-postgres==1.6.0
@@ -7,15 +8,16 @@ apache-airflow==2.5.1
 
 # Conexão com PostgreSQL
 psycopg2-binary==2.9.9
-sqlalchemy>=1.4,<2.0
+# SQLAlchemy 1.4.x é compatível com pandas 1.5.x
+SQLAlchemy>=1.4, <1.5
 
 # Leitura de Excel
-openpyxl
+openpyxl>=3.1
 
 # Manipulação de dados
-pandas
-numpy
+pandas>=1.5,<1.6
+numpy>=1.26
 
 # API
-fastapi
-uvicorn[standard]
+fastapi>=0.110
+uvicorn[standard]>=0.27

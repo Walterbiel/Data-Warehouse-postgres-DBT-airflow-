@@ -6351,3 +6351,1217 @@ HINT:  Check free disk space.
 [0m20:32:18.980595 [debug] [MainThread]: Command `dbt clean` succeeded at 20:32:18.980508 after 0.04 seconds
 [0m20:32:18.980918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f434b536390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4348e1a090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f434a894a50>]}
 [0m20:32:18.981287 [debug] [MainThread]: Flushing usage events
+[0m20:32:40.781617 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b9ba762d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b9ba5d810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b9df1ad10>]}
+
+
+============================== 20:32:40.784569 | 1f5a9b0b-8873-4d65-b6d8-d2773620d50a ==============================
+[0m20:32:40.784569 [info ] [MainThread]: Running with dbt=1.6.0
+[0m20:32:40.785037 [debug] [MainThread]: running dbt with arguments {'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'log_cache_events': 'False', 'debug': 'False', 'write_json': 'True', 'introspect': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'cache_selected_only': 'False', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'partial_parse': 'True', 'printer_width': '80', 'warn_error': 'None', 'no_print': 'None', 'indirect_selection': 'eager', 'target_path': 'None', 'invocation_command': 'dbt run', 'quiet': 'False', 'log_format': 'default', 'use_experimental_parser': 'False', 'profiles_dir': '/home/walterg/.dbt'}
+[0m20:32:40.842612 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1f5a9b0b-8873-4d65-b6d8-d2773620d50a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b9b4da7d0>]}
+[0m20:32:40.854861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1f5a9b0b-8873-4d65-b6d8-d2773620d50a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b9b8d2490>]}
+[0m20:32:40.855560 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m20:32:40.863126 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m20:32:40.863684 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:32:40.863996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '1f5a9b0b-8873-4d65-b6d8-d2773620d50a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b9b797c50>]}
+[0m20:32:41.379554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1f5a9b0b-8873-4d65-b6d8-d2773620d50a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b9b80e010>]}
+[0m20:32:41.388727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1f5a9b0b-8873-4d65-b6d8-d2773620d50a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b9af61410>]}
+[0m20:32:41.389345 [info ] [MainThread]: Found 10 models, 5 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m20:32:41.389655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1f5a9b0b-8873-4d65-b6d8-d2773620d50a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b9c656e50>]}
+[0m20:32:41.391281 [info ] [MainThread]: 
+[0m20:32:41.391983 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:32:41.393686 [debug] [ThreadPool]: Acquiring new postgres connection 'list_general_rtxt'
+[0m20:32:41.399774 [debug] [ThreadPool]: Acquiring new postgres connection 'list_general_rtxt'
+[0m20:32:41.403757 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt"
+[0m20:32:41.406608 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt"
+[0m20:32:41.407162 [debug] [ThreadPool]: On list_general_rtxt: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "list_general_rtxt"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:32:41.407549 [debug] [ThreadPool]: On list_general_rtxt: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "list_general_rtxt"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:32:41.407836 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:32:41.408098 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:32:42.836433 [debug] [ThreadPool]: SQL status: SELECT 7 in 1.0 seconds
+[0m20:32:42.837830 [debug] [ThreadPool]: On list_general_rtxt: Close
+[0m20:32:43.225401 [debug] [ThreadPool]: SQL status: SELECT 7 in 2.0 seconds
+[0m20:32:43.226824 [debug] [ThreadPool]: On list_general_rtxt: Close
+[0m20:32:43.229676 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_general_rtxt, now list_general_rtxt_bronze_gold)
+[0m20:32:43.230536 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_general_rtxt, now list_general_rtxt_bronze_silver)
+[0m20:32:43.236167 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt_bronze_gold"
+[0m20:32:43.238064 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt_bronze_silver"
+[0m20:32:43.238444 [debug] [ThreadPool]: On list_general_rtxt_bronze_gold: BEGIN
+[0m20:32:43.238776 [debug] [ThreadPool]: On list_general_rtxt_bronze_silver: BEGIN
+[0m20:32:43.239173 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:32:43.239717 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:32:44.613429 [debug] [ThreadPool]: SQL status: BEGIN in 1.0 seconds
+[0m20:32:44.614034 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt_bronze_gold"
+[0m20:32:44.614299 [debug] [ThreadPool]: On list_general_rtxt_bronze_gold: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "list_general_rtxt_bronze_gold"} */
+select
+      'general_rtxt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'bronze_gold'
+    union all
+    select
+      'general_rtxt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'bronze_gold'
+    union all
+    select
+      'general_rtxt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'bronze_gold'
+  
+[0m20:32:44.798184 [debug] [ThreadPool]: SQL status: BEGIN in 2.0 seconds
+[0m20:32:44.799017 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt_bronze_silver"
+[0m20:32:44.799274 [debug] [ThreadPool]: On list_general_rtxt_bronze_silver: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "list_general_rtxt_bronze_silver"} */
+select
+      'general_rtxt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'bronze_silver'
+    union all
+    select
+      'general_rtxt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'bronze_silver'
+    union all
+    select
+      'general_rtxt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'bronze_silver'
+  
+[0m20:32:44.803782 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m20:32:44.805342 [debug] [ThreadPool]: On list_general_rtxt_bronze_gold: ROLLBACK
+[0m20:32:44.987553 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.0 seconds
+[0m20:32:44.989001 [debug] [ThreadPool]: On list_general_rtxt_bronze_silver: ROLLBACK
+[0m20:32:44.990054 [debug] [ThreadPool]: On list_general_rtxt_bronze_gold: Close
+[0m20:32:45.173124 [debug] [ThreadPool]: On list_general_rtxt_bronze_silver: Close
+[0m20:32:45.176963 [debug] [MainThread]: Using postgres connection "master"
+[0m20:32:45.177351 [debug] [MainThread]: On master: BEGIN
+[0m20:32:45.177585 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:32:46.749940 [debug] [MainThread]: SQL status: BEGIN in 2.0 seconds
+[0m20:32:46.750751 [debug] [MainThread]: Using postgres connection "master"
+[0m20:32:46.751042 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:32:46.955874 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m20:32:46.957295 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1f5a9b0b-8873-4d65-b6d8-d2773620d50a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b9cb0f710>]}
+[0m20:32:46.957752 [debug] [MainThread]: On master: ROLLBACK
+[0m20:32:47.145683 [debug] [MainThread]: Using postgres connection "master"
+[0m20:32:47.146546 [debug] [MainThread]: On master: BEGIN
+[0m20:32:47.548656 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m20:32:47.549372 [debug] [MainThread]: On master: COMMIT
+[0m20:32:47.549614 [debug] [MainThread]: Using postgres connection "master"
+[0m20:32:47.549843 [debug] [MainThread]: On master: COMMIT
+[0m20:32:47.766667 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m20:32:47.767627 [debug] [MainThread]: On master: Close
+[0m20:32:47.768806 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:32:47.769134 [info ] [MainThread]: 
+[0m20:32:47.772225 [debug] [Thread-1 (]: Began running node model.vendas_dw.dim_lojas
+[0m20:32:47.772936 [debug] [Thread-2 (]: Began running node model.vendas_dw.dim_produtos
+[0m20:32:47.773635 [info ] [Thread-1 (]: 1 of 10 START sql table model bronze_silver.dim_lojas .......................... [RUN]
+[0m20:32:47.774495 [debug] [Thread-3 (]: Began running node model.vendas_dw.dim_vendedores
+[0m20:32:47.775062 [info ] [Thread-2 (]: 2 of 10 START sql table model bronze_silver.dim_produtos ....................... [RUN]
+[0m20:32:47.775770 [debug] [Thread-4 (]: Began running node model.vendas_dw.stg_devolucoes
+[0m20:32:47.776626 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_general_rtxt_bronze_silver, now model.vendas_dw.dim_lojas)
+[0m20:32:47.777335 [info ] [Thread-3 (]: 3 of 10 START sql table model bronze_silver.dim_vendedores ..................... [RUN]
+[0m20:32:47.778366 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_general_rtxt_bronze_gold, now model.vendas_dw.dim_produtos)
+[0m20:32:47.779056 [info ] [Thread-4 (]: 4 of 10 START sql table model bronze_silver.stg_devolucoes ..................... [RUN]
+[0m20:32:47.779954 [debug] [Thread-1 (]: Began compiling node model.vendas_dw.dim_lojas
+[0m20:32:47.781110 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.vendas_dw.dim_vendedores'
+[0m20:32:47.781951 [debug] [Thread-2 (]: Began compiling node model.vendas_dw.dim_produtos
+[0m20:32:47.783212 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.vendas_dw.stg_devolucoes'
+[0m20:32:47.789281 [debug] [Thread-1 (]: Writing injected SQL for node "model.vendas_dw.dim_lojas"
+[0m20:32:47.789968 [debug] [Thread-3 (]: Began compiling node model.vendas_dw.dim_vendedores
+[0m20:32:47.793380 [debug] [Thread-2 (]: Writing injected SQL for node "model.vendas_dw.dim_produtos"
+[0m20:32:47.794082 [debug] [Thread-4 (]: Began compiling node model.vendas_dw.stg_devolucoes
+[0m20:32:47.797811 [debug] [Thread-3 (]: Writing injected SQL for node "model.vendas_dw.dim_vendedores"
+[0m20:32:47.800852 [debug] [Thread-4 (]: Writing injected SQL for node "model.vendas_dw.stg_devolucoes"
+[0m20:32:47.802108 [debug] [Thread-4 (]: Timing info for model.vendas_dw.stg_devolucoes (compile): 20:32:47.798608 => 20:32:47.801914
+[0m20:32:47.802730 [debug] [Thread-2 (]: Timing info for model.vendas_dw.dim_produtos (compile): 20:32:47.790630 => 20:32:47.802458
+[0m20:32:47.803114 [debug] [Thread-4 (]: Began executing node model.vendas_dw.stg_devolucoes
+[0m20:32:47.803547 [debug] [Thread-1 (]: Timing info for model.vendas_dw.dim_lojas (compile): 20:32:47.783840 => 20:32:47.803370
+[0m20:32:47.803950 [debug] [Thread-3 (]: Timing info for model.vendas_dw.dim_vendedores (compile): 20:32:47.794864 => 20:32:47.803789
+[0m20:32:47.804325 [debug] [Thread-2 (]: Began executing node model.vendas_dw.dim_produtos
+[0m20:32:47.825699 [debug] [Thread-1 (]: Began executing node model.vendas_dw.dim_lojas
+[0m20:32:47.834570 [debug] [Thread-4 (]: Writing runtime sql for node "model.vendas_dw.stg_devolucoes"
+[0m20:32:47.835197 [debug] [Thread-3 (]: Began executing node model.vendas_dw.dim_vendedores
+[0m20:32:47.839345 [debug] [Thread-2 (]: Writing runtime sql for node "model.vendas_dw.dim_produtos"
+[0m20:32:47.844088 [debug] [Thread-1 (]: Writing runtime sql for node "model.vendas_dw.dim_lojas"
+[0m20:32:47.850030 [debug] [Thread-3 (]: Writing runtime sql for node "model.vendas_dw.dim_vendedores"
+[0m20:32:47.851205 [debug] [Thread-2 (]: Using postgres connection "model.vendas_dw.dim_produtos"
+[0m20:32:47.851932 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.dim_lojas"
+[0m20:32:47.852323 [debug] [Thread-4 (]: Using postgres connection "model.vendas_dw.stg_devolucoes"
+[0m20:32:47.852805 [debug] [Thread-2 (]: On model.vendas_dw.dim_produtos: BEGIN
+[0m20:32:47.853191 [debug] [Thread-3 (]: Using postgres connection "model.vendas_dw.dim_vendedores"
+[0m20:32:47.853553 [debug] [Thread-1 (]: On model.vendas_dw.dim_lojas: BEGIN
+[0m20:32:47.853984 [debug] [Thread-4 (]: On model.vendas_dw.stg_devolucoes: BEGIN
+[0m20:32:47.854357 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m20:32:47.854717 [debug] [Thread-3 (]: On model.vendas_dw.dim_vendedores: BEGIN
+[0m20:32:47.855285 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:32:47.855656 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:32:47.856168 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:32:49.250462 [debug] [Thread-1 (]: SQL status: BEGIN in 1.0 seconds
+[0m20:32:49.251070 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.dim_lojas"
+[0m20:32:49.251376 [debug] [Thread-1 (]: On model.vendas_dw.dim_lojas: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_lojas"} */
+
+  
+    
+
+  create  table "general_rtxt"."bronze_silver"."dim_lojas__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with src as (
+
+    select
+        cast(id_loja  as int)   as id_loja,
+        nome_loja,
+        logradouro,
+        cast("número" as int)   as numero,
+        bairro,
+        cidade,
+        estado,
+        cep
+    from "general_rtxt"."bronze"."lojas"
+
+)
+
+select *
+from src
+  );
+  
+[0m20:32:49.256752 [debug] [Thread-3 (]: SQL status: BEGIN in 1.0 seconds
+[0m20:32:49.257567 [debug] [Thread-3 (]: Using postgres connection "model.vendas_dw.dim_vendedores"
+[0m20:32:49.257855 [debug] [Thread-3 (]: On model.vendas_dw.dim_vendedores: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_vendedores"} */
+
+  
+    
+
+  create  table "general_rtxt"."bronze_silver"."dim_vendedores__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with src as (
+
+    select
+        cast(id                as int)   as id_vendedor,
+        nome_vendedor,
+        cast(data_admissao     as date)  as data_admissao,
+        endereco_vendedor,
+        cast(data_nascimento   as date)  as data_nascimento
+    from "general_rtxt"."bronze"."vendedores"
+
+)
+
+select *
+from src
+  );
+  
+[0m20:32:49.320410 [debug] [Thread-4 (]: SQL status: BEGIN in 1.0 seconds
+[0m20:32:49.321018 [debug] [Thread-4 (]: Using postgres connection "model.vendas_dw.stg_devolucoes"
+[0m20:32:49.321334 [debug] [Thread-4 (]: On model.vendas_dw.stg_devolucoes: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.stg_devolucoes"} */
+
+  
+    
+
+  create  table "general_rtxt"."bronze_silver"."stg_devolucoes__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with src as (
+
+    select
+        cast(id_venda       as bigint)              as id_venda,
+        cast(id_produto     as int)                 as id_produto,
+        cast(preco          as numeric(12,2))       as preco,
+        cast(quantidade     as int)                 as quantidade,
+        cast(data_venda     as date)                as data_venda,
+        cast(data_devolucao as date)                as data_devolucao,
+        cast(id_cliente     as int)                 as id_cliente,
+        cast(id_loja        as int)                 as id_loja,
+        cast(id_vendedor    as int)                 as id_vendedor,
+        motivo
+    from "general_rtxt"."bronze"."devolucoes"
+
+)
+
+select *
+from src
+  );
+  
+[0m20:32:49.385672 [debug] [Thread-2 (]: SQL status: BEGIN in 2.0 seconds
+[0m20:32:49.386300 [debug] [Thread-2 (]: Using postgres connection "model.vendas_dw.dim_produtos"
+[0m20:32:49.386597 [debug] [Thread-2 (]: On model.vendas_dw.dim_produtos: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_produtos"} */
+
+  
+    
+
+  create  table "general_rtxt"."bronze_silver"."dim_produtos__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with src as (
+
+    select
+        cast(id_produto         as int)           as id_produto,
+        nome_produto,
+        categoria,
+        cast(percentual_imposto as numeric(5,2))  as percentual_imposto
+    from "general_rtxt"."bronze"."produtos"
+
+)
+
+select *
+from src
+  );
+  
+[0m20:32:49.452467 [debug] [Thread-3 (]: SQL status: SELECT 120 in 0.0 seconds
+[0m20:32:49.457905 [debug] [Thread-3 (]: Using postgres connection "model.vendas_dw.dim_vendedores"
+[0m20:32:49.458327 [debug] [Thread-3 (]: On model.vendas_dw.dim_vendedores: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_vendedores"} */
+alter table "general_rtxt"."bronze_silver"."dim_vendedores__dbt_tmp" rename to "dim_vendedores"
+[0m20:32:49.467012 [debug] [Thread-1 (]: SQL status: SELECT 15 in 0.0 seconds
+[0m20:32:49.469901 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.dim_lojas"
+[0m20:32:49.470220 [debug] [Thread-1 (]: On model.vendas_dw.dim_lojas: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_lojas"} */
+alter table "general_rtxt"."bronze_silver"."dim_lojas__dbt_tmp" rename to "dim_lojas"
+[0m20:32:49.657579 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:32:49.670765 [debug] [Thread-1 (]: On model.vendas_dw.dim_lojas: COMMIT
+[0m20:32:49.671167 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.dim_lojas"
+[0m20:32:49.671450 [debug] [Thread-1 (]: On model.vendas_dw.dim_lojas: COMMIT
+[0m20:32:49.713795 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:32:49.714551 [debug] [Thread-2 (]: SQL status: SELECT 300 in 0.0 seconds
+[0m20:32:49.716219 [debug] [Thread-3 (]: On model.vendas_dw.dim_vendedores: COMMIT
+[0m20:32:49.718610 [debug] [Thread-2 (]: Using postgres connection "model.vendas_dw.dim_produtos"
+[0m20:32:49.719020 [debug] [Thread-3 (]: Using postgres connection "model.vendas_dw.dim_vendedores"
+[0m20:32:49.719374 [debug] [Thread-2 (]: On model.vendas_dw.dim_produtos: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_produtos"} */
+alter table "general_rtxt"."bronze_silver"."dim_produtos__dbt_tmp" rename to "dim_produtos"
+[0m20:32:49.719681 [debug] [Thread-3 (]: On model.vendas_dw.dim_vendedores: COMMIT
+[0m20:32:49.914543 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:32:49.916377 [debug] [Thread-2 (]: On model.vendas_dw.dim_produtos: COMMIT
+[0m20:32:49.916759 [debug] [Thread-2 (]: Using postgres connection "model.vendas_dw.dim_produtos"
+[0m20:32:49.917016 [debug] [Thread-2 (]: On model.vendas_dw.dim_produtos: COMMIT
+[0m20:32:49.918011 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m20:32:49.924840 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.dim_lojas"
+[0m20:32:49.925321 [debug] [Thread-3 (]: SQL status: COMMIT in 0.0 seconds
+[0m20:32:49.925716 [debug] [Thread-1 (]: On model.vendas_dw.dim_lojas: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_lojas"} */
+drop table if exists "general_rtxt"."bronze_silver"."dim_lojas__dbt_backup" cascade
+[0m20:32:49.928364 [debug] [Thread-3 (]: Using postgres connection "model.vendas_dw.dim_vendedores"
+[0m20:32:49.929018 [debug] [Thread-3 (]: On model.vendas_dw.dim_vendedores: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_vendedores"} */
+drop table if exists "general_rtxt"."bronze_silver"."dim_vendedores__dbt_backup" cascade
+[0m20:32:50.116202 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m20:32:50.116768 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m20:32:50.117430 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m20:32:50.118624 [debug] [Thread-1 (]: Timing info for model.vendas_dw.dim_lojas (execute): 20:32:47.839770 => 20:32:50.118485
+[0m20:32:50.120300 [debug] [Thread-3 (]: Timing info for model.vendas_dw.dim_vendedores (execute): 20:32:47.844835 => 20:32:50.120147
+[0m20:32:50.122749 [debug] [Thread-2 (]: Using postgres connection "model.vendas_dw.dim_produtos"
+[0m20:32:50.123164 [debug] [Thread-1 (]: On model.vendas_dw.dim_lojas: Close
+[0m20:32:50.123669 [debug] [Thread-3 (]: On model.vendas_dw.dim_vendedores: Close
+[0m20:32:50.124183 [debug] [Thread-2 (]: On model.vendas_dw.dim_produtos: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_produtos"} */
+drop table if exists "general_rtxt"."bronze_silver"."dim_produtos__dbt_backup" cascade
+[0m20:32:50.124993 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f5a9b0b-8873-4d65-b6d8-d2773620d50a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b9b5034d0>]}
+[0m20:32:50.125558 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f5a9b0b-8873-4d65-b6d8-d2773620d50a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b9b4f8d10>]}
+[0m20:32:50.126207 [info ] [Thread-3 (]: 3 of 10 OK created sql table model bronze_silver.dim_vendedores ................ [[32mSELECT 120[0m in 2.34s]
+[0m20:32:50.126751 [info ] [Thread-1 (]: 1 of 10 OK created sql table model bronze_silver.dim_lojas ..................... [[32mSELECT 15[0m in 2.35s]
+[0m20:32:50.127396 [debug] [Thread-3 (]: Finished running node model.vendas_dw.dim_vendedores
+[0m20:32:50.127875 [debug] [Thread-1 (]: Finished running node model.vendas_dw.dim_lojas
+[0m20:32:50.128291 [debug] [Thread-3 (]: Began running node model.vendas_dw.stg_vendas
+[0m20:32:50.129459 [info ] [Thread-3 (]: 5 of 10 START sql table model bronze_silver.stg_vendas ......................... [RUN]
+[0m20:32:50.130090 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.vendas_dw.dim_vendedores, now model.vendas_dw.stg_vendas)
+[0m20:32:50.130481 [debug] [Thread-3 (]: Began compiling node model.vendas_dw.stg_vendas
+[0m20:32:50.133024 [debug] [Thread-3 (]: Writing injected SQL for node "model.vendas_dw.stg_vendas"
+[0m20:32:50.133896 [debug] [Thread-3 (]: Timing info for model.vendas_dw.stg_vendas (compile): 20:32:50.130935 => 20:32:50.133705
+[0m20:32:50.134203 [debug] [Thread-3 (]: Began executing node model.vendas_dw.stg_vendas
+[0m20:32:50.137656 [debug] [Thread-3 (]: Writing runtime sql for node "model.vendas_dw.stg_vendas"
+[0m20:32:50.138233 [debug] [Thread-3 (]: Using postgres connection "model.vendas_dw.stg_vendas"
+[0m20:32:50.138556 [debug] [Thread-3 (]: On model.vendas_dw.stg_vendas: BEGIN
+[0m20:32:50.138830 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m20:32:50.314419 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m20:32:50.315871 [debug] [Thread-2 (]: Timing info for model.vendas_dw.dim_produtos (execute): 20:32:47.835855 => 20:32:50.315732
+[0m20:32:50.316192 [debug] [Thread-2 (]: On model.vendas_dw.dim_produtos: Close
+[0m20:32:50.316878 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f5a9b0b-8873-4d65-b6d8-d2773620d50a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b9ae43350>]}
+[0m20:32:50.317379 [info ] [Thread-2 (]: 2 of 10 OK created sql table model bronze_silver.dim_produtos .................. [[32mSELECT 300[0m in 2.54s]
+[0m20:32:50.317834 [debug] [Thread-2 (]: Finished running node model.vendas_dw.dim_produtos
+[0m20:32:50.617798 [debug] [Thread-4 (]: SQL status: SELECT 30000 in 1.0 seconds
+[0m20:32:50.620717 [debug] [Thread-4 (]: Using postgres connection "model.vendas_dw.stg_devolucoes"
+[0m20:32:50.621031 [debug] [Thread-4 (]: On model.vendas_dw.stg_devolucoes: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.stg_devolucoes"} */
+alter table "general_rtxt"."bronze_silver"."stg_devolucoes__dbt_tmp" rename to "stg_devolucoes"
+[0m20:32:50.808546 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:32:50.810816 [debug] [Thread-4 (]: On model.vendas_dw.stg_devolucoes: COMMIT
+[0m20:32:50.811180 [debug] [Thread-4 (]: Using postgres connection "model.vendas_dw.stg_devolucoes"
+[0m20:32:50.811468 [debug] [Thread-4 (]: On model.vendas_dw.stg_devolucoes: COMMIT
+[0m20:32:51.000752 [debug] [Thread-4 (]: SQL status: COMMIT in 0.0 seconds
+[0m20:32:51.003431 [debug] [Thread-4 (]: Using postgres connection "model.vendas_dw.stg_devolucoes"
+[0m20:32:51.003739 [debug] [Thread-4 (]: On model.vendas_dw.stg_devolucoes: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.stg_devolucoes"} */
+drop table if exists "general_rtxt"."bronze_silver"."stg_devolucoes__dbt_backup" cascade
+[0m20:32:51.213522 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m20:32:51.215305 [debug] [Thread-4 (]: Timing info for model.vendas_dw.stg_devolucoes (execute): 20:32:47.804601 => 20:32:51.215151
+[0m20:32:51.215621 [debug] [Thread-4 (]: On model.vendas_dw.stg_devolucoes: Close
+[0m20:32:51.216321 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f5a9b0b-8873-4d65-b6d8-d2773620d50a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b9ae66350>]}
+[0m20:32:51.216815 [info ] [Thread-4 (]: 4 of 10 OK created sql table model bronze_silver.stg_devolucoes ................ [[32mSELECT 30000[0m in 3.43s]
+[0m20:32:51.217522 [debug] [Thread-4 (]: Finished running node model.vendas_dw.stg_devolucoes
+[0m20:32:51.219009 [debug] [Thread-1 (]: Began running node model.vendas_dw.fct_devolucoes
+[0m20:32:51.219467 [info ] [Thread-1 (]: 6 of 10 START sql table model bronze_gold.fct_devolucoes ....................... [RUN]
+[0m20:32:51.220074 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vendas_dw.dim_lojas, now model.vendas_dw.fct_devolucoes)
+[0m20:32:51.220530 [debug] [Thread-1 (]: Began compiling node model.vendas_dw.fct_devolucoes
+[0m20:32:51.222946 [debug] [Thread-1 (]: Writing injected SQL for node "model.vendas_dw.fct_devolucoes"
+[0m20:32:51.223655 [debug] [Thread-1 (]: Timing info for model.vendas_dw.fct_devolucoes (compile): 20:32:51.220775 => 20:32:51.223463
+[0m20:32:51.223993 [debug] [Thread-1 (]: Began executing node model.vendas_dw.fct_devolucoes
+[0m20:32:51.228378 [debug] [Thread-1 (]: Writing runtime sql for node "model.vendas_dw.fct_devolucoes"
+[0m20:32:51.229056 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.fct_devolucoes"
+[0m20:32:51.229381 [debug] [Thread-1 (]: On model.vendas_dw.fct_devolucoes: BEGIN
+[0m20:32:51.229640 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:32:51.590590 [debug] [Thread-3 (]: SQL status: BEGIN in 1.0 seconds
+[0m20:32:51.591267 [debug] [Thread-3 (]: Using postgres connection "model.vendas_dw.stg_vendas"
+[0m20:32:51.591582 [debug] [Thread-3 (]: On model.vendas_dw.stg_vendas: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.stg_vendas"} */
+
+  
+    
+
+  create  table "general_rtxt"."bronze_silver"."stg_vendas__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with src as (
+
+    select
+        cast(id_venda      as bigint)               as id_venda,
+        cast(id_produto    as int)                  as id_produto,
+        cast(preco         as numeric(12,2))        as preco,
+        cast(quantidade    as int)                  as quantidade,
+        cast(data_venda    as date)                 as data_venda,
+        cast(id_cliente    as int)                  as id_cliente,
+        cast(id_loja       as int)                  as id_loja,
+        cast(id_vendedor   as int)                  as id_vendedor,
+        lower(trim(meio_pagamento))                 as meio_pagamento,
+        cast(parcelamento  as smallint)             as parcelamento
+    from "general_rtxt"."bronze"."vendas"
+
+)
+
+select *
+from src
+  );
+  
+[0m20:32:52.813620 [debug] [Thread-1 (]: SQL status: BEGIN in 2.0 seconds
+[0m20:32:52.814288 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.fct_devolucoes"
+[0m20:32:52.814588 [debug] [Thread-1 (]: On model.vendas_dw.fct_devolucoes: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.fct_devolucoes"} */
+
+  
+    
+
+  create  table "general_rtxt"."bronze_gold"."fct_devolucoes__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with devol as (
+    select * from "general_rtxt"."bronze_silver"."stg_devolucoes"
+)
+
+select
+    id_venda,
+    id_produto,
+    id_loja,
+    id_vendedor,
+    id_cliente,
+    data_venda,
+    data_devolucao,
+    quantidade,
+    preco,
+    quantidade * preco                             as valor_devolvido,
+    motivo
+from devol;
+  );
+  
+[0m20:32:53.013740 [debug] [Thread-1 (]: Postgres adapter: Postgres error: syntax error at or near ";"
+LINE 30: from devol;
+                   ^
+
+[0m20:32:53.014607 [debug] [Thread-1 (]: On model.vendas_dw.fct_devolucoes: ROLLBACK
+[0m20:32:53.213471 [debug] [Thread-1 (]: Timing info for model.vendas_dw.fct_devolucoes (execute): 20:32:51.224218 => 20:32:53.213104
+[0m20:32:53.213937 [debug] [Thread-1 (]: On model.vendas_dw.fct_devolucoes: Close
+[0m20:32:53.216734 [debug] [Thread-1 (]: Database Error in model fct_devolucoes (models/gold/fct_devolucoes.sql)
+  syntax error at or near ";"
+  LINE 30: from devol;
+                     ^
+  compiled Code at target/run/vendas_dw/models/gold/fct_devolucoes.sql
+[0m20:32:53.217176 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f5a9b0b-8873-4d65-b6d8-d2773620d50a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b9ad03490>]}
+[0m20:32:53.217647 [error] [Thread-1 (]: 6 of 10 ERROR creating sql table model bronze_gold.fct_devolucoes .............. [[31mERROR[0m in 2.00s]
+[0m20:32:53.218107 [debug] [Thread-1 (]: Finished running node model.vendas_dw.fct_devolucoes
+[0m20:33:42.128784 [debug] [Thread-3 (]: Postgres adapter: Postgres error: could not extend file "base/16389/16691" with FileFallocate(): No space left on device
+HINT:  Check free disk space.
+
+[0m20:33:42.129537 [debug] [Thread-3 (]: On model.vendas_dw.stg_vendas: ROLLBACK
+[0m20:33:42.332951 [debug] [Thread-3 (]: Timing info for model.vendas_dw.stg_vendas (execute): 20:32:50.134448 => 20:33:42.332488
+[0m20:33:42.333355 [debug] [Thread-3 (]: On model.vendas_dw.stg_vendas: Close
+[0m20:33:42.335121 [debug] [Thread-3 (]: Database Error in model stg_vendas (models/silver/stg_vendas.sql)
+  could not extend file "base/16389/16691" with FileFallocate(): No space left on device
+  HINT:  Check free disk space.
+  compiled Code at target/run/vendas_dw/models/silver/stg_vendas.sql
+[0m20:33:42.335539 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f5a9b0b-8873-4d65-b6d8-d2773620d50a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b9ad08150>]}
+[0m20:33:42.336000 [error] [Thread-3 (]: 5 of 10 ERROR creating sql table model bronze_silver.stg_vendas ................ [[31mERROR[0m in 52.21s]
+[0m20:33:42.336459 [debug] [Thread-3 (]: Finished running node model.vendas_dw.stg_vendas
+[0m20:33:42.338442 [debug] [Thread-4 (]: Began running node model.vendas_dw.fct_vendas
+[0m20:33:42.338907 [info ] [Thread-4 (]: 7 of 10 SKIP relation bronze_gold.fct_vendas ................................... [[33mSKIP[0m]
+[0m20:33:42.339255 [debug] [Thread-4 (]: Finished running node model.vendas_dw.fct_vendas
+[0m20:33:42.358078 [debug] [Thread-1 (]: Began running node model.vendas_dw.indicadores_vendas
+[0m20:33:42.358785 [debug] [Thread-3 (]: Began running node model.vendas_dw.mart_receita_diaria_loja
+[0m20:33:42.359370 [debug] [Thread-2 (]: Began running node model.vendas_dw.mart_receita_mensal_categoria
+[0m20:33:42.359719 [info ] [Thread-1 (]: 8 of 10 SKIP relation bronze_silver.indicadores_vendas ......................... [[33mSKIP[0m]
+[0m20:33:42.360145 [info ] [Thread-3 (]: 9 of 10 SKIP relation bronze_gold.mart_receita_diaria_loja ..................... [[33mSKIP[0m]
+[0m20:33:42.360816 [info ] [Thread-2 (]: 10 of 10 SKIP relation bronze_gold.mart_receita_mensal_categoria ............... [[33mSKIP[0m]
+[0m20:33:42.361574 [debug] [Thread-1 (]: Finished running node model.vendas_dw.indicadores_vendas
+[0m20:33:42.362024 [debug] [Thread-3 (]: Finished running node model.vendas_dw.mart_receita_diaria_loja
+[0m20:33:42.362398 [debug] [Thread-2 (]: Finished running node model.vendas_dw.mart_receita_mensal_categoria
+[0m20:33:42.365929 [debug] [MainThread]: Using postgres connection "master"
+[0m20:33:42.366394 [debug] [MainThread]: On master: BEGIN
+[0m20:33:42.366675 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:33:43.849454 [debug] [MainThread]: SQL status: BEGIN in 1.0 seconds
+[0m20:33:43.850352 [debug] [MainThread]: On master: COMMIT
+[0m20:33:43.850676 [debug] [MainThread]: Using postgres connection "master"
+[0m20:33:43.850899 [debug] [MainThread]: On master: COMMIT
+[0m20:33:44.038944 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m20:33:44.039839 [debug] [MainThread]: On master: Close
+[0m20:33:44.040605 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:33:44.040867 [debug] [MainThread]: Connection 'model.vendas_dw.fct_devolucoes' was properly closed.
+[0m20:33:44.041072 [debug] [MainThread]: Connection 'model.vendas_dw.dim_produtos' was properly closed.
+[0m20:33:44.041288 [debug] [MainThread]: Connection 'model.vendas_dw.stg_vendas' was properly closed.
+[0m20:33:44.041496 [debug] [MainThread]: Connection 'model.vendas_dw.stg_devolucoes' was properly closed.
+[0m20:33:44.041791 [info ] [MainThread]: 
+[0m20:33:44.042079 [info ] [MainThread]: Finished running 10 table models in 0 hours 1 minutes and 2.65 seconds (62.65s).
+[0m20:33:44.043193 [debug] [MainThread]: Command end result
+[0m20:33:44.050196 [info ] [MainThread]: 
+[0m20:33:44.050681 [info ] [MainThread]: [31mCompleted with 2 errors and 0 warnings:[0m
+[0m20:33:44.051102 [info ] [MainThread]: 
+[0m20:33:44.051598 [error] [MainThread]: [33mDatabase Error in model fct_devolucoes (models/gold/fct_devolucoes.sql)[0m
+[0m20:33:44.051986 [error] [MainThread]:   syntax error at or near ";"
+[0m20:33:44.052385 [error] [MainThread]:   LINE 30: from devol;
+[0m20:33:44.052692 [error] [MainThread]:                      ^
+[0m20:33:44.052987 [error] [MainThread]:   compiled Code at target/run/vendas_dw/models/gold/fct_devolucoes.sql
+[0m20:33:44.053336 [info ] [MainThread]: 
+[0m20:33:44.053718 [error] [MainThread]: [33mDatabase Error in model stg_vendas (models/silver/stg_vendas.sql)[0m
+[0m20:33:44.054017 [error] [MainThread]:   could not extend file "base/16389/16691" with FileFallocate(): No space left on device
+[0m20:33:44.054373 [error] [MainThread]:   HINT:  Check free disk space.
+[0m20:33:44.054658 [error] [MainThread]:   compiled Code at target/run/vendas_dw/models/silver/stg_vendas.sql
+[0m20:33:44.054963 [info ] [MainThread]: 
+[0m20:33:44.055307 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=2 SKIP=4 TOTAL=10
+[0m20:33:44.055868 [debug] [MainThread]: Command `dbt run` failed at 20:33:44.055731 after 63.28 seconds
+[0m20:33:44.056340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b9af70d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0ba01b6650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b9b7a4390>]}
+[0m20:33:44.056741 [debug] [MainThread]: Flushing usage events
+[0m20:37:15.602327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99bfaff990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99bfc08e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99bfc32d10>]}
+
+
+============================== 20:37:15.605059 | bcc6a6b5-76ce-46c2-aeab-0537493299cf ==============================
+[0m20:37:15.605059 [info ] [MainThread]: Running with dbt=1.6.0
+[0m20:37:15.605534 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'quiet': 'False', 'invocation_command': 'dbt run', 'no_print': 'None', 'indirect_selection': 'eager', 'warn_error': 'None', 'log_format': 'default', 'introspect': 'True', 'profiles_dir': '/home/walterg/.dbt', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'write_json': 'True', 'partial_parse': 'True', 'use_colors': 'True', 'fail_fast': 'False', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'log_cache_events': 'False', 'target_path': 'None', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'debug': 'False'}
+[0m20:37:15.662622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bcc6a6b5-76ce-46c2-aeab-0537493299cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99bf6ae410>]}
+[0m20:37:15.674803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bcc6a6b5-76ce-46c2-aeab-0537493299cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99bf91ab50>]}
+[0m20:37:15.675456 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m20:37:15.682971 [debug] [MainThread]: checksum: 08dabea3fc65f9f8dd48613681c2bcd827397a7ba9ce4c6d52980aba1215e8c9, vars: {}, profile: , target: , version: 1.6.0
+[0m20:37:15.699657 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 4 files changed.
+[0m20:37:15.700236 [debug] [MainThread]: Partial parsing: updated file: vendas_dw://models/gold/mart_receita_diaria_loja.sql
+[0m20:37:15.704510 [debug] [MainThread]: Partial parsing: updated file: vendas_dw://models/gold/mart_receita_mensal_categoria.sql
+[0m20:37:15.705522 [debug] [MainThread]: Partial parsing: updated file: vendas_dw://models/gold/fct_vendas.sql
+[0m20:37:15.706452 [debug] [MainThread]: Partial parsing: updated file: vendas_dw://models/gold/fct_devolucoes.sql
+[0m20:37:15.750916 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bcc6a6b5-76ce-46c2-aeab-0537493299cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99bf6d8250>]}
+[0m20:37:15.759901 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bcc6a6b5-76ce-46c2-aeab-0537493299cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99bf0f2d10>]}
+[0m20:37:15.760352 [info ] [MainThread]: Found 10 models, 5 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m20:37:15.760651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bcc6a6b5-76ce-46c2-aeab-0537493299cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99bfd65d10>]}
+[0m20:37:15.762279 [info ] [MainThread]: 
+[0m20:37:15.762970 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:37:15.764954 [debug] [ThreadPool]: Acquiring new postgres connection 'list_general_rtxt'
+[0m20:37:15.766116 [debug] [ThreadPool]: Acquiring new postgres connection 'list_general_rtxt'
+[0m20:37:15.775062 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt"
+[0m20:37:15.777490 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt"
+[0m20:37:15.777888 [debug] [ThreadPool]: On list_general_rtxt: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "list_general_rtxt"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:37:15.778182 [debug] [ThreadPool]: On list_general_rtxt: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "list_general_rtxt"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:37:15.778488 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:37:15.778774 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:37:17.180711 [debug] [ThreadPool]: SQL status: SELECT 7 in 1.0 seconds
+[0m20:37:17.182315 [debug] [ThreadPool]: On list_general_rtxt: Close
+[0m20:37:17.205365 [debug] [ThreadPool]: SQL status: SELECT 7 in 1.0 seconds
+[0m20:37:17.206910 [debug] [ThreadPool]: On list_general_rtxt: Close
+[0m20:37:17.209867 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_general_rtxt, now list_general_rtxt_bronze_silver)
+[0m20:37:17.211087 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_general_rtxt, now list_general_rtxt_bronze_gold)
+[0m20:37:17.216070 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt_bronze_silver"
+[0m20:37:17.217902 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt_bronze_gold"
+[0m20:37:17.218354 [debug] [ThreadPool]: On list_general_rtxt_bronze_silver: BEGIN
+[0m20:37:17.218738 [debug] [ThreadPool]: On list_general_rtxt_bronze_gold: BEGIN
+[0m20:37:17.219229 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:37:17.219526 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:37:18.644216 [debug] [ThreadPool]: SQL status: BEGIN in 1.0 seconds
+[0m20:37:18.644855 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt_bronze_silver"
+[0m20:37:18.645142 [debug] [ThreadPool]: On list_general_rtxt_bronze_silver: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "list_general_rtxt_bronze_silver"} */
+select
+      'general_rtxt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'bronze_silver'
+    union all
+    select
+      'general_rtxt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'bronze_silver'
+    union all
+    select
+      'general_rtxt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'bronze_silver'
+  
+[0m20:37:18.821886 [debug] [ThreadPool]: SQL status: BEGIN in 2.0 seconds
+[0m20:37:18.822632 [debug] [ThreadPool]: Using postgres connection "list_general_rtxt_bronze_gold"
+[0m20:37:18.823161 [debug] [ThreadPool]: On list_general_rtxt_bronze_gold: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "list_general_rtxt_bronze_gold"} */
+select
+      'general_rtxt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'bronze_gold'
+    union all
+    select
+      'general_rtxt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'bronze_gold'
+    union all
+    select
+      'general_rtxt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'bronze_gold'
+  
+[0m20:37:18.845480 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.0 seconds
+[0m20:37:18.846631 [debug] [ThreadPool]: On list_general_rtxt_bronze_silver: ROLLBACK
+[0m20:37:19.018442 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m20:37:19.020223 [debug] [ThreadPool]: On list_general_rtxt_bronze_gold: ROLLBACK
+[0m20:37:19.029681 [debug] [ThreadPool]: On list_general_rtxt_bronze_silver: Close
+[0m20:37:19.206369 [debug] [ThreadPool]: On list_general_rtxt_bronze_gold: Close
+[0m20:37:19.211151 [debug] [MainThread]: Using postgres connection "master"
+[0m20:37:19.211534 [debug] [MainThread]: On master: BEGIN
+[0m20:37:19.211797 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:37:20.705460 [debug] [MainThread]: SQL status: BEGIN in 1.0 seconds
+[0m20:37:20.706355 [debug] [MainThread]: Using postgres connection "master"
+[0m20:37:20.706696 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:37:20.906718 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m20:37:20.908303 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bcc6a6b5-76ce-46c2-aeab-0537493299cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99bf1652d0>]}
+[0m20:37:20.908688 [debug] [MainThread]: On master: ROLLBACK
+[0m20:37:21.099164 [debug] [MainThread]: Using postgres connection "master"
+[0m20:37:21.099998 [debug] [MainThread]: On master: BEGIN
+[0m20:37:21.478061 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m20:37:21.478954 [debug] [MainThread]: On master: COMMIT
+[0m20:37:21.479215 [debug] [MainThread]: Using postgres connection "master"
+[0m20:37:21.479475 [debug] [MainThread]: On master: COMMIT
+[0m20:37:21.669087 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m20:37:21.669943 [debug] [MainThread]: On master: Close
+[0m20:37:21.670600 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:37:21.670911 [info ] [MainThread]: 
+[0m20:37:21.674541 [debug] [Thread-1 (]: Began running node model.vendas_dw.dim_lojas
+[0m20:37:21.675286 [debug] [Thread-2 (]: Began running node model.vendas_dw.dim_produtos
+[0m20:37:21.675744 [debug] [Thread-3 (]: Began running node model.vendas_dw.dim_vendedores
+[0m20:37:21.676312 [debug] [Thread-4 (]: Began running node model.vendas_dw.stg_devolucoes
+[0m20:37:21.676736 [info ] [Thread-1 (]: 1 of 10 START sql table model bronze_silver.dim_lojas .......................... [RUN]
+[0m20:37:21.677556 [info ] [Thread-2 (]: 2 of 10 START sql table model bronze_silver.dim_produtos ....................... [RUN]
+[0m20:37:21.678349 [info ] [Thread-3 (]: 3 of 10 START sql table model bronze_silver.dim_vendedores ..................... [RUN]
+[0m20:37:21.678943 [info ] [Thread-4 (]: 4 of 10 START sql table model bronze_silver.stg_devolucoes ..................... [RUN]
+[0m20:37:21.679859 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_general_rtxt_bronze_gold, now model.vendas_dw.dim_lojas)
+[0m20:37:21.680397 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_general_rtxt_bronze_silver, now model.vendas_dw.dim_produtos)
+[0m20:37:21.681149 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.vendas_dw.dim_vendedores'
+[0m20:37:21.681874 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.vendas_dw.stg_devolucoes'
+[0m20:37:21.682356 [debug] [Thread-1 (]: Began compiling node model.vendas_dw.dim_lojas
+[0m20:37:21.682723 [debug] [Thread-2 (]: Began compiling node model.vendas_dw.dim_produtos
+[0m20:37:21.683199 [debug] [Thread-3 (]: Began compiling node model.vendas_dw.dim_vendedores
+[0m20:37:21.683684 [debug] [Thread-4 (]: Began compiling node model.vendas_dw.stg_devolucoes
+[0m20:37:21.690626 [debug] [Thread-1 (]: Writing injected SQL for node "model.vendas_dw.dim_lojas"
+[0m20:37:21.693516 [debug] [Thread-2 (]: Writing injected SQL for node "model.vendas_dw.dim_produtos"
+[0m20:37:21.697145 [debug] [Thread-3 (]: Writing injected SQL for node "model.vendas_dw.dim_vendedores"
+[0m20:37:21.700285 [debug] [Thread-4 (]: Writing injected SQL for node "model.vendas_dw.stg_devolucoes"
+[0m20:37:21.701929 [debug] [Thread-1 (]: Timing info for model.vendas_dw.dim_lojas (compile): 20:37:21.684037 => 20:37:21.701565
+[0m20:37:21.702496 [debug] [Thread-3 (]: Timing info for model.vendas_dw.dim_vendedores (compile): 20:37:21.694012 => 20:37:21.702222
+[0m20:37:21.703073 [debug] [Thread-2 (]: Timing info for model.vendas_dw.dim_produtos (compile): 20:37:21.691048 => 20:37:21.702832
+[0m20:37:21.703448 [debug] [Thread-1 (]: Began executing node model.vendas_dw.dim_lojas
+[0m20:37:21.703912 [debug] [Thread-3 (]: Began executing node model.vendas_dw.dim_vendedores
+[0m20:37:21.704376 [debug] [Thread-4 (]: Timing info for model.vendas_dw.stg_devolucoes (compile): 20:37:21.697719 => 20:37:21.704198
+[0m20:37:21.705871 [debug] [Thread-2 (]: Began executing node model.vendas_dw.dim_produtos
+[0m20:37:21.744478 [debug] [Thread-3 (]: Writing runtime sql for node "model.vendas_dw.dim_vendedores"
+[0m20:37:21.747151 [debug] [Thread-1 (]: Writing runtime sql for node "model.vendas_dw.dim_lojas"
+[0m20:37:21.747664 [debug] [Thread-4 (]: Began executing node model.vendas_dw.stg_devolucoes
+[0m20:37:21.751170 [debug] [Thread-2 (]: Writing runtime sql for node "model.vendas_dw.dim_produtos"
+[0m20:37:21.755492 [debug] [Thread-4 (]: Writing runtime sql for node "model.vendas_dw.stg_devolucoes"
+[0m20:37:21.756224 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.dim_lojas"
+[0m20:37:21.757197 [debug] [Thread-3 (]: Using postgres connection "model.vendas_dw.dim_vendedores"
+[0m20:37:21.758160 [debug] [Thread-1 (]: On model.vendas_dw.dim_lojas: BEGIN
+[0m20:37:21.758641 [debug] [Thread-3 (]: On model.vendas_dw.dim_vendedores: BEGIN
+[0m20:37:21.759068 [debug] [Thread-2 (]: Using postgres connection "model.vendas_dw.dim_produtos"
+[0m20:37:21.759389 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:37:21.759704 [debug] [Thread-4 (]: Using postgres connection "model.vendas_dw.stg_devolucoes"
+[0m20:37:21.760055 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:37:21.760420 [debug] [Thread-2 (]: On model.vendas_dw.dim_produtos: BEGIN
+[0m20:37:21.760880 [debug] [Thread-4 (]: On model.vendas_dw.stg_devolucoes: BEGIN
+[0m20:37:21.761380 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m20:37:21.761692 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:37:23.191514 [debug] [Thread-2 (]: SQL status: BEGIN in 1.0 seconds
+[0m20:37:23.192284 [debug] [Thread-2 (]: Using postgres connection "model.vendas_dw.dim_produtos"
+[0m20:37:23.192608 [debug] [Thread-2 (]: On model.vendas_dw.dim_produtos: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_produtos"} */
+
+  
+    
+
+  create  table "general_rtxt"."bronze_silver"."dim_produtos__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with src as (
+
+    select
+        cast(id_produto         as int)           as id_produto,
+        nome_produto,
+        categoria,
+        cast(percentual_imposto as numeric(5,2))  as percentual_imposto
+    from "general_rtxt"."bronze"."produtos"
+
+)
+
+select *
+from src
+  );
+  
+[0m20:37:23.231910 [debug] [Thread-3 (]: SQL status: BEGIN in 1.0 seconds
+[0m20:37:23.232868 [debug] [Thread-3 (]: Using postgres connection "model.vendas_dw.dim_vendedores"
+[0m20:37:23.233172 [debug] [Thread-3 (]: On model.vendas_dw.dim_vendedores: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_vendedores"} */
+
+  
+    
+
+  create  table "general_rtxt"."bronze_silver"."dim_vendedores__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with src as (
+
+    select
+        cast(id                as int)   as id_vendedor,
+        nome_vendedor,
+        cast(data_admissao     as date)  as data_admissao,
+        endereco_vendedor,
+        cast(data_nascimento   as date)  as data_nascimento
+    from "general_rtxt"."bronze"."vendedores"
+
+)
+
+select *
+from src
+  );
+  
+[0m20:37:23.331087 [debug] [Thread-4 (]: SQL status: BEGIN in 2.0 seconds
+[0m20:37:23.331585 [debug] [Thread-4 (]: Using postgres connection "model.vendas_dw.stg_devolucoes"
+[0m20:37:23.331871 [debug] [Thread-4 (]: On model.vendas_dw.stg_devolucoes: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.stg_devolucoes"} */
+
+  
+    
+
+  create  table "general_rtxt"."bronze_silver"."stg_devolucoes__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with src as (
+
+    select
+        cast(id_venda       as bigint)              as id_venda,
+        cast(id_produto     as int)                 as id_produto,
+        cast(preco          as numeric(12,2))       as preco,
+        cast(quantidade     as int)                 as quantidade,
+        cast(data_venda     as date)                as data_venda,
+        cast(data_devolucao as date)                as data_devolucao,
+        cast(id_cliente     as int)                 as id_cliente,
+        cast(id_loja        as int)                 as id_loja,
+        cast(id_vendedor    as int)                 as id_vendedor,
+        motivo
+    from "general_rtxt"."bronze"."devolucoes"
+
+)
+
+select *
+from src
+  );
+  
+[0m20:37:23.379927 [debug] [Thread-1 (]: SQL status: BEGIN in 2.0 seconds
+[0m20:37:23.380551 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.dim_lojas"
+[0m20:37:23.380824 [debug] [Thread-1 (]: On model.vendas_dw.dim_lojas: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_lojas"} */
+
+  
+    
+
+  create  table "general_rtxt"."bronze_silver"."dim_lojas__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with src as (
+
+    select
+        cast(id_loja  as int)   as id_loja,
+        nome_loja,
+        logradouro,
+        cast("número" as int)   as numero,
+        bairro,
+        cidade,
+        estado,
+        cep
+    from "general_rtxt"."bronze"."lojas"
+
+)
+
+select *
+from src
+  );
+  
+[0m20:37:23.403160 [debug] [Thread-2 (]: SQL status: SELECT 300 in 0.0 seconds
+[0m20:37:23.408077 [debug] [Thread-2 (]: Using postgres connection "model.vendas_dw.dim_produtos"
+[0m20:37:23.408512 [debug] [Thread-2 (]: On model.vendas_dw.dim_produtos: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_produtos"} */
+alter table "general_rtxt"."bronze_silver"."dim_produtos" rename to "dim_produtos__dbt_backup"
+[0m20:37:23.467727 [debug] [Thread-3 (]: SQL status: SELECT 120 in 0.0 seconds
+[0m20:37:23.470879 [debug] [Thread-3 (]: Using postgres connection "model.vendas_dw.dim_vendedores"
+[0m20:37:23.471215 [debug] [Thread-3 (]: On model.vendas_dw.dim_vendedores: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_vendedores"} */
+alter table "general_rtxt"."bronze_silver"."dim_vendedores" rename to "dim_vendedores__dbt_backup"
+[0m20:37:23.614366 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:37:23.617524 [debug] [Thread-2 (]: Using postgres connection "model.vendas_dw.dim_produtos"
+[0m20:37:23.617900 [debug] [Thread-2 (]: On model.vendas_dw.dim_produtos: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_produtos"} */
+alter table "general_rtxt"."bronze_silver"."dim_produtos__dbt_tmp" rename to "dim_produtos"
+[0m20:37:23.626746 [debug] [Thread-1 (]: SQL status: SELECT 15 in 0.0 seconds
+[0m20:37:23.629015 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.dim_lojas"
+[0m20:37:23.629375 [debug] [Thread-1 (]: On model.vendas_dw.dim_lojas: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_lojas"} */
+alter table "general_rtxt"."bronze_silver"."dim_lojas" rename to "dim_lojas__dbt_backup"
+[0m20:37:23.659512 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:37:23.662470 [debug] [Thread-3 (]: Using postgres connection "model.vendas_dw.dim_vendedores"
+[0m20:37:23.662821 [debug] [Thread-3 (]: On model.vendas_dw.dim_vendedores: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_vendedores"} */
+alter table "general_rtxt"."bronze_silver"."dim_vendedores__dbt_tmp" rename to "dim_vendedores"
+[0m20:37:23.813626 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:37:23.825819 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:37:23.830597 [debug] [Thread-2 (]: On model.vendas_dw.dim_produtos: COMMIT
+[0m20:37:23.835450 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.dim_lojas"
+[0m20:37:23.836199 [debug] [Thread-2 (]: Using postgres connection "model.vendas_dw.dim_produtos"
+[0m20:37:23.837002 [debug] [Thread-1 (]: On model.vendas_dw.dim_lojas: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_lojas"} */
+alter table "general_rtxt"."bronze_silver"."dim_lojas__dbt_tmp" rename to "dim_lojas"
+[0m20:37:23.837382 [debug] [Thread-2 (]: On model.vendas_dw.dim_produtos: COMMIT
+[0m20:37:23.913318 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:37:23.916019 [debug] [Thread-3 (]: On model.vendas_dw.dim_vendedores: COMMIT
+[0m20:37:23.916357 [debug] [Thread-3 (]: Using postgres connection "model.vendas_dw.dim_vendedores"
+[0m20:37:23.916618 [debug] [Thread-3 (]: On model.vendas_dw.dim_vendedores: COMMIT
+[0m20:37:24.122837 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m20:37:24.123649 [debug] [Thread-3 (]: SQL status: COMMIT in 0.0 seconds
+[0m20:37:24.129802 [debug] [Thread-2 (]: Using postgres connection "model.vendas_dw.dim_produtos"
+[0m20:37:24.133267 [debug] [Thread-3 (]: Using postgres connection "model.vendas_dw.dim_vendedores"
+[0m20:37:24.133952 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:37:24.134791 [debug] [Thread-2 (]: On model.vendas_dw.dim_produtos: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_produtos"} */
+drop table if exists "general_rtxt"."bronze_silver"."dim_produtos__dbt_backup" cascade
+[0m20:37:24.135142 [debug] [Thread-3 (]: On model.vendas_dw.dim_vendedores: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_vendedores"} */
+drop table if exists "general_rtxt"."bronze_silver"."dim_vendedores__dbt_backup" cascade
+[0m20:37:24.136968 [debug] [Thread-1 (]: On model.vendas_dw.dim_lojas: COMMIT
+[0m20:37:24.137577 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.dim_lojas"
+[0m20:37:24.137862 [debug] [Thread-1 (]: On model.vendas_dw.dim_lojas: COMMIT
+[0m20:37:24.513218 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m20:37:24.515334 [debug] [Thread-3 (]: Timing info for model.vendas_dw.dim_vendedores (execute): 20:37:21.721650 => 20:37:24.515153
+[0m20:37:24.515693 [debug] [Thread-3 (]: On model.vendas_dw.dim_vendedores: Close
+[0m20:37:24.516050 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m20:37:24.516873 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bcc6a6b5-76ce-46c2-aeab-0537493299cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99bf6fae50>]}
+[0m20:37:24.518509 [debug] [Thread-2 (]: Timing info for model.vendas_dw.dim_produtos (execute): 20:37:21.748166 => 20:37:24.518295
+[0m20:37:24.519208 [info ] [Thread-3 (]: 3 of 10 OK created sql table model bronze_silver.dim_vendedores ................ [[32mSELECT 120[0m in 2.84s]
+[0m20:37:24.519872 [debug] [Thread-2 (]: On model.vendas_dw.dim_produtos: Close
+[0m20:37:24.520941 [debug] [Thread-3 (]: Finished running node model.vendas_dw.dim_vendedores
+[0m20:37:24.521706 [debug] [Thread-3 (]: Began running node model.vendas_dw.stg_vendas
+[0m20:37:24.522770 [info ] [Thread-3 (]: 5 of 10 START sql table model bronze_silver.stg_vendas ......................... [RUN]
+[0m20:37:24.523630 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bcc6a6b5-76ce-46c2-aeab-0537493299cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99bf6e7e90>]}
+[0m20:37:24.524252 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.vendas_dw.dim_vendedores, now model.vendas_dw.stg_vendas)
+[0m20:37:24.524999 [info ] [Thread-2 (]: 2 of 10 OK created sql table model bronze_silver.dim_produtos .................. [[32mSELECT 300[0m in 2.84s]
+[0m20:37:24.525408 [debug] [Thread-3 (]: Began compiling node model.vendas_dw.stg_vendas
+[0m20:37:24.526000 [debug] [Thread-2 (]: Finished running node model.vendas_dw.dim_produtos
+[0m20:37:24.528829 [debug] [Thread-3 (]: Writing injected SQL for node "model.vendas_dw.stg_vendas"
+[0m20:37:24.530921 [debug] [Thread-3 (]: Timing info for model.vendas_dw.stg_vendas (compile): 20:37:24.526359 => 20:37:24.530472
+[0m20:37:24.531880 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m20:37:24.532639 [debug] [Thread-3 (]: Began executing node model.vendas_dw.stg_vendas
+[0m20:37:24.535342 [debug] [Thread-1 (]: Using postgres connection "model.vendas_dw.dim_lojas"
+[0m20:37:24.539886 [debug] [Thread-3 (]: Writing runtime sql for node "model.vendas_dw.stg_vendas"
+[0m20:37:24.540535 [debug] [Thread-1 (]: On model.vendas_dw.dim_lojas: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.dim_lojas"} */
+drop table if exists "general_rtxt"."bronze_silver"."dim_lojas__dbt_backup" cascade
+[0m20:37:24.541236 [debug] [Thread-3 (]: Using postgres connection "model.vendas_dw.stg_vendas"
+[0m20:37:24.541626 [debug] [Thread-3 (]: On model.vendas_dw.stg_vendas: BEGIN
+[0m20:37:24.541898 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m20:37:24.616774 [debug] [Thread-4 (]: SQL status: SELECT 30000 in 1.0 seconds
+[0m20:37:24.619658 [debug] [Thread-4 (]: Using postgres connection "model.vendas_dw.stg_devolucoes"
+[0m20:37:24.620029 [debug] [Thread-4 (]: On model.vendas_dw.stg_devolucoes: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.stg_devolucoes"} */
+alter table "general_rtxt"."bronze_silver"."stg_devolucoes" rename to "stg_devolucoes__dbt_backup"
+[0m20:37:24.730023 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m20:37:24.731764 [debug] [Thread-1 (]: Timing info for model.vendas_dw.dim_lojas (execute): 20:37:21.706176 => 20:37:24.731621
+[0m20:37:24.732087 [debug] [Thread-1 (]: On model.vendas_dw.dim_lojas: Close
+[0m20:37:24.732746 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bcc6a6b5-76ce-46c2-aeab-0537493299cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99bf080510>]}
+[0m20:37:24.733216 [info ] [Thread-1 (]: 1 of 10 OK created sql table model bronze_silver.dim_lojas ..................... [[32mSELECT 15[0m in 3.05s]
+[0m20:37:24.733710 [debug] [Thread-1 (]: Finished running node model.vendas_dw.dim_lojas
+[0m20:37:24.806396 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:37:24.809053 [debug] [Thread-4 (]: Using postgres connection "model.vendas_dw.stg_devolucoes"
+[0m20:37:24.809421 [debug] [Thread-4 (]: On model.vendas_dw.stg_devolucoes: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.stg_devolucoes"} */
+alter table "general_rtxt"."bronze_silver"."stg_devolucoes__dbt_tmp" rename to "stg_devolucoes"
+[0m20:37:24.996062 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:37:24.998434 [debug] [Thread-4 (]: On model.vendas_dw.stg_devolucoes: COMMIT
+[0m20:37:24.998798 [debug] [Thread-4 (]: Using postgres connection "model.vendas_dw.stg_devolucoes"
+[0m20:37:24.999065 [debug] [Thread-4 (]: On model.vendas_dw.stg_devolucoes: COMMIT
+[0m20:37:25.189869 [debug] [Thread-4 (]: SQL status: COMMIT in 0.0 seconds
+[0m20:37:25.192790 [debug] [Thread-4 (]: Using postgres connection "model.vendas_dw.stg_devolucoes"
+[0m20:37:25.193102 [debug] [Thread-4 (]: On model.vendas_dw.stg_devolucoes: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.stg_devolucoes"} */
+drop table if exists "general_rtxt"."bronze_silver"."stg_devolucoes__dbt_backup" cascade
+[0m20:37:25.384742 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m20:37:25.386253 [debug] [Thread-4 (]: Timing info for model.vendas_dw.stg_devolucoes (execute): 20:37:21.751981 => 20:37:25.386100
+[0m20:37:25.386566 [debug] [Thread-4 (]: On model.vendas_dw.stg_devolucoes: Close
+[0m20:37:25.387264 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bcc6a6b5-76ce-46c2-aeab-0537493299cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99bf149e90>]}
+[0m20:37:25.387724 [info ] [Thread-4 (]: 4 of 10 OK created sql table model bronze_silver.stg_devolucoes ................ [[32mSELECT 30000[0m in 3.71s]
+[0m20:37:25.388165 [debug] [Thread-4 (]: Finished running node model.vendas_dw.stg_devolucoes
+[0m20:37:25.389864 [debug] [Thread-2 (]: Began running node model.vendas_dw.fct_devolucoes
+[0m20:37:25.390791 [info ] [Thread-2 (]: 6 of 10 START sql table model bronze_gold.fct_devolucoes ....................... [RUN]
+[0m20:37:25.391428 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.vendas_dw.dim_produtos, now model.vendas_dw.fct_devolucoes)
+[0m20:37:25.391751 [debug] [Thread-2 (]: Began compiling node model.vendas_dw.fct_devolucoes
+[0m20:37:25.394177 [debug] [Thread-2 (]: Writing injected SQL for node "model.vendas_dw.fct_devolucoes"
+[0m20:37:25.394970 [debug] [Thread-2 (]: Timing info for model.vendas_dw.fct_devolucoes (compile): 20:37:25.391963 => 20:37:25.394743
+[0m20:37:25.395360 [debug] [Thread-2 (]: Began executing node model.vendas_dw.fct_devolucoes
+[0m20:37:25.398837 [debug] [Thread-2 (]: Writing runtime sql for node "model.vendas_dw.fct_devolucoes"
+[0m20:37:25.399540 [debug] [Thread-2 (]: Using postgres connection "model.vendas_dw.fct_devolucoes"
+[0m20:37:25.399937 [debug] [Thread-2 (]: On model.vendas_dw.fct_devolucoes: BEGIN
+[0m20:37:25.400321 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m20:37:25.918239 [debug] [Thread-3 (]: SQL status: BEGIN in 1.0 seconds
+[0m20:37:25.919014 [debug] [Thread-3 (]: Using postgres connection "model.vendas_dw.stg_vendas"
+[0m20:37:25.919681 [debug] [Thread-3 (]: On model.vendas_dw.stg_vendas: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.stg_vendas"} */
+
+  
+    
+
+  create  table "general_rtxt"."bronze_silver"."stg_vendas__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with src as (
+
+    select
+        cast(id_venda      as bigint)               as id_venda,
+        cast(id_produto    as int)                  as id_produto,
+        cast(preco         as numeric(12,2))        as preco,
+        cast(quantidade    as int)                  as quantidade,
+        cast(data_venda    as date)                 as data_venda,
+        cast(id_cliente    as int)                  as id_cliente,
+        cast(id_loja       as int)                  as id_loja,
+        cast(id_vendedor   as int)                  as id_vendedor,
+        lower(trim(meio_pagamento))                 as meio_pagamento,
+        cast(parcelamento  as smallint)             as parcelamento
+    from "general_rtxt"."bronze"."vendas"
+
+)
+
+select *
+from src
+  );
+  
+[0m20:37:27.098869 [debug] [Thread-2 (]: SQL status: BEGIN in 2.0 seconds
+[0m20:37:27.099689 [debug] [Thread-2 (]: Using postgres connection "model.vendas_dw.fct_devolucoes"
+[0m20:37:27.099999 [debug] [Thread-2 (]: On model.vendas_dw.fct_devolucoes: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.fct_devolucoes"} */
+
+  
+    
+
+  create  table "general_rtxt"."bronze_gold"."fct_devolucoes__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with devol as (
+    select * from "general_rtxt"."bronze_silver"."stg_devolucoes"
+)
+
+select
+    id_venda,
+    id_produto,
+    id_loja,
+    id_vendedor,
+    id_cliente,
+    data_venda,
+    data_devolucao,
+    quantidade,
+    preco,
+    quantidade * preco                             as valor_devolvido,
+    motivo
+from devol
+  );
+  
+[0m20:37:28.214861 [debug] [Thread-2 (]: SQL status: SELECT 30000 in 1.0 seconds
+[0m20:37:28.218001 [debug] [Thread-2 (]: Using postgres connection "model.vendas_dw.fct_devolucoes"
+[0m20:37:28.218407 [debug] [Thread-2 (]: On model.vendas_dw.fct_devolucoes: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.fct_devolucoes"} */
+alter table "general_rtxt"."bronze_gold"."fct_devolucoes__dbt_tmp" rename to "fct_devolucoes"
+[0m20:37:28.403494 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:37:28.405664 [debug] [Thread-2 (]: On model.vendas_dw.fct_devolucoes: COMMIT
+[0m20:37:28.405994 [debug] [Thread-2 (]: Using postgres connection "model.vendas_dw.fct_devolucoes"
+[0m20:37:28.406275 [debug] [Thread-2 (]: On model.vendas_dw.fct_devolucoes: COMMIT
+[0m20:37:28.615997 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m20:37:28.618760 [debug] [Thread-2 (]: Using postgres connection "model.vendas_dw.fct_devolucoes"
+[0m20:37:28.619105 [debug] [Thread-2 (]: On model.vendas_dw.fct_devolucoes: /* {"app": "dbt", "dbt_version": "1.6.0", "profile_name": "vendas_dw", "target_name": "dev", "node_id": "model.vendas_dw.fct_devolucoes"} */
+drop table if exists "general_rtxt"."bronze_gold"."fct_devolucoes__dbt_backup" cascade
+[0m20:37:28.813194 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m20:37:28.815144 [debug] [Thread-2 (]: Timing info for model.vendas_dw.fct_devolucoes (execute): 20:37:25.395618 => 20:37:28.815004
+[0m20:37:28.815478 [debug] [Thread-2 (]: On model.vendas_dw.fct_devolucoes: Close
+[0m20:37:28.816156 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bcc6a6b5-76ce-46c2-aeab-0537493299cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99beffeb90>]}
+[0m20:37:28.816667 [info ] [Thread-2 (]: 6 of 10 OK created sql table model bronze_gold.fct_devolucoes .................. [[32mSELECT 30000[0m in 3.42s]
+[0m20:37:28.817123 [debug] [Thread-2 (]: Finished running node model.vendas_dw.fct_devolucoes
+[0m20:38:18.025288 [debug] [Thread-3 (]: Postgres adapter: Postgres error: could not extend file "base/16389/16716" with FileFallocate(): No space left on device
+HINT:  Check free disk space.
+
+[0m20:38:18.026098 [debug] [Thread-3 (]: On model.vendas_dw.stg_vendas: ROLLBACK
+[0m20:38:18.227498 [debug] [Thread-3 (]: Timing info for model.vendas_dw.stg_vendas (execute): 20:37:24.535794 => 20:38:18.226957
+[0m20:38:18.228044 [debug] [Thread-3 (]: On model.vendas_dw.stg_vendas: Close
+[0m20:38:18.230884 [debug] [Thread-3 (]: Database Error in model stg_vendas (models/silver/stg_vendas.sql)
+  could not extend file "base/16389/16716" with FileFallocate(): No space left on device
+  HINT:  Check free disk space.
+  compiled Code at target/run/vendas_dw/models/silver/stg_vendas.sql
+[0m20:38:18.231368 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bcc6a6b5-76ce-46c2-aeab-0537493299cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99befe5e10>]}
+[0m20:38:18.231850 [error] [Thread-3 (]: 5 of 10 ERROR creating sql table model bronze_silver.stg_vendas ................ [[31mERROR[0m in 53.71s]
+[0m20:38:18.232343 [debug] [Thread-3 (]: Finished running node model.vendas_dw.stg_vendas
+[0m20:38:18.235185 [debug] [Thread-4 (]: Began running node model.vendas_dw.fct_vendas
+[0m20:38:18.236061 [info ] [Thread-4 (]: 7 of 10 SKIP relation bronze_gold.fct_vendas ................................... [[33mSKIP[0m]
+[0m20:38:18.236787 [debug] [Thread-4 (]: Finished running node model.vendas_dw.fct_vendas
+[0m20:38:18.239479 [debug] [Thread-2 (]: Began running node model.vendas_dw.indicadores_vendas
+[0m20:38:18.239946 [debug] [Thread-3 (]: Began running node model.vendas_dw.mart_receita_diaria_loja
+[0m20:38:18.240378 [info ] [Thread-2 (]: 8 of 10 SKIP relation bronze_silver.indicadores_vendas ......................... [[33mSKIP[0m]
+[0m20:38:18.240930 [debug] [Thread-1 (]: Began running node model.vendas_dw.mart_receita_mensal_categoria
+[0m20:38:18.241403 [info ] [Thread-3 (]: 9 of 10 SKIP relation bronze_gold.mart_receita_diaria_loja ..................... [[33mSKIP[0m]
+[0m20:38:18.241953 [debug] [Thread-2 (]: Finished running node model.vendas_dw.indicadores_vendas
+[0m20:38:18.242434 [info ] [Thread-1 (]: 10 of 10 SKIP relation bronze_gold.mart_receita_mensal_categoria ............... [[33mSKIP[0m]
+[0m20:38:18.242906 [debug] [Thread-3 (]: Finished running node model.vendas_dw.mart_receita_diaria_loja
+[0m20:38:18.243967 [debug] [Thread-1 (]: Finished running node model.vendas_dw.mart_receita_mensal_categoria
+[0m20:38:18.247651 [debug] [MainThread]: Using postgres connection "master"
+[0m20:38:18.248282 [debug] [MainThread]: On master: BEGIN
+[0m20:38:18.248724 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:38:19.943142 [debug] [MainThread]: SQL status: BEGIN in 2.0 seconds
+[0m20:38:19.944012 [debug] [MainThread]: On master: COMMIT
+[0m20:38:19.944259 [debug] [MainThread]: Using postgres connection "master"
+[0m20:38:19.944488 [debug] [MainThread]: On master: COMMIT
+[0m20:38:20.134377 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m20:38:20.135325 [debug] [MainThread]: On master: Close
+[0m20:38:20.135986 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:38:20.136257 [debug] [MainThread]: Connection 'model.vendas_dw.dim_lojas' was properly closed.
+[0m20:38:20.136475 [debug] [MainThread]: Connection 'model.vendas_dw.fct_devolucoes' was properly closed.
+[0m20:38:20.136686 [debug] [MainThread]: Connection 'model.vendas_dw.stg_vendas' was properly closed.
+[0m20:38:20.136896 [debug] [MainThread]: Connection 'model.vendas_dw.stg_devolucoes' was properly closed.
+[0m20:38:20.137186 [info ] [MainThread]: 
+[0m20:38:20.137483 [info ] [MainThread]: Finished running 10 table models in 0 hours 1 minutes and 4.37 seconds (64.37s).
+[0m20:38:20.138496 [debug] [MainThread]: Command end result
+[0m20:38:20.199847 [info ] [MainThread]: 
+[0m20:38:20.200231 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m20:38:20.200516 [info ] [MainThread]: 
+[0m20:38:20.200764 [error] [MainThread]: [33mDatabase Error in model stg_vendas (models/silver/stg_vendas.sql)[0m
+[0m20:38:20.201004 [error] [MainThread]:   could not extend file "base/16389/16716" with FileFallocate(): No space left on device
+[0m20:38:20.201251 [error] [MainThread]:   HINT:  Check free disk space.
+[0m20:38:20.201501 [error] [MainThread]:   compiled Code at target/run/vendas_dw/models/silver/stg_vendas.sql
+[0m20:38:20.201750 [info ] [MainThread]: 
+[0m20:38:20.202019 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=1 SKIP=4 TOTAL=10
+[0m20:38:20.202446 [debug] [MainThread]: Command `dbt run` failed at 20:38:20.202364 after 64.61 seconds
+[0m20:38:20.202752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99c439af10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99bf984a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99bf984650>]}
+[0m20:38:20.203036 [debug] [MainThread]: Flushing usage events

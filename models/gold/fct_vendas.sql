@@ -30,4 +30,4 @@ select
 from ventes v
 left join dim_produtos   p  on v.id_produto  = p.id_produto
 left join dim_lojas      l  on v.id_loja     = l.id_loja
-left join dim_vendedores ve on v.id_vendedor = ve.id_vendedor;
+left join dim_vendedores ve on v.id_vendedor = ve.id_vendedor
