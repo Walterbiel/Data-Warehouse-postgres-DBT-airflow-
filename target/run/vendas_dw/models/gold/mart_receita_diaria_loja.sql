@@ -1,13 +1,8 @@
 
-  
+  create view "general_rtxt"."bronze_gold"."mart_receita_diaria_loja__dbt_tmp"
     
-
-  create  table "general_rtxt"."bronze_gold"."mart_receita_diaria_loja__dbt_tmp"
-  
-  
-    as
-  
-  (
+    
+  as (
     
 
 with fct as (
@@ -24,4 +19,3 @@ select
 from fct
 group by data_venda, id_loja, nome_loja
   );
-  

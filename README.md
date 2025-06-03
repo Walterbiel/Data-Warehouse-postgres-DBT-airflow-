@@ -3,6 +3,9 @@
 
 Em parceria com a **3D Universe Creators** — sorteio de logos em impressão 3D de Power BI e Python
 
+#### Link para sorteio:
+-- https://forms.gle/bLbwaH8h5KW6Px9X7
+
 ## 💡 Recomendado para Windows
 Se estiver usando Windows, o melhor cenário é:
 
@@ -474,7 +477,7 @@ elamento   AS SMALLINT)      AS parcelamento
 
 SELECT *
 FROM src
-```
+```com colunas corretas
 
 #### 🧾 stg_devolucoes.sql
 

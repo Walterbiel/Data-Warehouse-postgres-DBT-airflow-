@@ -1,13 +1,8 @@
 
-  
+  create view "general_rtxt"."bronze_silver"."indicadores_vendas__dbt_tmp"
     
-
-  create  table "general_rtxt"."bronze_silver"."indicadores_vendas__dbt_tmp"
-  
-  
-    as
-  
-  (
+    
+  as (
     
 
 WITH base AS (
@@ -27,4 +22,3 @@ SELECT
 FROM base
 GROUP BY data_venda, id_loja
   );
-  

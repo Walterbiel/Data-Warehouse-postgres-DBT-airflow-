@@ -1,13 +1,8 @@
 
-  
+  create view "general_rtxt"."bronze_gold"."mart_receita_mensal_categoria__dbt_tmp"
     
-
-  create  table "general_rtxt"."bronze_gold"."mart_receita_mensal_categoria__dbt_tmp"
-  
-  
-    as
-  
-  (
+    
+  as (
     
 
 with fct as (
@@ -26,4 +21,3 @@ base as (
 
 select * from base
   );
-  
