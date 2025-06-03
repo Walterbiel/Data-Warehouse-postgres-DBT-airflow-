@@ -276,25 +276,6 @@ sources:
       - name: lojas
       - name: vendedores
 ```
-
----
-
-### 8. Executando o Projeto
-
-Para compilar e rodar os modelos:
-
-```bash
-dbt run
-```
-
-Para validar a conexão e estrutura:
-
-```bash
-dbt debug
-```
-
----
-
 ---
 
 ## 🗂️ Estrutura de diretórios
@@ -332,17 +313,14 @@ dbt run --select gold
 
 # 3) Explorar lineage
 dbt docs generate
-dbt docs serve
+dbt docs serve --port 8085
+
 ```
 
 ------------------------------------------------------------------------------------------
 
 ### Rodar no postgres:
 
-## ⚙️ Execução
-Execute os comandos abaixo em sua instância PostgreSQL, ajustando os nomes dos schemas e tabelas conforme necessário.
-
----
 ## 🔹 Queries por Categoria
 
 ### 📂 Transformações de Dimensões
@@ -412,7 +390,8 @@ select *
 from src
 ```
 
-### 📂 Preparação### 3.1  `fct_vendas.sql` — fluxo simplificado
+### 📂 Preparação### 3.1  
+`fct_vendas.sql` — fluxo simplificado
 ```mermaid
 graph TD
     subgraph Silver
@@ -484,3 +463,322 @@ group by data_venda, id_loja, nome_loja;
 > **Uso**: Painéis operacionais (metas diárias, comparativo de lojas).
 elamento   AS SMALLINT)      AS parcelamento
     FROM -- {{ source('bronze', 'vendas') -- }}
+
+    {% if is_incremental() %}
+      WHERE id_venda NOT IN (
+        SELECT id_venda FROM -- {{ this -- }}
+      )
+    {% endif %}
+
+)
+
+SELECT *
+FROM src
+```
+
+#### 🧾 stg_devolucoes.sql
+
+```sql
+-- {{ config(materialized = 'table') -- }}
+
+with src as (
+
+    select
+        cast(id_venda       as bigint)              as id_venda,
+        cast(id_produto     as int)                 as id_produto,
+        cast(preco          as numeric(12,2))       as preco,
+        cast(quantidade     as int)                 as quantidade,
+        cast(data_venda     as date)                as data_venda,
+        cast(data_devolucao as date)                as data_devolucao,
+        cast(id_cliente     as int)                 as id_cliente,
+        cast(id_loja        as int)                 as id_loja,
+        cast(id_vendedor    as int)                 as id_vendedor,
+        motivo
+    from -- {{ source('bronze','devolucoes') -- }}
+
+)
+
+select *
+from src
+```
+
+### 📂 Construção das Tabelas Fato
+
+#### 🧾 fct_vendas.sql
+
+```sql
+-- {{ config(
+    materialized = 'view'
+) -- }}
+
+WITH ventes AS (
+    SELECT * FROM -- {{ ref('stg_vendas') -- }}
+),
+
+dim_produtos   AS (SELECT * FROM -- {{ ref('dim_produtos')   -- }}),
+dim_lojas      AS (SELECT * FROM -- {{ ref('dim_lojas')      -- }}),
+dim_vendedores AS (SELECT * FROM -- {{ ref('dim_vendedores') -- }})
+
+SELECT
+    v.id_venda,
+    v.id_produto,
+    v.id_loja,
+    v.id_vendedor,
+    v.id_cliente,
+    v.data_venda,
+    v.quantidade,
+    v.preco,
+    v.quantidade * v.preco AS receita_bruta,
+    v.meio_pagamento,
+    v.parcelamento,
+
+    -- dimensões
+    p.nome_produto,
+    p.categoria,
+    l.nome_loja,
+    l.cidade,
+    ve.nome_vendedor
+FROM ventes v
+LEFT JOIN dim_produtos   p  ON v.id_produto  = p.id_produto
+LEFT JOIN dim_lojas      l  ON v.id_loja     = l.id_loja
+LEFT JOIN dim_vendedores ve ON v.id_vendedor = ve.id_vendedor
+```
+
+#### 🧾 fct_devolucoes.sql
+
+```sql
+-- {{ config(materialized = 'view') -- }}
+
+with devol as (
+    select * from -- {{ ref('stg_devolucoes') -- }}
+)
+
+select
+    id_venda,
+    id_produto,
+    id_loja,
+    id_vendedor,
+    id_cliente,
+    data_venda,
+    data_devolucao,
+    quantidade,
+    preco,
+    quantidade * preco                             as valor_devolvido,
+    motivo
+from devol
+```
+
+### 📂 Indicadores e Mart de Vendas
+
+#### 🧾 indicadores_vendas.sql
+
+```sql
+-- {{ 
+  config(
+    materialized = 'view',
+    schema       = 'silver'
+  ) 
+-- }}
+
+WITH base AS (
+    SELECT
+        data_venda,
+        id_loja,
+        preco,
+        quantidade,
+        id_venda
+    FROM -- {{ ref('fct_vendas') -- }}
+)
+SELECT
+    data_venda,
+    id_loja,
+    SUM(preco * quantidade) AS receita_total,
+    COUNT(DISTINCT id_venda) AS qtd_vendas
+FROM base
+GROUP BY data_venda, id_loja
+```
+
+#### 🧾 mart_receita_diaria_loja.sql
+
+```sql
+-- {{ config(materialized = 'view') -- }}
+
+with fct as (
+    select * from -- {{ ref('fct_vendas') -- }}
+)
+
+select
+    data_venda,
+    id_loja,
+    nome_loja,
+    sum(receita_bruta)                           as receita_diaria,
+    count(distinct id_venda)                     as qtd_vendas,
+    sum(quantidade)                              as itens_vendidos
+from fct
+group by data_venda, id_loja, nome_loja
+```
+
+#### 🧾 mart_receita_mensal_categoria.sql
+
+```sql
+-- {{ config(materialized = 'view') -- }}
+
+with fct as (
+    select * from -- {{ ref('fct_vendas') -- }}
+),
+
+base as (
+    select
+        date_trunc('month', data_venda)::date    as mes,
+        categoria,
+        sum(receita_bruta)                       as receita_mensal,
+        sum(quantidade)                          as itens_vendidos
+    from fct
+    group by 1, 2
+)
+
+select * from base
+```
+
+### 📂 Análises Avançadas - Camada Gold
+
+#### 🧾 gold_media_movel_7d.sql
+
+```sql
+-- {{ config(materialized = 'view') -- }}
+
+WITH receita_diaria AS (
+    SELECT
+        data_venda,
+        id_loja,
+        nome_loja,
+        SUM(receita_bruta) AS receita_diaria
+    FROM -- {{ ref('fct_vendas') -- }}
+    GROUP BY data_venda, id_loja, nome_loja
+)
+
+SELECT
+    *,
+    AVG(receita_diaria) OVER (
+        PARTITION BY id_loja
+        ORDER BY data_venda
+        ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
+    ) AS media_movel_7d
+FROM receita_diaria
+```
+
+#### 🧾 gold_crescimento_receita_categoria.sql
+
+```sql
+-- {{ config(materialized = 'view') -- }}
+
+WITH base AS (
+    SELECT
+        DATE_TRUNC('month', data_venda)::date AS mes,
+        categoria,
+        SUM(receita_bruta) AS receita_mensal
+    FROM -- {{ ref('fct_vendas') -- }}
+    GROUP BY 1, 2
+),
+
+crescimento AS (
+    SELECT
+        mes,
+        categoria,
+        receita_mensal,
+        LAG(receita_mensal) OVER (PARTITION BY categoria ORDER BY mes) AS receita_mes_anterior
+    FROM base
+)
+
+SELECT
+    *,
+    ROUND(
+        CASE
+            WHEN receita_mes_anterior > 0 THEN 
+                (receita_mensal - receita_mes_anterior) / receita_mes_anterior::numeric
+            ELSE NULL
+        END, 4
+    ) AS crescimento_pct
+FROM crescimento
+```
+
+#### 🧾 gold_ticket_medio_categoria.sql
+
+```sql
+-- {{ config(materialized = 'view') -- }}
+
+WITH base AS (
+    SELECT
+        DATE_TRUNC('month', data_venda)::date AS mes,
+        categoria,
+        SUM(receita_bruta) AS receita,
+        SUM(quantidade) AS itens
+    FROM -- {{ ref('fct_vendas') -- }}
+    GROUP BY 1, 2
+)
+
+SELECT
+    mes,
+    categoria,
+    receita,
+    itens,
+    ROUND(receita / NULLIF(itens, 0), 2) AS ticket_medio
+FROM base
+```
+
+#### 🧾 gold_taxa_devolucao.sql
+
+```sql
+-- {{ config(materialized = 'view') -- }}
+
+WITH vendas AS (
+    SELECT id_venda, id_produto, data_venda, receita_bruta
+    FROM -- {{ ref('fct_vendas') -- }}
+),
+devolucoes AS (
+    SELECT id_venda, data_devolucao
+    FROM -- {{ ref('fct_devolucoes') -- }}
+)
+
+SELECT
+    v.data_venda,
+    COUNT(DISTINCT v.id_venda) AS vendas_totais,
+    COUNT(DISTINCT d.id_venda) AS vendas_devolvidas,
+    ROUND(
+        COUNT(DISTINCT d.id_venda)::numeric / NULLIF(COUNT(DISTINCT v.id_venda), 0),
+        4
+    ) AS taxa_devolucao
+FROM vendas v
+LEFT JOIN devolucoes d ON v.id_venda = d.id_venda
+GROUP BY v.data_venda
+```
+
+#### 🧾 gold_receita_acumulada_loja.sql
+
+```sql
+-- {{ config(materialized = 'view') -- }}
+
+WITH base AS (
+    SELECT
+        data_venda,
+        id_loja,
+        nome_loja,
+        EXTRACT(YEAR FROM data_venda) AS ano,
+        receita_bruta
+    FROM -- {{ ref('fct_vendas') -- }}
+),
+
+acumulado AS (
+    SELECT
+        data_venda,
+        id_loja,
+        nome_loja,
+        ano,
+        SUM(receita_bruta) OVER (
+            PARTITION BY id_loja, ano ORDER BY data_venda
+        ) AS receita_acumulada
+    FROM base
+)
+
+SELECT * FROM acumulado
+```

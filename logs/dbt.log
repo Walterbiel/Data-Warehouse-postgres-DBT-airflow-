@@ -10818,3 +10818,52 @@ with relation as (
 [0m17:20:43.341538 [debug] [MainThread]: Connection 'general_rtxt.information_schema' was properly closed.
 [0m17:20:43.341792 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab65a5ad10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab65bb6610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab61deec50>]}
 [0m17:20:43.342095 [debug] [MainThread]: Flushing usage events
+[0m17:26:08.574669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f28c6c65650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f28c71d9dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f28c6f4a710>]}
+
+
+============================== 17:26:08.577511 | 6f764bf1-e51a-4f22-8a3e-20530fe3a797 ==============================
+[0m17:26:08.577511 [info ] [MainThread]: Running with dbt=1.6.0
+[0m17:26:08.577947 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'introspect': 'True', 'version_check': 'True', 'fail_fast': 'False', 'profiles_dir': '/home/walterg/.dbt', 'static_parser': 'True', 'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'write_json': 'True', 'target_path': 'None', 'indirect_selection': 'eager', 'no_print': 'None', 'use_colors': 'True', 'warn_error': 'None', 'debug': 'False', 'quiet': 'False', 'invocation_command': 'dbt docs serve', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'log_format': 'default', 'cache_selected_only': 'False'}
+[0m17:26:08.635757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6f764bf1-e51a-4f22-8a3e-20530fe3a797', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f28c92cd890>]}
+[0m17:26:08.648070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6f764bf1-e51a-4f22-8a3e-20530fe3a797', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f28c6aa7710>]}
+[0m17:26:08.802952 [error] [MainThread]: Encountered an error:
+[Errno 98] Address already in use
+[0m17:26:08.806618 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 87, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 72, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 143, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 172, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 219, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/dbt/cli/main.py", line 306, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/.venv/lib/python3.11/site-packages/dbt/task/serve.py", line 23, in run
+    with socketserver.TCPServer(("", port), SimpleHTTPRequestHandler) as httpd:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socketserver.py", line 456, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.11/socketserver.py", line 472, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+
+[0m17:26:08.807974 [debug] [MainThread]: Command `dbt docs serve` failed at 17:26:08.807640 after 0.24 seconds
+[0m17:26:08.808733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f28c8814150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f28c65386d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f28c70d4510>]}
+[0m17:26:08.809496 [debug] [MainThread]: Flushing usage events
+[0m17:27:52.831262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd09a68650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd09d9d950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd09d93210>]}
+
+
+============================== 17:27:52.834602 | 1c2e8801-3e69-4182-9459-7a964a2824b1 ==============================
+[0m17:27:52.834602 [info ] [MainThread]: Running with dbt=1.6.0
+[0m17:27:52.835025 [debug] [MainThread]: running dbt with arguments {'log_path': '/home/walterg/Documentos/Data_projects/Data-Warehouse-postgres-DBT-airflow-/logs', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'use_experimental_parser': 'False', 'invocation_command': 'dbt docs serve --port 8085', 'target_path': 'None', 'no_print': 'None', 'printer_width': '80', 'log_format': 'default', 'warn_error': 'None', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/home/walterg/.dbt', 'version_check': 'True', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'introspect': 'True', 'quiet': 'False', 'log_cache_events': 'False', 'debug': 'False', 'static_parser': 'True', 'indirect_selection': 'eager', 'fail_fast': 'False'}
+[0m17:27:52.895354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1c2e8801-3e69-4182-9459-7a964a2824b1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd0978b450>]}
+[0m17:27:52.907842 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1c2e8801-3e69-4182-9459-7a964a2824b1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd09946f90>]}
